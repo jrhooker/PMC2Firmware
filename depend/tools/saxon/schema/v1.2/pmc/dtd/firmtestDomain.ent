@@ -1,0 +1,30 @@
+<!ENTITY %  firmtest-d-test "test" >
+
+<!ENTITY % firmtest-d-test-row "test-row" >
+
+<!ENTITY % firmtest-d-test-name-short "test-name-short" >
+<!ENTITY % firmtest-d-test-name-long  "test-name-long" >
+
+<!ENTITY % firmtest-d-test-matrix-nm-short "test-matrix-nm-short" >
+<!ENTITY % firmtest-d-test-matrix-nm-long  "test-matrix-nm-long" >
+
+<!--<!ENTITY  firmtest-d-att  "(topic firmtest-d)" >-->
+
+<!ENTITY % firmtest-d-test-row-type  "test-row-type" >
+<!ENTITY % firmtest-d-test-owner  "test-owner" >
+<!ENTITY % firmtest-d-test-pri "test-pri" >
+<!ENTITY % firmtest-d-test-desc  "test-desc" >
+<!ENTITY % firmtest-d-test-proc  "test-proc" >
+<!ENTITY % firmtest-d-test-exp-rslt  "test-exp-rslt" >
+<!ENTITY % firmtest-d-test-sched-est  "test-sched-est" >
+<!ENTITY % firmtest-d-test-sched-act  "test-sched-act" >
+<!ENTITY % firmtest-d-test-result  "test-result" >
+<!ENTITY % firmtest-d-test-fw  "test-fw" >
+<!ENTITY % firmtest-d-test-hw  "test-hw" >
+<!ENTITY % firmtest-d-test-notes  "test-notes" >
+<!ENTITY % firmtest-d-test-req  "test-req" >
+<!ENTITY % firmtest-d-test-misc  "test-misc" >
+
+
+
+

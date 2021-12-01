@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    Atmel DITA SIDSC Address Block Shell              -->
+<!--  VERSION:   1.3                                               -->
+<!--  DATE:      March 2019                                        -->
+<!-- PUBLIC "-//Atmel//DTD DITA SIDSC Address Block//EN"           -->
+<!-- Delivered as file "atmel-sidsc-addressBlock.dtd"              -->
+<!-- ============================================================= -->
+<!-- SIDSC Address Block                                           -->
+<!-- Copyright OASIS 2009                                          -->
+<!-- Author: Seth Park                                             -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--              TOPIC ENTITY DECLARATIONS                        -->
+<!-- ============================================================= -->
+
+<!ENTITY % reference-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Reference//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/reference.ent"
+>%reference-dec;
+
+<!ENTITY % addressBlock-dec
+  PUBLIC "-//Atmel//ENTITIES DITA 1.3 SIDSC Address Block//EN"
+         "sidsc-addressBlock.ent"
+>%addressBlock-dec;
+
+<!ENTITY % register-dec
+  PUBLIC "-//Atmel//ENTITIES DITA 1.3 SIDSC Register//EN"
+         "sidsc-register.ent"
+>%register-dec;
+
+<!ENTITY % bitField-dec
+  PUBLIC "-//Atmel//ENTITIES DITA 1.3 SIDSC Bit Field//EN"
+         "sidsc-bitField.ent"
+>%bitField-dec;
+
+<!-- ============================================================= -->
+<!--             DOMAIN ENTITY DECLARATIONS                        -->
+<!-- ============================================================= -->
+
+<!ENTITY % equation-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Equation Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/equationDomain.ent"
+>%equation-d-dec;
+
+<!ENTITY % hi-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Highlight Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % mathml-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 MathML Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/mathmlDomain.ent"
+>%mathml-d-dec;
+
+<!ENTITY % pr-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Programming Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/programmingDomain.ent"
+>%pr-d-dec;
+
+<!ENTITY % dataTableDomain-d-dec
+  PUBLIC "-//Atmel//ENTITIES DITA 1.3 SIDSC dataTable Domain//EN"
+         "dataTableDomain.ent"
+>%dataTableDomain-d-dec;
+
+<!ENTITY % sidscDomain-d-dec
+  PUBLIC "-//Atmel//ENTITIES DITA 1.3 SIDSC Domain//EN"
+         "sidscDomain.ent"
+>%sidscDomain-d-dec;
+
+<!-- ============================================================= -->
+<!--             DOMAIN ATTRIBUTES DECLARATIONS                    -->
+<!-- ============================================================= -->
+
+<!ENTITY % deliveryTargetAtt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/deliveryTargetAttDomain.ent"
+>%deliveryTargetAtt-d-dec;
+
+<!ENTITY % ishconditionAtt-d-dec
+  PUBLIC "-//SDL//ENTITIES DITA 1.3 Condition Attribute Domain//EN"
+         "../../../../../dita-sdl/1.3/dtd/base/dtd/ishconditionAttDomain.ent"
+>%ishconditionAtt-d-dec;
+
+<!ENTITY % varidAtt-d-dec
+  PUBLIC "-//SDL//ENTITIES DITA 1.3 Variable Identifier Attribute Domain//EN"
+         "../../../../../dita-sdl/1.3/dtd/base/dtd/varidAttDomain.ent"
+>%varidAtt-d-dec;
+
+<!ENTITY % varrefAtt-d-dec
+  PUBLIC "-//SDL//ENTITIES DITA 1.3 Variable Reference Attribute Domain//EN"
+         "../../../../../dita-sdl/1.3/dtd/base/dtd/varrefAttDomain.ent"
+>%varrefAtt-d-dec;
+
+<!ENTITY % cidAtt-d-dec
+  PUBLIC "-//SDL//ENTITIES DITA 1.3 Comment Identifier Attribute Domain//EN"
+         "../../../../../dita-sdl/1.3/dtd/base/dtd/cidAttDomain.ent"
+>%cidAtt-d-dec;
+
+<!ENTITY % featureAtt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 SIDSC Feature Attribute Domain//EN"
+         "featurePropsAttDomain.ent"
+>%featureAtt-d-dec;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+
+<!ENTITY % ph           "ph |
+                         %hi-d-ph; |
+                         %pr-d-ph; |
+                         %equation-d-ph; |
+                         %sidscDomain-d-ph;
+                        ">
+<!ENTITY % pre          "pre |
+                         %pr-d-pre;
+                        ">
+<!ENTITY % keyword      "keyword |
+                         %pr-d-keyword;
+                        ">
+<!ENTITY % fig          "fig |
+                         %pr-d-fig; |
+                         %equation-d-fig;
+                        ">
+<!ENTITY % dl           "dl |
+                         %pr-d-dl; |
+                         %dataTableDomain-d-dl;
+                        ">
+<!ENTITY % div          "div |
+                         %equation-d-div;
+                        ">
+<!ENTITY % foreign      "foreign |
+                         %mathml-d-foreign;
+                        ">
+<!ENTITY % simpletable  "simpletable |
+                         %dataTableDomain-d-simpletable;
+                        ">
+<!ENTITY % strow        "strow |
+                         %dataTableDomain-d-strow;
+                        ">
+<!ENTITY % stentry      "stentry |
+                         %dataTableDomain-d-stentry;
+                        ">
+<!ENTITY % dlentry      "dlentry |
+                         %dataTableDomain-d-dlentry;
+                        ">
+<!ENTITY % dt           "dt |
+                         %dataTableDomain-d-dt;
+                        ">
+<!ENTITY % dd           "dd |
+                         %dataTableDomain-d-dd;
+                        ">
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+
+<!ENTITY % props-attribute-extensions
+  "%deliveryTargetAtt-d-attribute;
+   %featureAtt-d-attribute;"
+>
+<!ENTITY % base-attribute-extensions
+  "%ishconditionAtt-d-attribute;
+   %cidAtt-d-attribute;"
+>
+
+<!-- ============================================================= -->
+<!--                    TOPIC NESTING OVERRIDE                     -->
+<!-- ============================================================= -->
+
+<!ENTITY % reference-info-types
+              "no-topic-nesting"
+>
+<!ENTITY % sidsc-addressBlock-info-types
+              "register"
+>
+<!ENTITY % sidsc-register-info-types
+              "bitField |
+               reference"
+>
+<!ENTITY % sidsc-bitField-info-types
+              "reference"
+>
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+
+<!ENTITY included-domains
+                          "&reference-att;
+                           &addressBlock-att;
+                           &register-att;
+                           &bitField-att;
+                           &deliveryTargetAtt-d-att;
+                           &equation-d-att;
+                           &hi-d-att;
+                           &mathml-d-att;
+                           &pr-d-att;
+                           &dataTableDomain-d-att;
+                           &sidscDomain-d-att;
+                           &ishconditionAtt-d-att;
+                           &varidAtt-d-att;
+                           &varrefAtt-d-att;
+                           &cidAtt-d-att;
+                           &featureAtt-d-att;
+                           &atmelVariables-constraints;
+  "
+>
+
+<!-- ============================================================= -->
+<!--                    CONTENT CONSTRAINT INTEGRATION             -->
+<!-- ============================================================= -->
+
+<!ENTITY % atmelVariables-def
+  PUBLIC "-//Atmel//ELEMENTS DITA 1.3 Variables Constraint//EN"
+         "../../base/dtd/atmelVariablesConstraint.mod"
+>%atmelVariables-def;
+
+<!-- ============================================================= -->
+<!--                    TOPIC ELEMENT INTEGRATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY % topic-type
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Topic//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/topic.mod"
+>%topic-type;
+
+<!ENTITY % reference-type
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Reference//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/reference.mod"
+>%reference-type;
+
+<!ENTITY % addressBlock-type
+  PUBLIC "-//Atmel//ELEMENTS DITA 1.3 SIDSC Address Block//EN"
+         "sidsc-addressBlock.mod"
+>%addressBlock-type;
+
+<!ENTITY % register-type
+  PUBLIC "-//Atmel//ELEMENTS DITA 1.3 SIDSC Register//EN"
+         "sidsc-register.mod"
+>%register-type;
+
+<!ENTITY % bitField-type
+  PUBLIC "-//Atmel//ELEMENTS DITA 1.3 SIDSC Bit Field//EN"
+         "sidsc-bitField.mod"
+>%bitField-type;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % equation-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Equation Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/equationDomain.mod"
+>%equation-d-def;
+
+<!ENTITY % hi-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Highlight Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % mathml-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 MathML Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/mathmlDomain.mod"
+>%mathml-d-def;
+
+<!ENTITY % pr-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Programming Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/programmingDomain.mod"
+>%pr-d-def;
+
+<!ENTITY % dataTableDomain-d-def
+  PUBLIC "-//Atmel//ELEMENTS DITA 1.3 SIDSC dataTable Domain//EN"
+         "dataTableDomain.mod"
+>%dataTableDomain-d-def;
+
+<!ENTITY % sidscDomain-d-def
+  PUBLIC "-//Atmel//ELEMENTS DITA 1.3 SIDSC Domain//EN"
+         "sidscDomain.mod"
+>%sidscDomain-d-def;
+
+<!-- ================= End of Atmel DITA SIDSC Address Block Shell ================= -->

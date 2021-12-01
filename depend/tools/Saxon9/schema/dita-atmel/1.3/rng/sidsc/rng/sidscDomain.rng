@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns="http://relaxng.org/ns/structure/1.0">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA SIDSC Domain</moduleTitle>
+    <headerComment xml:space="preserve">
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    DITA SIDSC Domain                     
+ VERSION:   1.3                                              
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Domain//EN"
+      Delivered as file "sidscDomain.mod"                   
+
+=============================================================
+
+Copyright OASIS 2009
+Author: Seth Park
+ 
+=============================================================
+</headerComment>
+    <moduleMetadata>
+      <moduleType>elementdomain</moduleType>
+      <moduleShortName>sidscDomain-d</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver"/> SIDSC Domain//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver"/> SIDSC Domain//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:sidscDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <rncMod>urn:atmel:names:tc:dita:rnc:sidscDomain.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:sidscDomain.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic sidscDomain-d)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+    <define name="sidscDomain-d-ph">
+      <choice>
+        <ref name="active-low.element"/>
+        <ref name="unitQualifier.element"/>
+        <ref name="namePattern.element"/>
+        <ref name="instancesNumber.element"/>
+        <ref name="instanceOffsets.element"/>
+      </choice>
+    </define>
+
+    <define name="ph" combine="choice">
+      <ref name="sidscDomain-d-ph"/>
+    </define>
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+
+    <define name="active-low">
+      <ref name="active-low.element"/>
+    </define>
+    <define name="unitQualifier">
+      <ref name="unitQualifier.element"/>
+    </define>
+    <define name="namePattern">
+      <ref name="namePattern.element"/>
+    </define>
+    <define name="instancesNumber">
+      <ref name="instancesNumber.element"/>
+    </define>
+    <define name="instanceOffsets">
+      <ref name="instanceOffsets.element"/>
+    </define>
+ 
+  </div>
+
+<div>
+  <a:documentation>GENERAL DECLARATION FOR PLAIN TEXT CONTENT</a:documentation>
+  <define name="sidsc.plain.text.cnt">
+    <choice>
+      <text/>
+      <ref name="text"/>
+      <ref name="ph.element"/>
+    </choice>
+  </define>
+</div>
+
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation> LONG NAME: Active Low </a:documentation>
+      <define name="active-low.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="active-low.attributes">
+        <optional>
+          <attribute name="keyref"/>
+        </optional>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="active-low.element">
+        <element name="active-low" dita:longName="Active Low">
+          <a:documentation>
+            <![CDATA[Active Low
+    Category: SIDSC
+  ]]></a:documentation>
+          <ref name="active-low.attlist"/>
+          <ref name="active-low.content"/>
+        </element>
+      </define>
+      <define name="active-low.attlist" combine="interleave">
+        <ref name="active-low.attributes"/>
+      </define>
+    </div>
+  
+    <div>
+      <a:documentation> LONG NAME: Instances Number </a:documentation>
+      <define name="instancesNumber.content">
+        <zeroOrMore>
+          <ref name="term.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="instancesNumber.attributes">
+        <optional>
+          <attribute name="keyref"/>
+        </optional>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="instancesNumber.element">
+        <element name="instancesNumber" dita:longName="Instances Number">
+          <a:documentation>
+            <![CDATA[Instances Number
+    Category: SIDSC
+  ]]></a:documentation>
+          <ref name="instancesNumber.attlist"/>
+          <ref name="instancesNumber.content"/>
+        </element>
+      </define>
+      <define name="instancesNumber.attlist" combine="interleave">
+        <ref name="instancesNumber.attributes"/>
+      </define>
+    </div>
+   
+    <div>
+      <a:documentation> LONG NAME: Unit Qualifier </a:documentation>
+      <define name="unitQualifier.content">
+        <zeroOrMore>
+          <ref name="defn.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="unitQualifier.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="unitQualifier.element">
+        <element name="unitQualifier" dita:longName="Unit Qualifier">
+          <a:documentation>
+            <![CDATA[Unit Qualifier
+    Category: SIDSC
+  ]]></a:documentation>
+          <ref name="unitQualifier.attlist"/>
+          <ref name="unitQualifier.content"/>
+        </element>
+      </define>
+      <define name="unitQualifier.attlist" combine="interleave">
+        <ref name="unitQualifier.attributes"/>
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Name Pattern </a:documentation>
+      <define name="namePattern.content">
+        <zeroOrMore>
+          <ref name="defn.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="namePattern.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="namePattern.element">
+        <element name="namePattern" dita:longName="Name Pattern">
+          <a:documentation>
+            <![CDATA[Name Pattern
+    Category: SIDSC
+  ]]></a:documentation>
+          <ref name="namePattern.attlist"/>
+          <ref name="namePattern.content"/>
+        </element>
+      </define>
+      <define name="namePattern.attlist" combine="interleave">
+        <ref name="namePattern.attributes"/>
+      </define>
+    </div>
+ 
+    <div>
+      <a:documentation> LONG NAME: Instance Offsets </a:documentation>
+      <define name="instanceOffsets.content">
+        <zeroOrMore>
+          <ref name="defn.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="instanceOffsets.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="instanceOffsets.element">
+        <element name="instanceOffsets" dita:longName="Instance Offsets">
+          <a:documentation>
+            <![CDATA[Instance Offsets
+    Category: SIDSC
+  ]]></a:documentation>
+          <ref name="instanceOffsets.attlist"/>
+          <ref name="instanceOffsets.content"/>
+        </element>
+      </define>
+      <define name="instanceOffsets.attlist" combine="interleave">
+        <ref name="instanceOffsets.attributes"/>
+      </define>
+    </div>
+    
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+    <define name="active-low.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/ph sidscDomain-d/active-low "/>
+      </optional>
+    </define>
+    <define name="unitQualifier.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/ph sidscDomain-d/unitQualifier "/>
+      </optional>
+    </define>
+    <define name="namePattern.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/ph sidscDomain-d/namePattern "/>
+      </optional>
+    </define>
+    <define name="instancesNumber.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/ph sidscDomain-d/instancesNumber "/>
+      </optional>
+    </define>
+    <define name="instanceOffsets.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/ph sidscDomain-d/instanceOffsets "/>
+      </optional>
+    </define>
+  
+  </div>
+</grammar>

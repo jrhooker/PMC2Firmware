@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA SIDSC Register</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    DITA SIDSC Register         
+ VERSION:   1.3                                              
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Register//EN"
+      Delivered as file "sidsc-register.mod"     
+
+=============================================================
+
+Copyright OASIS 2009
+Author: Seth Park
+ 
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>register</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver"/> SIDSC Register//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver"/> SIDSC Register//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:sidsc-registerMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <xsdGrp>urn:atmel:names:tc:dita:xsd:sidsc-registerGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <rncMod>urn:atmel:names:tc:dita:rnc:sidsc-registerMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:sidsc-registerMod.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic reference sidsc-register)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+    <define name="sidsc-register-info-types">
+      <ref name="info-types"/>
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="register">
+      <ref name="register.element"/>
+    </define>
+    <define name="registerName">
+      <ref name="registerName.element"/>
+    </define>
+    <define name="registerNameMore">
+      <ref name="registerNameMore.element"/>
+    </define>
+    <define name="registerBody">
+      <ref name="registerBody.element"/>
+    </define>
+    <define name="registerNameFull">
+      <ref name="registerNameFull.element"/>
+    </define>
+    <define name="registerBitsInLau">
+      <ref name="registerBitsInLau.element"/>
+    </define>
+    <define name="registerBriefDescription">
+      <ref name="registerBriefDescription.element"/>
+    </define>
+    <define name="registerDescription">
+      <ref name="registerDescription.element"/>
+    </define>
+    <define name="registerProperties">
+      <ref name="registerProperties.element"/>
+    </define>
+    <define name="registerPropset">
+      <ref name="registerPropset.element"/>
+    </define>
+    <define name="addressOffset">
+      <ref name="addressOffset.element"/>
+    </define>
+    <define name="registerSize">
+      <ref name="registerSize.element"/>
+    </define>
+    <define name="registerAccess">
+      <ref name="registerAccess.element"/>
+    </define>
+    <define name="registerResetValue">
+      <ref name="registerResetValue.element"/>
+    </define>
+    <define name="bitOrder">
+      <ref name="bitOrder.element"/>
+    </define>
+    <define name="resetTrig">
+      <ref name="resetTrig.element"/>
+    </define>
+    
+  </div>
+  
+  <div>
+    <a:documentation>general purpose content models</a:documentation>
+    <define name="dataPhrase.cnt">
+      <choice>
+        <text />
+        <ref name="text" />
+        <ref name="ph.element" />
+      </choice>
+    </define>
+    <define name="sidsc.registerBitsInLau.cnt">
+      <choice>
+        <text />
+        <ref name="text" />
+        <ref name="foreign"/>
+        <ref name="ph" />
+      </choice>
+    </define>
+    <a:documentation>GENERAL DECLARATION FOR PLAIN TEXT CONTENT</a:documentation>
+    <define name="sidsc.plain.text.cnt">
+      <choice>
+        <text />
+        <ref name="text" />
+        <ref name="ph.element" />
+      </choice>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>allow to constraint ish attributes</a:documentation>
+    
+    <define name="ish-atts.registerName">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerNameMore">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerBody">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerNameFull">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerBitsInLau">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerBriefDescription">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerDescription">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerProperties">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerPropset">
+      <empty/>
+    </define>
+    <define name="ish-atts.addressOffset">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerSize">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerAccess">
+      <empty/>
+    </define>
+    <define name="ish-atts.registerResetValue">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitOrder">
+      <empty/>
+    </define>
+    <define name="ish-atts.resetTrig">
+      <empty/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation> LONG NAME: Register </a:documentation>
+      <define name="register.content">
+        <ref name="registerName" />
+        <ref name="registerNameMore" />
+        <ref name="registerBody" />
+        <zeroOrMore>
+          <ref name="sidsc-register-info-types" />
+        </zeroOrMore>
+      </define>
+
+      <define name="register.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="register.element">
+        <element name="register" dita:longName="Register">
+          <a:documentation>The &lt;register> element is the top-level element for a SIDSC register topic. Category: SIDSC Register elements</a:documentation>
+          <ref name="register.attlist" />
+          <ref name="register.content" />
+        </element>
+      </define>
+      <define name="register.attlist" combine="interleave">
+        <ref name="register.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="register.element" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Name </a:documentation>
+      <define name="registerName.content">
+        <zeroOrMore>
+          <ref name="title.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="registerName.attributes">
+        <ref name="ish-atts.registerName" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerName.element">
+        <element name="registerName" dita:longName="Register Name">
+          <a:documentation>&lt;registerName> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerName.attlist" />
+          <ref name="registerName.content" />
+        </element>
+      </define>
+      <define name="registerName.attlist" combine="interleave">
+        <ref name="registerName.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Name More </a:documentation>
+      <define name="registerNameMore.content">
+        <ref name="registerNameFull" />
+        <optional>
+          <ref name="registerBriefDescription" />
+        </optional>
+      </define>
+      <define name="registerNameMore.attributes">
+        <ref name="ish-atts.registerNameMore" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerNameMore.element">
+        <element name="registerNameMore" dita:longName="Register Name More">
+          <a:documentation>&lt;registerNameMore> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerNameMore.attlist" />
+          <ref name="registerNameMore.content" />
+        </element>
+      </define>
+      <define name="registerNameMore.attlist" combine="interleave">
+        <ref name="registerNameMore.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Name Full </a:documentation>
+      <define name="registerNameFull.content">
+        <zeroOrMore>
+          <ref name="title.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="registerNameFull.attributes">
+        <ref name="ish-atts.registerNameFull" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerNameFull.element">
+        <element name="registerNameFull" dita:longName="Register Name Full">
+          <a:documentation>&lt;registerNameFull> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerNameFull.attlist" />
+          <ref name="registerNameFull.content" />
+        </element>
+      </define>
+      <define name="registerNameFull.attlist" combine="interleave">
+        <ref name="registerNameFull.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Brief Description </a:documentation>
+      <define name="registerBriefDescription.content">
+        <zeroOrMore>
+          <ref name="title.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="registerBriefDescription.attributes">
+        <ref name="ish-atts.registerBriefDescription" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerBriefDescription.element">
+        <element name="registerBriefDescription" dita:longName="Register Brief Description">
+          <a:documentation>&lt;registerBriefDescription> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerBriefDescription.attlist" />
+          <ref name="registerBriefDescription.content" />
+        </element>
+      </define>
+      <define name="registerBriefDescription.attlist" combine="interleave">
+        <ref name="registerBriefDescription.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Body </a:documentation>
+      <define name="registerBody.content">
+        <ref name="registerDescription" />
+        <ref name="registerProperties" />
+      </define>
+      <define name="registerBody.attributes">
+        <ref name="ish-atts.registerBody" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerBody.element">
+        <element name="registerBody" dita:longName="Register Body">
+          <a:documentation>&lt;registerBody> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerBody.attlist" />
+          <ref name="registerBody.content" />
+        </element>
+      </define>
+      <define name="registerBody.attlist" combine="interleave">
+        <ref name="registerBody.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Description </a:documentation>
+      <define name="registerDescription.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="sidsc.plain.text.cnt" />
+            <ref name="body.cnt" />
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="registerDescription.attributes">
+        <ref name="ish-atts.registerDescription" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerDescription.element">
+        <element name="registerDescription" dita:longName="Register Description">
+          <a:documentation>&lt;registerDescription> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerDescription.attlist" />
+          <ref name="registerDescription.content" />
+        </element>
+      </define>
+      <define name="registerDescription.attlist" combine="interleave">
+        <ref name="registerDescription.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Properties </a:documentation>
+      <define name="registerProperties.content">
+        <ref name="registerPropset" />
+      </define>
+      <define name="registerProperties.attributes">
+        <ref name="ish-atts.registerProperties" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerProperties.element">
+        <element name="registerProperties" dita:longName="Register Properties">
+          <a:documentation>&lt;registerProperties> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerProperties.attlist" />
+          <ref name="registerProperties.content" />
+        </element>
+      </define>
+      <define name="registerProperties.attlist" combine="interleave">
+        <ref name="registerProperties.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Properties Set </a:documentation>
+      <define name="registerPropset.content">
+        <optional>
+          <ref name="registerBitsInLau" />
+        </optional>
+        <ref name="addressOffset" />
+        <ref name="registerSize" />
+        <optional>
+          <ref name="registerAccess" />
+        </optional>
+        <optional>
+          <ref name="registerResetValue" />
+        </optional>
+        <ref name="bitOrder" />
+        <optional>
+          <ref name="resetTrig" />
+        </optional>
+        <optional>
+          <ref name="dimension.element" />
+        </optional>
+      </define>
+      <define name="registerPropset.attributes">
+        <ref name="ish-atts.registerPropset" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerPropset.element">
+        <element name="registerPropset" dita:longName="Register Properties Set">
+          <a:documentation>&lt;registerPropset> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerPropset.attlist" />
+          <ref name="registerPropset.content" />
+        </element>
+      </define>
+      <define name="registerPropset.attlist" combine="interleave">
+        <ref name="registerPropset.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Bits In Least-accessible Unit </a:documentation>
+      <define name="registerBitsInLau.content">
+        <zeroOrMore>
+          <ref name="sidsc.registerBitsInLau.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="registerBitsInLau.attributes">
+        <ref name="ish-atts.registerBitsInLau" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerBitsInLau.element">
+        <element name="registerBitsInLau" dita:longName="Register Bits In Least-accessible Unit">
+          <a:documentation>&lt;registerBitsInLau> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerBitsInLau.attlist" />
+          <ref name="registerBitsInLau.content" />
+        </element>
+      </define>
+      <define name="registerBitsInLau.attlist" combine="interleave">
+        <ref name="registerBitsInLau.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Address Offset </a:documentation>
+      <define name="addressOffset.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="addressOffset.attributes">
+        <ref name="ish-atts.addressOffset" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="addressOffset.element">
+        <element name="addressOffset" dita:longName="Address Offset">
+          <a:documentation>&lt;addressOffset> element. Category: SISDC Register elements</a:documentation>
+          <ref name="addressOffset.attlist" />
+          <ref name="addressOffset.content" />
+        </element>
+      </define>
+      <define name="addressOffset.attlist" combine="interleave">
+        <ref name="addressOffset.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Size </a:documentation>
+      <define name="registerSize.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="registerSize.attributes">
+        <ref name="ish-atts.registerSize" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerSize.element">
+        <element name="registerSize" dita:longName="Register Size">
+          <a:documentation>&lt;registerSize> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerSize.attlist" />
+          <ref name="registerSize.content" />
+        </element>
+      </define>
+      <define name="registerSize.attlist" combine="interleave">
+        <ref name="registerSize.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Access </a:documentation>
+      <define name="registerAccess.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="registerAccess.attributes">
+        <ref name="ish-atts.registerAccess" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerAccess.element">
+        <element name="registerAccess" dita:longName="Register Access">
+          <a:documentation>&lt;registerAccess> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerAccess.attlist" />
+          <ref name="registerAccess.content" />
+        </element>
+      </define>
+      <define name="registerAccess.attlist" combine="interleave">
+        <ref name="registerAccess.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Register Reset Value </a:documentation>
+      <define name="registerResetValue.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="registerResetValue.attributes">
+        <ref name="ish-atts.registerResetValue" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="registerResetValue.element">
+        <element name="registerResetValue" dita:longName="Register Reset Value">
+          <a:documentation>&lt;registerResetValue> element. Category: SISDC Register elements</a:documentation>
+          <ref name="registerResetValue.attlist" />
+          <ref name="registerResetValue.content" />
+        </element>
+      </define>
+      <define name="registerResetValue.attlist" combine="interleave">
+        <ref name="registerResetValue.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Order </a:documentation>
+      <define name="bitOrder.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="bitOrder.attributes">
+        <ref name="ish-atts.bitOrder" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitOrder.element">
+        <element name="bitOrder" dita:longName="Bit Order">
+          <a:documentation>&lt;bitOrder> element. Category: SISDC Register elements</a:documentation>
+          <ref name="bitOrder.attlist" />
+          <ref name="bitOrder.content" />
+        </element>
+      </define>
+      <define name="bitOrder.attlist" combine="interleave">
+        <ref name="bitOrder.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Reset Trigger </a:documentation>
+      <define name="resetTrig.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="resetTrig.attributes">
+        <ref name="ish-atts.resetTrig" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="resetTrig.element">
+        <element name="resetTrig" dita:longName="Reset Trigger">
+          <a:documentation>&lt;resetTrig> element. Category: SISDC Register elements</a:documentation>
+          <ref name="resetTrig.attlist" />
+          <ref name="resetTrig.content" />
+        </element>
+      </define>
+      <define name="resetTrig.attlist" combine="interleave">
+        <ref name="resetTrig.attributes" />
+      </define>
+    </div>
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="register.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic reference/reference sidsc-register/register "/>
+      </optional>
+    </define>
+    <define name="registerName.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title reference/title sidsc-register/registerName "/>
+      </optional>
+    </define>
+    <define name="registerNameMore.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/abstract reference/abstract sidsc-register/registerNameMore "/>
+      </optional>
+    </define>
+    <define name="registerBody.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body reference/refbody sidsc-register/registerBody "/>
+      </optional>
+    </define>
+    <define name="registerNameFull.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/shortdesc reference/shortdesc sidsc-register/registerNameFull "/>
+      </optional>
+    </define>
+    <define name="registerBitsInLau.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-register/registerBitsInLau "/>
+      </optional>
+    </define>
+    <define name="registerBriefDescription.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/p reference/p sidsc-register/registerBriefDescription "/>
+      </optional>
+    </define>
+    <define name="registerDescription.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section reference/section sidsc-register/registerDescription "/>
+      </optional>
+    </define>
+    <define name="registerProperties.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable dataTableDomain/dataTable sidsc-register/registerProperties "/>
+      </optional>
+    </define>
+    <define name="registerPropset.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow dataTableDomain/dataRow sidsc-register/registerPropset "/>
+      </optional>
+    </define>
+    <define name="addressOffset.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-register/addressOffset "/>
+      </optional>
+    </define>
+    <define name="registerSize.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-register/registerSize "/>
+      </optional>
+    </define>
+    <define name="registerAccess.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-register/registerAccess "/>
+      </optional>
+    </define>
+    <define name="registerResetValue.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-register/registerResetValue "/>
+      </optional>
+    </define>
+    <define name="bitOrder.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-register/bitOrder "/>
+      </optional>
+    </define>
+    <define name="resetTrig.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-register/resetTrig "/>
+      </optional>
+    </define>
+  </div>
+</grammar>

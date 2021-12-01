@@ -1,0 +1,28 @@
+<!ENTITY % pmc_switch-props-d-attribute 
+   "pmc_switch 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY pmc_switch-props-d-att
+  "a(props  pmc_switch)"
+>
+
+
+<!ENTITY %  pmc_package-props-d-attribute 
+   " pmc_package 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  pmc_package-props-d-att
+  "a(props   pmc_package)">
+
+
+
+  
+ <!ENTITY %  pmc_phy-props-d-attribute 
+   " pmc_phy 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  pmc_phy-props-d-att
+  "a(props   pmc_phy)">  

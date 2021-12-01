@@ -1,0 +1,9 @@
+<!ENTITY % firmware-d-reg-references "reg-references" >
+
+<!ENTITY % firmware-d-registers "registers" >
+
+<!ENTITY  firmware-d-att  "(topic firmware-d)" >
+
+
+
+

@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://relaxng.org/ns/structure/1.0" 
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA SIDSC Bit Field</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    DITA SIDSC Bit Field            
+ VERSION:   1.3                                              
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Bit Field//EN"
+      Delivered as file "sidsc-bitField.mod"               
+
+=============================================================
+
+Copyright OASIS 2009
+Author: Seth Park
+ 
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>bitField</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver" /> SIDSC Bit Field//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver" /> SIDSC Bit Field//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:sidsc-bitFieldMod.xsd<var presep=":" name="ditaver" /></xsdMod>
+        <xsdGrp>urn:atmel:names:tc:dita:xsd:sidsc-bitFieldGrp.xsd<var presep=":" name="ditaver" /></xsdGrp>
+        <rncMod>urn:atmel:names:tc:dita:rnc:sidsc-bitFieldMod.rnc<var presep=":" name="ditaver" /></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:sidsc-bitFieldMod.rng<var presep=":" name="ditaver" /></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic reference sidsc-bitField)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+    <define name="sidsc-bitField-info-types">
+      <ref name="info-types" />
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="bitField">
+      <ref name="bitField.element" />
+    </define>
+    <define name="bitFieldName">
+      <ref name="bitFieldName.element" />
+    </define>
+    <define name="bitFieldBriefDescription">
+      <ref name="bitFieldBriefDescription.element" />
+    </define>
+    <define name="bitFieldDescription">
+      <ref name="bitFieldDescription.element" />
+    </define>
+    <define name="bitFieldProperties">
+      <ref name="bitFieldProperties.element" />
+    </define>
+    <define name="bitFieldPropset">
+      <ref name="bitFieldPropset.element" />
+    </define>
+    <define name="bitFieldBody">
+      <ref name="bitFieldBody.element" />
+    </define>
+    <define name="bitNumbers">
+      <ref name="bitNumbers.element" />
+    </define>
+    <define name="bitWidth">
+      <ref name="bitWidth.element" />
+    </define>
+    <define name="bitOffset">
+      <ref name="bitOffset.element" />
+    </define>
+    <define name="bitFieldAccess">
+      <ref name="bitFieldAccess.element" />
+    </define>
+    <define name="bitFieldRadix">
+      <ref name="bitFieldRadix.element" />
+    </define>
+    <define name="bitFieldReset">
+      <ref name="bitFieldReset.element" />
+    </define>
+    <define name="bitFieldResetValue">
+      <ref name="bitFieldResetValue.element" />
+    </define>
+    <define name="bitFieldResetTrig">
+      <ref name="bitFieldResetTrig.element" />
+    </define>
+    <define name="bitFieldResetValueSource">
+      <ref name="bitFieldResetValueSource.element" />
+    </define>
+    <define name="bitFieldValues">
+      <ref name="bitFieldValues.element" />
+    </define>
+    <define name="bitFieldValueGroup">
+      <ref name="bitFieldValueGroup.element" />
+    </define>
+    <define name="bitFieldValue">
+      <ref name="bitFieldValue.element" />
+    </define>
+    <define name="bitFieldValueName">
+      <ref name="bitFieldValueName.element" />
+    </define>
+    <define name="bitFieldValueDescription">
+      <ref name="bitFieldValueDescription.element" />
+    </define>
+
+  </div>
+
+  <div>
+    <a:documentation>general purpose content models</a:documentation>
+    <define name="dataPhrase.cnt">
+      <choice>
+        <text />
+        <ref name="ph.element" />
+      </choice>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>allow to constraint ish attributes</a:documentation>
+    
+    <define name="ish-atts.bitFieldBriefDescription">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldName">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldDescription">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldProperties">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldPropset">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldBody">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitNumbers">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitWidth">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitOffset">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldAccess">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldRadix">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldReset">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldResetValue">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldResetTrig">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldResetValueSource">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldValues">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldValueGroup">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldValue">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldValueName">
+      <empty/>
+    </define>
+    <define name="ish-atts.bitFieldValueDescription">
+      <empty/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+   
+    <div>
+      <a:documentation> LONG NAME: Bit Field </a:documentation>
+      <define name="bitField.content">
+        <ref name="bitFieldName" />
+        <ref name="bitFieldBriefDescription" />
+        <ref name="bitFieldBody" />
+        <zeroOrMore>
+          <ref name="sidsc-bitField-info-types" />
+        </zeroOrMore>
+      </define>
+
+      <define name="bitField.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitField.element">
+        <element name="bitField" dita:longName="Bit Field">
+          <a:documentation>The &lt;bitField> element is the top-level element for a SIDSC bitField topic. Category: SIDSC Bit Field elements</a:documentation>
+          <ref name="bitField.attlist" />
+          <ref name="bitField.content" />
+        </element>
+      </define>
+      <define name="bitField.attlist" combine="interleave">
+        <ref name="bitField.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="bitField.element" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Name </a:documentation>
+      <define name="bitFieldName.content">
+        <zeroOrMore>
+          <ref name="title.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldName.attributes">
+        <ref name="ish-atts.bitFieldName" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldName.element">
+        <element name="bitFieldName" dita:longName="Bit Field Name">
+          <a:documentation>&lt;bitFieldName> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldName.attlist" />
+          <ref name="bitFieldName.content" />
+        </element>
+      </define>
+      <define name="bitFieldName.attlist" combine="interleave">
+        <ref name="bitFieldName.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Brief Description </a:documentation>
+      <define name="bitFieldBriefDescription.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dataPhrase.cnt" />
+            <ref name="body.cnt" />
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldBriefDescription.attributes">
+        <ref name="ish-atts.bitFieldBriefDescription" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldBriefDescription.element">
+        <element name="bitFieldBriefDescription" dita:longName="Bit Field Brief Description">
+          <a:documentation>&lt;bitFieldBriefDescription> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldBriefDescription.attlist" />
+          <ref name="bitFieldBriefDescription.content" />
+        </element>
+      </define>
+      <define name="bitFieldBriefDescription.attlist" combine="interleave">
+        <ref name="bitFieldBriefDescription.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Description </a:documentation>
+      <define name="bitFieldDescription.content">
+        <zeroOrMore>
+          <ref name="section.notitle.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldDescription.attributes">
+        <ref name="ish-atts.bitFieldDescription" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldDescription.element">
+        <element name="bitFieldDescription" dita:longName="Bit Field Description">
+          <a:documentation>&lt;bitFieldDescription> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldDescription.attlist" />
+          <ref name="bitFieldDescription.content" />
+        </element>
+      </define>
+      <define name="bitFieldDescription.attlist" combine="interleave">
+        <ref name="bitFieldDescription.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Properties </a:documentation>
+      <define name="bitFieldProperties.content">
+        <ref name="bitFieldPropset" />
+      </define>
+      <define name="bitFieldProperties.attributes">
+        <ref name="ish-atts.bitFieldProperties" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldProperties.element">
+        <element name="bitFieldProperties" dita:longName="Bit Field Properties">
+          <a:documentation>&lt;bitFieldProperties> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldProperties.attlist" />
+          <ref name="bitFieldProperties.content" />
+        </element>
+      </define>
+      <define name="bitFieldProperties.attlist" combine="interleave">
+        <ref name="bitFieldProperties.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Properties Set </a:documentation>
+      <define name="bitFieldPropset.content">
+        <optional>
+          <ref name="bitNumbers" />
+        </optional>
+        <ref name="bitWidth" />
+        <optional>
+          <ref name="bitOffset" />
+        </optional>
+        <optional>
+          <ref name="bitFieldAccess" />
+        </optional>
+        <optional>
+          <ref name="bitFieldRadix" />
+        </optional>
+        <zeroOrMore>
+          <ref name="bitFieldReset" />
+        </zeroOrMore>
+        <optional>
+          <ref name="dimension.element" />
+        </optional>
+      </define>
+      <define name="bitFieldPropset.attributes">
+        <ref name="ish-atts.bitFieldPropset" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldPropset.element">
+        <element name="bitFieldPropset" dita:longName="Bit Field Properties Set">
+          <a:documentation>&lt;bitFieldPropset> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldPropset.attlist" />
+          <ref name="bitFieldPropset.content" />
+        </element>
+      </define>
+      <define name="bitFieldPropset.attlist" combine="interleave">
+        <ref name="bitFieldPropset.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Body </a:documentation>
+      <define name="bitFieldBody.content">
+        <ref name="bitFieldDescription" />
+        <ref name="bitFieldProperties" />
+        <optional>
+          <ref name="bitFieldValues" />
+        </optional>
+      </define>
+      <define name="bitFieldBody.attributes">
+        <ref name="ish-atts.bitFieldBody" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldBody.element">
+        <element name="bitFieldBody" dita:longName="Bit Field Body">
+          <a:documentation>&lt;bitFieldBody> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldBody.attlist" />
+          <ref name="bitFieldBody.content" />
+        </element>
+      </define>
+      <define name="bitFieldBody.attlist" combine="interleave">
+        <ref name="bitFieldBody.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Numbers </a:documentation>
+      <define name="bitNumbers.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitNumbers.attributes">
+        <ref name="ish-atts.bitNumbers" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitNumbers.element">
+        <element name="bitNumbers" dita:longName="Bit Numbers">
+          <a:documentation>&lt;bitNumbers> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitNumbers.attlist" />
+          <ref name="bitNumbers.content" />
+        </element>
+      </define>
+      <define name="bitNumbers.attlist" combine="interleave">
+        <ref name="bitNumbers.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Width </a:documentation>
+      <define name="bitWidth.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitWidth.attributes">
+        <ref name="ish-atts.bitWidth" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitWidth.element">
+        <element name="bitWidth" dita:longName="Bit Width">
+          <a:documentation>&lt;bitWidth> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitWidth.attlist" />
+          <ref name="bitWidth.content" />
+        </element>
+      </define>
+      <define name="bitWidth.attlist" combine="interleave">
+        <ref name="bitWidth.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Offset </a:documentation>
+      <define name="bitOffset.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitOffset.attributes">
+        <ref name="ish-atts.bitOffset" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitOffset.element">
+        <element name="bitOffset" dita:longName="Bit Offset">
+          <a:documentation>&lt;bitOffset> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitOffset.attlist" />
+          <ref name="bitOffset.content" />
+        </element>
+      </define>
+      <define name="bitOffset.attlist" combine="interleave">
+        <ref name="bitOffset.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Access </a:documentation>
+      <define name="bitFieldAccess.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldAccess.attributes">
+        <ref name="ish-atts.bitFieldAccess" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitFieldAccess.element">
+        <element name="bitFieldAccess" dita:longName="Bit Field Access">
+          <a:documentation>&lt;bitFieldAccess> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldAccess.attlist" />
+          <ref name="bitFieldAccess.content" />
+        </element>
+      </define>
+      <define name="bitFieldAccess.attlist" combine="interleave">
+        <ref name="bitFieldAccess.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Radix </a:documentation>
+      <define name="bitFieldRadix.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldRadix.attributes">
+        <ref name="ish-atts.bitFieldRadix" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitFieldRadix.element">
+        <element name="bitFieldRadix" dita:longName="Bit Field Radix">
+          <a:documentation>&lt;bitFieldRadix> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldRadix.attlist" />
+          <ref name="bitFieldRadix.content" />
+        </element>
+      </define>
+      <define name="bitFieldRadix.attlist" combine="interleave">
+        <ref name="bitFieldRadix.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Reset </a:documentation>
+      <define name="bitFieldReset.content">
+        <choice>
+          <ref name="bitFieldResetValue" />
+          <ref name="bitFieldResetValueSource" />
+        </choice>
+        <optional>
+          <ref name="bitFieldResetTrig" />
+        </optional>
+      </define>
+      <define name="bitFieldReset.attributes">
+        <ref name="ish-atts.bitFieldReset" />
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldReset.element">
+        <element name="bitFieldReset" dita:longName="Bit Field Reset">
+          <a:documentation>&lt;bitFieldReset> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldReset.attlist" />
+          <ref name="bitFieldReset.content" />
+        </element>
+      </define>
+      <define name="bitFieldReset.attlist" combine="interleave">
+        <ref name="bitFieldReset.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Reset Value </a:documentation>
+      <define name="bitFieldResetValue.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldResetValue.attributes">
+        <ref name="ish-atts.bitFieldResetValue" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitFieldResetValue.element">
+        <element name="bitFieldResetValue" dita:longName="Bit Field Reset Value">
+          <a:documentation>&lt;bitFieldResetValue> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldResetValue.attlist" />
+          <ref name="bitFieldResetValue.content" />
+        </element>
+      </define>
+      <define name="bitFieldResetValue.attlist" combine="interleave">
+        <ref name="bitFieldResetValue.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Reset Trigger </a:documentation>
+      <define name="bitFieldResetTrig.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldResetTrig.attributes">
+        <ref name="ish-atts.bitFieldResetTrig" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitFieldResetTrig.element">
+        <element name="bitFieldResetTrig" dita:longName="Bit Field Reset Trigger">
+          <a:documentation>&lt;bitFieldResetTrig> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldResetTrig.attlist" />
+          <ref name="bitFieldResetTrig.content" />
+        </element>
+      </define>
+      <define name="bitFieldResetTrig.attlist" combine="interleave">
+        <ref name="bitFieldResetTrig.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Reset Value Source </a:documentation>
+      <define name="bitFieldResetValueSource.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldResetValueSource.attributes">
+        <ref name="ish-atts.bitFieldResetValueSource" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitFieldResetValueSource.element">
+        <element name="bitFieldResetValueSource" dita:longName="Bit Field Reset Value Source">
+          <a:documentation>&lt;bitFieldResetValueSource> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldResetValueSource.attlist" />
+          <ref name="bitFieldResetValueSource.content" />
+        </element>
+      </define>
+      <define name="bitFieldResetValueSource.attlist" combine="interleave">
+        <ref name="bitFieldResetValueSource.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Values </a:documentation>
+      <define name="bitFieldValues.content">
+        <oneOrMore>
+          <ref name="bitFieldValueGroup" />
+        </oneOrMore>
+      </define>
+      <define name="bitFieldValues.attributes">
+        <ref name="ish-atts.bitFieldValues" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldValues.element">
+        <element name="bitFieldValues" dita:longName="Bit Field Values">
+          <a:documentation>&lt;bitFieldValues> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldValues.attlist" />
+          <ref name="bitFieldValues.content" />
+        </element>
+      </define>
+      <define name="bitFieldValues.attlist" combine="interleave">
+        <ref name="bitFieldValues.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Value Group </a:documentation>
+      <define name="bitFieldValueGroup.content">
+        <optional>
+          <ref name="bitFieldValue" />
+        </optional>
+        <optional>
+          <ref name="bitFieldValueName" />
+        </optional>
+        <optional>
+          <ref name="bitFieldValueDescription" />
+        </optional>
+      </define>
+      <define name="bitFieldValueGroup.attributes">
+        <ref name="ish-atts.bitFieldValueGroup" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="bitFieldValueGroup.element">
+        <element name="bitFieldValueGroup" dita:longName="Bit Field Value Group">
+          <a:documentation>&lt;bitFieldValueGroup> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldValueGroup.attlist" />
+          <ref name="bitFieldValueGroup.content" />
+        </element>
+      </define>
+      <define name="bitFieldValueGroup.attlist" combine="interleave">
+        <ref name="bitFieldValueGroup.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Value </a:documentation>
+      <define name="bitFieldValue.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldValue.attributes">
+        <ref name="ish-atts.bitFieldValue" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitFieldValue.element">
+        <element name="bitFieldValue" dita:longName="Bit Field Value">
+          <a:documentation>&lt;bitFieldValue> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldValue.attlist" />
+          <ref name="bitFieldValue.content" />
+        </element>
+      </define>
+      <define name="bitFieldValue.attlist" combine="interleave">
+        <ref name="bitFieldValue.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Value Name </a:documentation>
+      <define name="bitFieldValueName.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldValueName.attributes">
+        <ref name="ish-atts.bitFieldValueName" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitFieldValueName.element">
+        <element name="bitFieldValueName" dita:longName="Bit Field Value Name">
+          <a:documentation>&lt;bitFieldValueName> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldValueName.attlist" />
+          <ref name="bitFieldValueName.content" />
+        </element>
+      </define>
+      <define name="bitFieldValueName.attlist" combine="interleave">
+        <ref name="bitFieldValueName.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Bit Field Value Description </a:documentation>
+      <define name="bitFieldValueDescription.content">
+        <zeroOrMore>
+          <ref name="tblcell.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="bitFieldValueDescription.attributes">
+        <ref name="ish-atts.bitFieldValueDescription" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+      </define>
+      <define name="bitFieldValueDescription.element">
+        <element name="bitFieldValueDescription" dita:longName="Bit Field Value Description">
+          <a:documentation>&lt;bitFieldValueDescription> element. Category: SISDC Bit Field elements</a:documentation>
+          <ref name="bitFieldValueDescription.attlist" />
+          <ref name="bitFieldValueDescription.content" />
+        </element>
+      </define>
+      <define name="bitFieldValueDescription.attlist" combine="interleave">
+        <ref name="bitFieldValueDescription.attributes" />
+      </define>
+    </div>
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="bitField.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic reference/reference sidsc-bitField/bitField " />
+      </optional>
+    </define>
+    <define name="bitFieldName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title reference/title sidsc-bitField/bitFieldName " />
+      </optional>
+    </define>
+    <define name="bitFieldBriefDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/shortdesc reference/shortdesc sidsc-bitField/bitFieldBriefDescription " />
+      </optional>
+    </define>
+    <define name="bitFieldDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section reference/section sidsc-bitField/bitFieldDescription " />
+      </optional>
+    </define>
+    <define name="bitFieldProperties.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable dataTableDomain/dataTable sidsc-bitField/bitFieldProperties " />
+      </optional>
+    </define>
+    <define name="bitFieldPropset.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow dataTableDomain/dataRow sidsc-bitField/bitFieldPropset " />
+      </optional>
+    </define>
+    <define name="bitFieldBody.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body reference/refbody sidsc-bitField/bitFieldBody " />
+      </optional>
+    </define>
+    <define name="bitNumbers.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitNumbers " />
+      </optional>
+    </define>
+    <define name="bitWidth.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitWidth " />
+      </optional>
+    </define>
+    <define name="bitOffset.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitOffset " />
+      </optional>
+    </define>
+    <define name="bitFieldAccess.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldAccess " />
+      </optional>
+    </define>
+    <define name="bitFieldRadix.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldRadix " />
+      </optional>
+    </define>
+    <define name="bitFieldReset.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldReset " />
+      </optional>
+    </define>
+    <define name="bitFieldResetValue.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph dataTableDomain/dataPhrase sidsc-bitField/bitFieldResetValue " />
+      </optional>
+    </define>
+    <define name="bitFieldResetTrig.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph dataTableDomain/dataPhrase sidsc-bitField/bitFieldResetTrig " />
+      </optional>
+    </define>
+    <define name="bitFieldResetValueSource.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph dataTableDomain/dataPhrase sidsc-bitField/bitFieldResetValueSource " />
+      </optional>
+    </define>
+    <define name="bitFieldValues.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable dataTableDomain/dataTable sidsc-bitField/bitFieldValues " />
+      </optional>
+    </define>
+    <define name="bitFieldValueGroup.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow dataTableDomain/dataRow sidsc-bitField/bitFieldGroup " />
+      </optional>
+    </define>
+    <define name="bitFieldValue.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldValue " />
+      </optional>
+    </define>
+    <define name="bitFieldValueName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldValueName " />
+      </optional>
+    </define>
+    <define name="bitFieldValueDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldValueDescription " />
+      </optional>
+    </define>
+  </div>
+</grammar>

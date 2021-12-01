@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+    <system systemId="http://docs.oasis-open.org/dita/dtd/bookmap.dtd" uri="dummy.dtd"/>   
+    <system systemId="/SysConfig/dita/bookmap.dtd" uri="dummy.dtd"/> 
+    <system systemId="/SysSchema/dita/bookmap.dtd" uri="dummy.dtd"/>    
+    <system systemId="-//OASIS//DTD DITA Concept//EN" uri="dummy.dtd"/>
+    <system systemId="-//OASIS//DTD DITA Task//EN" uri="dummy.dtd"/>
+    <system systemId="-//OASIS//DTD DITA Reference//EN" uri="dummy.dtd"/> 
+    <system systemId="-//OASIS//DTD DITA 1.2 Topic//EN" uri="dummy.dtd"/>    
+    <system systemId="http://docs.oasis-open.org/dita/dtd/bookmap.dtd" uri="dummy.dtd"/>    
+ 
+    <public publicId="http://docs.oasis-open.org/dita/dtd/bookmap.dtd" uri="dummy.dtd"/>    
+    <public publicId="/SysSchema/dita/bookmap.dtd" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Concept//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Task//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Reference//EN" uri="dummy.dtd"/>      
+    <public publicId="http://docs.oasis-open.org/dita/dtd/bookmap.dtd" uri="dummy.dtd"/>
+    <system systemId="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" uri="xhtml1-strict.dtd"/>
+
+    <public publicId="-//OASIS//DTD DITA Topic//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA Task//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA Concept//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA Reference//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA Bookmap//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA Map//EN" uri="dummy.dtd"/> 
+        
+    <public publicId="-//OASIS//DTD DITA 1.2 Topic//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.2 Task//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.2 Concept//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.2 Reference//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.2 Bookmap//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.2 Map//EN" uri="dummy.dtd"/> 
+    
+    <public publicId="-//OASIS//DTD DITA 1.1 Topic//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Reference//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Task//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Concept//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Reference//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Bookmap//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Map//EN" uri="dummy.dtd"/> 
+    
+    <system systemId="/SysSchema/dita/topic.dtd" uri="dummy.dtd"/> 
+    <system systemId="/SysSchema/dita/task.dtd" uri="dummy.dtd"/>
+    <system systemId="/SysSchema/dita/concept.dtd" uri="dummy.dtd"/>
+    <system systemId="/SysSchema/dita/reference.dtd" uri="dummy.dtd"/>
+    <system systemId="/SysSchema/dita/bookmap.dtd" uri="dummy.dtd"/> 
+    <system systemId="/SysSchema/dita/map.dtd" uri="dummy.dtd"/>  
+    
+</catalog>

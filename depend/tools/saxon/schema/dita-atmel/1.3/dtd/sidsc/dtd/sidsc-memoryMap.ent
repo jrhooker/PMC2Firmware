@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    DITA SIDSC Memory Map                             -->
+<!--  VERSION:   1.3                                               -->
+<!--  DATE:      March 2019                                        -->
+<!--                                                               -->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an  -->
+<!--       appropriate system identifier                           -->
+<!-- PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Memory Map//EN"         -->
+<!--       Delivered as file "sidsc-memoryMap.mod"                 -->
+<!-- ============================================================= -->
+<!-- Copyright OASIS 2009                                          -->
+<!-- Author: Seth Park                                             -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY memoryMap-att
+  "(topic reference sidsc-memoryMap)"
+>
+
+<!-- ================ End DITA SIDSC Memory Map ================== -->
+ 

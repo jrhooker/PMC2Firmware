@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA SIDSC Component</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    DITA SIDSC Component 
+ VERSION:   1.3                                              
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Component//EN"
+      Delivered as file "sidsc-component.mod"   
+
+=============================================================
+
+Copyright OASIS 2009
+Author: Seth Park
+ 
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>sidsc-component</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver"/> SIDSC Component//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver"/> SIDSC Component//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:sidsc-componentMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <xsdGrp>urn:atmel:names:tc:dita:xsd:sidsc-componentGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <rncMod>urn:atmel:names:tc:dita:rnc:sidsc-componentMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:sidsc-componentMod.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic reference sidsc-component)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+    <define name="sidsc-component-info-types">
+      <ref name="info-types"/>
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    
+    <define name="sidsc-component">
+      <ref name="sidsc-component.element"/>
+    </define>
+    <define name="componentName">
+      <ref name="componentName.element"/>
+    </define>
+    <define name="componentBriefDescription">
+      <ref name="componentBriefDescription.element"/>
+    </define>
+    <define name="componentBody">
+      <ref name="componentBody.element"/>
+    </define>
+    <define name="componentDescription">
+      <ref name="componentDescription.element"/>
+    </define>
+    <define name="unitAddress">
+      <ref name="unitAddress.element"/>
+    </define>
+    <define name="componentInstanceVariables">
+      <ref name="componentInstanceVariables.element"/>
+    </define>
+    <define name="componentData">
+      <ref name="componentData.element"/>
+    </define>
+    <define name="componentDataKey">
+      <ref name="componentDataKey.element"/>
+    </define>
+    <define name="componentDataValue">
+      <ref name="componentDataValue.element"/>
+    </define>
+    <define name="instanceParameters">
+      <ref name="instanceParameters.element"/>
+    </define>
+  </div>
+
+  <div>
+    <a:documentation>GENERAL DECLARATION FOR PLAIN TEXT CONTENT</a:documentation>
+    <define name="sidsc.plain.text.cnt">
+      <choice>
+        <text/>
+        <ref name="text"/>
+        <ref name="ph.element"/>
+      </choice>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation> LONG NAME: SIDSC Component </a:documentation>
+      <define name="sidsc-component.content">
+        <ref name="componentName" />
+        <zeroOrMore>
+          <ref name="data" />
+        </zeroOrMore>
+        <ref name="componentBriefDescription" />
+        <ref name="componentBody" />
+        <zeroOrMore>
+          <ref name="sidsc-component-info-types" />
+        </zeroOrMore>
+      </define>
+
+      <define name="sidsc-component.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="sidsc-component.element">
+        <element name="sidsc-component" dita:longName="SIDSC Component">
+          <a:documentation>The &lt;sidsc-component> element is the top-level element for a SIDSC Component topic. Category: SIDSC Component elements</a:documentation>
+          <ref name="sidsc-component.attlist" />
+          <ref name="sidsc-component.content" />
+        </element>
+      </define>
+      <define name="sidsc-component.attlist" combine="interleave">
+        <ref name="sidsc-component.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="sidsc-component.element" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Component Name </a:documentation>
+      <define name="componentName.content">
+        <zeroOrMore>
+          <ref name="title.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="componentName.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="componentName.element">
+        <element name="componentName" dita:longName="Component Name">
+          <a:documentation>&lt;componentName> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="componentName.attlist"/>
+          <ref name="componentName.content"/>
+        </element>
+      </define>
+      <define name="componentName.attlist" combine="interleave">
+        <ref name="componentName.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Component Brief Description </a:documentation>
+      <define name="componentBriefDescription.content">
+        <zeroOrMore>
+          <ref name="title.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="componentBriefDescription.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="componentBriefDescription.element">
+        <element name="componentBriefDescription" dita:longName="Component Brief Description">
+          <a:documentation>&lt;componentBriefDescription> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="componentBriefDescription.attlist"/>
+          <ref name="componentBriefDescription.content"/>
+        </element>
+      </define>
+      <define name="componentBriefDescription.attlist" combine="interleave">
+        <ref name="componentBriefDescription.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Component Body </a:documentation>
+      <define name="componentBody.content">
+        <zeroOrMore>
+          <ref name="body.cnt"/>
+        </zeroOrMore>
+        <ref name="componentDescription"/>
+        <optional>
+          <ref name="unitAddress"/>
+        </optional>
+        <optional>
+          <ref name="componentInstanceVariables"/>
+        </optional>       
+      </define>
+      <define name="componentBody.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="componentBody.element">
+        <element name="componentBody" dita:longName="Component Body">
+          <a:documentation>&lt;componentBody> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="componentBody.attlist"/>
+          <ref name="componentBody.content"/>
+        </element>
+      </define>
+      <define name="componentBody.attlist" combine="interleave">
+        <ref name="componentBody.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Component Description </a:documentation>
+      <define name="componentDescription.content">
+        <zeroOrMore>
+          <ref name="section.notitle.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="componentDescription.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="componentDescription.element">
+        <element name="componentDescription" dita:longName="Component Description">
+          <a:documentation>&lt;componentDescription> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="componentDescription.attlist"/>
+          <ref name="componentDescription.content"/>
+        </element>
+      </define>
+      <define name="componentDescription.attlist" combine="interleave">
+        <ref name="componentDescription.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Unit Address </a:documentation>
+      <define name="unitAddress.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="unitAddress.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="unitAddress.element">
+        <element name="unitAddress" dita:longName="Unit Address">
+          <a:documentation>&lt;unitAddress> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="unitAddress.attlist"/>
+          <ref name="unitAddress.content"/>
+        </element>
+      </define>
+      <define name="unitAddress.attlist" combine="interleave">
+        <ref name="unitAddress.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Component Instance Variables </a:documentation>
+      <define name="componentInstanceVariables.content">
+        <zeroOrMore>
+          <ref name="componentData"/>
+        </zeroOrMore>
+      </define>
+      <define name="componentInstanceVariables.attributes">
+        <optional>
+          <attribute name="spectitle"/>
+        </optional>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="componentInstanceVariables.element">
+        <element name="componentInstanceVariables" dita:longName="Component Instance Variables">
+          <a:documentation>&lt;componentInstanceVariables> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="componentInstanceVariables.attlist"/>
+          <ref name="componentInstanceVariables.content"/>
+        </element>
+      </define>
+      <define name="componentInstanceVariables.attlist" combine="interleave">
+        <ref name="componentInstanceVariables.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Component Data </a:documentation>
+      <define name="componentData.content">
+        <zeroOrMore>
+          <choice>
+            <group>
+              <group>
+                <ref name="componentDataKey"/>
+              </group>
+              <group>
+                <ref name="componentDataValue"/>
+              </group>
+            </group>
+            <group>
+              <ref name="instanceParameters"/>
+            </group>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="componentData.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="componentData.element">
+        <element name="componentData" dita:longName="Component Data">
+          <a:documentation>&lt;componentData> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="componentData.attlist"/>
+          <ref name="componentData.content"/>
+        </element>
+      </define>
+      <define name="componentData.attlist" combine="interleave">
+        <ref name="componentData.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Component Data Key </a:documentation>
+      <define name="componentDataKey.content">
+        <zeroOrMore>
+          <ref name="term.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="componentDataKey.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="componentDataKey.element">
+        <element name="componentDataKey" dita:longName="Component Data Key">
+          <a:documentation>&lt;componentDataKey> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="componentDataKey.attlist"/>
+          <ref name="componentDataKey.content"/>
+        </element>
+      </define>
+      <define name="componentDataKey.attlist" combine="interleave">
+        <ref name="componentDataKey.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Component Data Value </a:documentation>
+      <define name="componentDataValue.content">
+        <zeroOrMore>
+          <ref name="defn.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="componentDataValue.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="componentDataValue.element">
+        <element name="componentDataValue" dita:longName="Component Data Value">
+          <a:documentation>&lt;componentDataValue> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="componentDataValue.attlist"/>
+          <ref name="componentDataValue.content"/>
+        </element>
+      </define>
+      <define name="componentDataValue.attlist" combine="interleave">
+        <ref name="componentDataValue.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Instance Parameters </a:documentation>
+      <define name="instanceParameters.content">
+        <zeroOrMore>
+          <ref name="ph"/>
+        </zeroOrMore>
+      </define>
+      <define name="instanceParameters.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="instanceParameters.element">
+        <element name="instanceParameters" dita:longName="Instance Parameters">
+          <a:documentation>&lt;instanceParameters> element. 
+            Category: SISDC Component elements</a:documentation>
+          <ref name="instanceParameters.attlist"/>
+          <ref name="instanceParameters.content"/>
+        </element>
+      </define>
+      <define name="instanceParameters.attlist" combine="interleave">
+        <ref name="instanceParameters.attributes"/>
+      </define>
+    </div>
+    
+  </div>
+  
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="sidsc-component.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic reference/reference sidsc-component/sidsc-component "/>
+      </optional>
+    </define>
+    <define name="componentName.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title reference/title sidsc-component/componentName "/>
+      </optional>
+    </define>
+    <define name="componentBriefDescription.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/shortdesc reference/shortdesc sidsc-component/componentBriefDescription "/>
+      </optional>
+    </define>
+    <define name="componentBody.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body reference/refbody sidsc-component/componentBody "/>
+      </optional>
+    </define>
+    <define name="componentDescription.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section reference/section sidsc-component/componentDescription "/>
+      </optional>
+    </define>
+    <define name="unitAddress.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/p reference/p sidsc-component/unitAddress "/>
+      </optional>
+    </define>
+    <define name="componentInstanceVariables.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable dataTableDomain/dataTable/componentInstanceVariables "/>
+      </optional>
+    </define>
+    <define name="componentData.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow dataTableDomain/dataRow sidsc-component/componentData "/>
+      </optional>
+    </define>
+    <define name="componentDataKey.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-component/componentDataKey "/>
+      </optional>
+    </define>
+    <define name="componentDataValue.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-component/componentDataValue "/>
+      </optional>
+    </define>
+    <define name="instanceParameters.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-component/instanceParameters "/>
+      </optional>
+    </define>
+  </div>
+</grammar>

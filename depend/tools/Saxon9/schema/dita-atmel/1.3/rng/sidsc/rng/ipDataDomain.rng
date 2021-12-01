@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns="http://relaxng.org/ns/structure/1.0">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA SIDSC IP Data Domain</moduleTitle>
+    <headerComment xml:space="preserve">
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    DITA SIDSC IP Data Domain      
+ VERSION:   1.3                                              
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA SIDSC IP Data Domain//EN"
+      Delivered as file "ipDataDomain.mod"  
+
+=============================================================
+
+Copyright OASIS 2009
+Author: Seth Park
+ 
+=============================================================
+</headerComment>
+    <moduleMetadata>
+      <moduleType>elementdomain</moduleType>
+      <moduleShortName>ipDataDomain-d</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver"/> SIDSC IP Data Domain//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver"/> SIDSC IP Data Domain//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:ipDataDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <rncMod>urn:atmel:names:tc:dita:rnc:ipDataDomain.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:ipDataDomain.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic ipDataDomain-d)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+    <define name="ipDataDomain-d-data">
+      <choice>
+        <ref name="ip-data.element"/>
+        <ref name="ip-name.element"/>
+        <ref name="ip-system-name.element"/>
+        <ref name="ip-system-uid.element"/>
+        <ref name="technology.element"/>
+        <ref name="ip-version.element"/>
+      </choice>
+    </define>
+
+    <define name="data" combine="choice">
+      <ref name="ipDataDomain-d-data"/>
+    </define>
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+
+    <define name="ip-data">
+      <ref name="ip-data.element"/>
+    </define>
+    <define name="ip-name">
+      <ref name="ip-name.element"/>
+    </define>
+    <define name="ip-system-name">
+      <ref name="ip-system-name.element"/>
+    </define>
+    <define name="ip-system-uid">
+      <ref name="ip-system-uid.element"/>
+    </define>
+    <define name="technology">
+      <ref name="technology.element"/>
+    </define>
+    <define name="ip-version">
+      <ref name="ip-version.element"/>
+    </define>
+  </div>
+
+  <div>
+    <a:documentation>GENERAL DECLARATION FOR PLAIN TEXT CONTENT</a:documentation>
+    <define name="sidsc.plain.text.cnt">
+      <choice>
+        <text/>
+        <ref name="text"/>
+        <ref name="ph.element"/>
+      </choice>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation> LONG NAME: IP Data </a:documentation>
+      <define name="ip-data.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="ip-data.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="ip-data.element">
+        <element name="ip-data" dita:longName="IP Data">
+          <a:documentation>&lt;ip-data> element. 
+            Category: SISDC IP Data elements</a:documentation>
+          <ref name="ip-data.attlist"/>
+          <ref name="ip-data.content"/>
+        </element>
+      </define>
+      <define name="ip-data.attlist" combine="interleave">
+        <ref name="ip-data.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: IP Name </a:documentation>
+      <define name="ip-name.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="ip-name.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="ip-name.element">
+        <element name="ip-name" dita:longName="IP Name">
+          <a:documentation>&lt;ip-name> element. 
+            Category: SISDC IP Data elements</a:documentation>
+          <ref name="ip-name.attlist"/>
+          <ref name="ip-name.content"/>
+        </element>
+      </define>
+      <define name="ip-name.attlist" combine="interleave">
+        <ref name="ip-name.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: IP System Name </a:documentation>
+      <define name="ip-system-name.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="ip-system-name.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="ip-system-name.element">
+        <element name="ip-system-name" dita:longName="IP System Name">
+          <a:documentation>&lt;ip-system-name> element. 
+            Category: SISDC IP Data elements</a:documentation>
+          <ref name="ip-system-name.attlist"/>
+          <ref name="ip-system-name.content"/>
+        </element>
+      </define>
+      <define name="ip-system-name.attlist" combine="interleave">
+        <ref name="ip-system-name.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: IP System UID </a:documentation>
+      <define name="ip-system-uid.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="ip-system-uid.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="ip-system-uid.element">
+        <element name="ip-system-uid" dita:longName="IP System UID">
+          <a:documentation>&lt;ip-system-uid> element. 
+            Category: SISDC IP Data elements</a:documentation>
+          <ref name="ip-system-uid.attlist"/>
+          <ref name="ip-system-uid.content"/>
+        </element>
+      </define>
+      <define name="ip-system-uid.attlist" combine="interleave">
+        <ref name="ip-system-uid.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Technology </a:documentation>
+      <define name="technology.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="technology.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="technology.element">
+        <element name="technology" dita:longName="Technology">
+          <a:documentation>&lt;technology> element. 
+            Category: SISDC IP Data elements</a:documentation>
+          <ref name="technology.attlist"/>
+          <ref name="technology.content"/>
+        </element>
+      </define>
+      <define name="technology.attlist" combine="interleave">
+        <ref name="technology.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: IP Version </a:documentation>
+      <define name="ip-version.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="ip-version.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="ip-version.element">
+        <element name="ip-version" dita:longName="IP Version">
+          <a:documentation>&lt;ip-version> element. 
+            Category: SISDC IP Data elements</a:documentation>
+          <ref name="ip-version.attlist"/>
+          <ref name="ip-version.content"/>
+        </element>
+      </define>
+      <define name="ip-version.attlist" combine="interleave">
+        <ref name="ip-version.attributes"/>
+      </define>
+    </div>
+    
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+    <define name="ip-data.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data  ipDataDomain/ip-data "/>
+      </optional>
+    </define>
+    <define name="ip-name.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data  ipDataDomain/ip-name "/>
+      </optional>
+    </define>
+    <define name="ip-system-name.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data ipDataDomain/ip-system-name "/>
+      </optional>
+    </define>
+    <define name="ip-system-uid.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data ipDataDomain/ip-system-name "/>
+      </optional>
+    </define>
+    <define name="technology.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data ipDataDomain/technology "/>
+      </optional>
+    </define>
+    <define name="ip-version.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data ipDataDomain/ip-version "/>
+      </optional>
+    </define>
+  
+  </div>
+</grammar>

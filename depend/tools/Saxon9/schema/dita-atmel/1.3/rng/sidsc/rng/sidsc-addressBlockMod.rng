@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA SIDSC Address Block</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    DITA SIDSC Address Block 
+ VERSION:   1.3                                              
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Address Block//EN"
+      Delivered as file "sidsc-addressBlock.mod"   
+
+=============================================================
+
+Copyright OASIS 2009
+Author: Seth Park
+ 
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>addressBlock</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver"/> SIDSC Address Block//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver"/> SIDSC Address Block//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:sidsc-addressBlockMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <xsdGrp>urn:atmel:names:tc:dita:xsd:sidsc-addressBlockGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <rncMod>urn:atmel:names:tc:dita:rnc:sidsc-addressBlockMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:sidsc-addressBlockMod.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic reference sidsc-addressBlock)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+    <define name="sidsc-addressBlock-info-types">
+      <ref name="info-types"/>
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="addressBlock">
+      <ref name="addressBlock.element"/>
+    </define>
+    <define name="addressBlockName">
+      <ref name="addressBlockName.element"/>
+    </define>
+    <define name="addressBlockBriefDescription">
+      <ref name="addressBlockBriefDescription.element"/>
+    </define>
+    <define name="addressBlockBody">
+      <ref name="addressBlockBody.element"/>
+    </define>
+    <define name="addressBlockDescription">
+      <ref name="addressBlockDescription.element"/>
+    </define>
+    <define name="addressBlockProperties">
+      <ref name="addressBlockProperties.element"/>
+    </define>
+    <define name="addressBlockPropset">
+      <ref name="addressBlockPropset.element"/>
+    </define>
+    <define name="baseAddress">
+      <ref name="baseAddress.element"/>
+    </define>
+    <define name="range">
+      <ref name="range.element"/>
+    </define>
+    <define name="width">
+      <ref name="width.element"/>
+    </define>
+    <define name="byteOrder">
+      <ref name="byteOrder.element"/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation> LONG NAME: Address Block </a:documentation>
+      <define name="addressBlock.content">
+        <ref name="addressBlockName" />
+        <ref name="addressBlockBriefDescription" />
+        <ref name="addressBlockBody" />
+        <zeroOrMore>
+          <ref name="sidsc-addressBlock-info-types" />
+        </zeroOrMore>
+      </define>
+
+      <define name="addressBlock.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="addressBlock.element">
+        <element name="addressBlock" dita:longName="Address Block">
+          <a:documentation>The &lt;addressBlock> element is the top-level element for a SIDSC addressBlock topic. Category: SIDSC Address Block elements</a:documentation>
+          <ref name="addressBlock.attlist" />
+          <ref name="addressBlock.content" />
+        </element>
+      </define>
+      <define name="addressBlock.attlist" combine="interleave">
+        <ref name="addressBlock.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="addressBlock.element" />
+      </define>
+    </div>
+
+     <div>
+      <a:documentation> LONG NAME: Address Block Name </a:documentation>
+      <define name="addressBlockName.content">
+        <zeroOrMore>
+          <ref name="title.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="addressBlockName.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="addressBlockName.element">
+        <element name="addressBlockName" dita:longName="Address Block Name">
+          <a:documentation>&lt;addressBlockName> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="addressBlockName.attlist"/>
+          <ref name="addressBlockName.content"/>
+        </element>
+      </define>
+      <define name="addressBlockName.attlist" combine="interleave">
+        <ref name="addressBlockName.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Address Block Brief Description </a:documentation>
+      <define name="addressBlockBriefDescription.content">
+        <zeroOrMore>
+          <ref name="title.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="addressBlockBriefDescription.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="addressBlockBriefDescription.element">
+        <element name="addressBlockBriefDescription" dita:longName="Address Block Brief Description">
+          <a:documentation>&lt;addressBlockBriefDescription> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="addressBlockBriefDescription.attlist"/>
+          <ref name="addressBlockBriefDescription.content"/>
+        </element>
+      </define>
+      <define name="addressBlockBriefDescription.attlist" combine="interleave">
+        <ref name="addressBlockBriefDescription.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Address Block Body </a:documentation>
+      <define name="addressBlockBody.content">
+        <ref name="addressBlockDescription"/>
+        <ref name="addressBlockProperties"/>
+      </define>
+      <define name="addressBlockBody.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="addressBlockBody.element">
+        <element name="addressBlockBody" dita:longName="Address Block Body">
+          <a:documentation>&lt;addressBlockBody> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="addressBlockBody.attlist"/>
+          <ref name="addressBlockBody.content"/>
+        </element>
+      </define>
+      <define name="addressBlockBody.attlist" combine="interleave">
+        <ref name="addressBlockBody.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Address Block Description </a:documentation>
+      <define name="addressBlockDescription.content">
+        <zeroOrMore>
+          <ref name="body.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="addressBlockDescription.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="addressBlockDescription.element">
+        <element name="addressBlockDescription" dita:longName="Address Block Description">
+          <a:documentation>&lt;addressBlockDescription> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="addressBlockDescription.attlist"/>
+          <ref name="addressBlockDescription.content"/>
+        </element>
+      </define>
+      <define name="addressBlockDescription.attlist" combine="interleave">
+        <ref name="addressBlockDescription.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Address Block Properties </a:documentation>
+      <define name="addressBlockProperties.content">
+        <ref name="addressBlockPropset"/>
+      </define>
+      <define name="addressBlockProperties.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="addressBlockProperties.element">
+        <element name="addressBlockProperties" dita:longName="Address Block Properties">
+          <a:documentation>&lt;addressBlockProperties> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="addressBlockProperties.attlist"/>
+          <ref name="addressBlockProperties.content"/>
+        </element>
+      </define>
+      <define name="addressBlockProperties.attlist" combine="interleave">
+        <ref name="addressBlockProperties.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Address Block Properties Set </a:documentation>
+      <define name="addressBlockPropset.content">
+        <ref name="baseAddress"/>
+        <optional>
+          <ref name="range"/>
+        </optional>
+        <optional>
+          <ref name="width"/>
+        </optional>
+        <ref name="byteOrder"/>
+      </define>
+      <define name="addressBlockPropset.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="addressBlockPropset.element">
+        <element name="addressBlockPropset" dita:longName="Address Block Properties Set">
+          <a:documentation>&lt;addressBlockPropset> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="addressBlockPropset.attlist"/>
+          <ref name="addressBlockPropset.content"/>
+        </element>
+      </define>
+      <define name="addressBlockPropset.attlist" combine="interleave">
+        <ref name="addressBlockPropset.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Base Address </a:documentation>
+      <define name="baseAddress.content">
+        <group>
+          <text />
+        </group>
+      </define>
+      <define name="baseAddress.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="baseAddress.element">
+        <element name="baseAddress" dita:longName="Base Address">
+          <a:documentation>&lt;baseAddress> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="baseAddress.attlist"/>
+          <ref name="baseAddress.content"/>
+        </element>
+      </define>
+      <define name="baseAddress.attlist" combine="interleave">
+        <ref name="baseAddress.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Range </a:documentation>
+      <define name="range.content">
+        <group>
+          <text />
+        </group>
+      </define>
+      <define name="range.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="range.element">
+        <element name="range" dita:longName="Range">
+          <a:documentation>&lt;range> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="range.attlist"/>
+          <ref name="range.content"/>
+        </element>
+      </define>
+      <define name="range.attlist" combine="interleave">
+        <ref name="range.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Width </a:documentation>
+      <define name="width.content">
+        <group>
+          <text />
+        </group>
+      </define>
+      <define name="width.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="width.element">
+        <element name="width" dita:longName="Width">
+          <a:documentation>&lt;width> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="width.attlist"/>
+          <ref name="width.content"/>
+        </element>
+      </define>
+      <define name="width.attlist" combine="interleave">
+        <ref name="width.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Byte Order </a:documentation>
+      <define name="byteOrder.content">
+        <group>
+          <text />
+        </group>
+      </define>
+      <define name="byteOrder.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="byteOrder.element">
+        <element name="byteOrder" dita:longName="Byte Order">
+          <a:documentation>&lt;byteOrder> element. 
+            Category: SISDC Address Block elements</a:documentation>
+          <ref name="byteOrder.attlist"/>
+          <ref name="byteOrder.content"/>
+        </element>
+      </define>
+      <define name="byteOrder.attlist" combine="interleave">
+        <ref name="byteOrder.attributes"/>
+      </define>
+    </div>
+    
+  </div>
+  
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="addressBlock.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic reference/reference sidsc-addressBlock/addressBlock "/>
+      </optional>
+    </define>
+    <define name="addressBlockName.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title reference/title sidsc-addressBlock/addressBlockName "/>
+      </optional>
+    </define>
+    <define name="addressBlockBriefDescription.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/shortdesc reference/shortdesc sidsc-addressBlock/addressBlockBriefDescription "/>
+      </optional>
+    </define>
+    <define name="addressBlockBody.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body reference/refbody sidsc-addressBlock/addressBlockBody "/>
+      </optional>
+    </define>
+    <define name="addressBlockDescription.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section reference/section sidsc-addressBlock/addressBlockDescription "/>
+      </optional>
+    </define>
+    <define name="addressBlockProperties.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable dataTableDomain/dataTable sidsc-addressBlock/addressBlockProperties "/>
+      </optional>
+    </define>
+    <define name="addressBlockPropset.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow dataTableDomain/dataRow sidsc-addressBlock/addressBlockPropset "/>
+      </optional>
+    </define>
+    <define name="baseAddress.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-addressBlock/baseAddress "/>
+      </optional>
+    </define>
+    <define name="range.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-addressBlock/range "/>
+      </optional>
+    </define>
+    <define name="width.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-addressBlock/width "/>
+      </optional>
+    </define>
+    <define name="byteOrder.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry sidsc-addressBlock/byteOrder "/>
+      </optional>
+    </define>
+  </div>
+</grammar>

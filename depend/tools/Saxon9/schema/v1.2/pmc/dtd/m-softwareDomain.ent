@@ -1,0 +1,12 @@
+<!ENTITY % m-software-d-reg-def "reg-def" >
+
+<!ENTITY % m-software-d-address-map "address-map" >
+
+<!ENTITY % m-software-d-field-enum-list  "field-enum-list" >
+
+<!ENTITY % m-software-d-reg-name-main "reg-name-main" >
+
+<!ENTITY % m-software-d-reg-desc  "reg-desc" >
+
+<!ENTITY % m-software-d-att  "(topic m-software-d)" >
+

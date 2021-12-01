@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--Atmel DITA Classification Map Shell-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:atmel:names:tc:dita:spec:classification:rng:classifyMap.rng"
+              uri="rng/atmelClassifyMap.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:spec:classification:rng:classifyMap.rng:1.x"
+              uri="rng/atmelClassifyMap.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:spec:classification:rng:classifyMap.rng:1.3"
+              uri="rng/atmelClassifyMap.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:spec:classification:rng:subjectScheme.rng"
+              uri="rng/atmelSubjectScheme.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:spec:classification:rng:subjectScheme.rng:1.x"
+              uri="rng/atmelSubjectScheme.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:spec:classification:rng:subjectScheme.rng:1.3"
+              uri="rng/atmelSubjectScheme.rng"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:atmel:names:tc:dita:spec:classification:rng:classifyMap.rng"
+           uri="rng/atmelClassifyMap.rng"/>
+      <uri name="urn:atmel:names:tc:dita:spec:classification:rng:classifyMap.rng:1.x"
+           uri="rng/atmelClassifyMap.rng"/>
+      <uri name="urn:atmel:names:tc:dita:spec:classification:rng:classifyMap.rng:1.3"
+           uri="rng/atmelClassifyMap.rng"/>
+      <uri name="urn:atmel:names:tc:dita:spec:classification:rng:subjectScheme.rng"
+           uri="rng/atmelSubjectScheme.rng"/>
+      <uri name="urn:atmel:names:tc:dita:spec:classification:rng:subjectScheme.rng:1.x"
+           uri="rng/atmelSubjectScheme.rng"/>
+      <uri name="urn:atmel:names:tc:dita:spec:classification:rng:subjectScheme.rng:1.3"
+           uri="rng/atmelSubjectScheme.rng"/>
+   </group>
+</catalog>

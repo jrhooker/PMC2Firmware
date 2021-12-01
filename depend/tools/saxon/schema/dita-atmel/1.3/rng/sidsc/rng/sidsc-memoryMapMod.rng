@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA SIDSC Memory Map</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    DITA SIDSC Memory Map 
+ VERSION:   1.3                                              
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Memory Map//EN"
+      Delivered as file "sidsc-memoryMap.mod"   
+
+=============================================================
+
+Copyright OASIS 2009
+Author: Seth Park
+ 
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>memoryMap</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver"/> SIDSC Memory Map//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver"/> SIDSC Memory Map//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:sidsc-memoryMapMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <xsdGrp>urn:atmel:names:tc:dita:xsd:sidsc-memoryMapGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <rncMod>urn:atmel:names:tc:dita:rnc:sidsc-memoryMapMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:sidsc-memoryMapMod.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic reference sidsc-memoryMap)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+    <define name="sidsc-memoryMap-info-types">
+      <ref name="info-types"/>
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    
+    <define name="memoryMap">
+      <ref name="memoryMap.element"/>
+    </define>
+    <define name="memoryMapName">
+      <ref name="memoryMapName.element"/>
+    </define>
+    <define name="memoryMapBody">
+      <ref name="memoryMapBody.element"/>
+    </define>
+    <define name="bitsInLau">
+      <ref name="bitsInLau.element"/>
+    </define>
+    <define name="memoryMapClass">
+      <ref name="memoryMapClass.element"/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation> LONG NAME: Memory Map </a:documentation>
+      <define name="memoryMap.content">
+        <ref name="memoryMapName" />
+        <ref name="memoryMapBody" />
+        <zeroOrMore>
+          <ref name="sidsc-memoryMap-info-types" />
+        </zeroOrMore>
+      </define>
+
+      <define name="memoryMap.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="memoryMap.element">
+        <element name="memoryMap" dita:longName="Memory Map">
+          <a:documentation>The &lt;memoryMap> element is the top-level element for a SIDSC memoryMap topic. Category: SIDSC Memory Map elements</a:documentation>
+          <ref name="memoryMap.attlist" />
+          <ref name="memoryMap.content" />
+        </element>
+      </define>
+      <define name="memoryMap.attlist" combine="interleave">
+        <ref name="memoryMap.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="memoryMap.element" />
+      </define>
+    </div>
+
+     <div>
+      <a:documentation> LONG NAME: Memory Map Name </a:documentation>
+      <define name="memoryMapName.content">
+        <zeroOrMore>
+          <ref name="title.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="memoryMapName.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="memoryMapName.element">
+        <element name="memoryMapName" dita:longName="Memory Map Name">
+          <a:documentation>&lt;memoryMapName> element. 
+            Category: SISDC Memory Map elements</a:documentation>
+          <ref name="memoryMapName.attlist"/>
+          <ref name="memoryMapName.content"/>
+        </element>
+      </define>
+      <define name="memoryMapName.attlist" combine="interleave">
+        <ref name="memoryMapName.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Memory Map Body </a:documentation>
+      <define name="memoryMapBody.content">
+        <ref name="bitsInLau"/>
+        <ref name="memoryMapClass"/>
+      </define>
+      <define name="memoryMapBody.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="memoryMapBody.element">
+        <element name="memoryMapBody" dita:longName="Memory Map Body">
+          <a:documentation>&lt;memoryMapBody> element. 
+            Category: SISDC Memory Map elements</a:documentation>
+          <ref name="memoryMapBody.attlist"/>
+          <ref name="memoryMapBody.content"/>
+        </element>
+      </define>
+      <define name="memoryMapBody.attlist" combine="interleave">
+        <ref name="memoryMapBody.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Bits In Least Adressable Unit </a:documentation>
+      <define name="bitsInLau.content">
+        <group>
+          <text />
+        </group>
+      </define>
+      <define name="bitsInLau.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="bitsInLau.element">
+        <element name="bitsInLau" dita:longName="Bits In Least Adressable Unit">
+          <a:documentation>&lt;bitsInLau> element. 
+            Category: SISDC Memory Map elements</a:documentation>
+          <ref name="bitsInLau.attlist"/>
+          <ref name="bitsInLau.content"/>
+        </element>
+      </define>
+      <define name="bitsInLau.attlist" combine="interleave">
+        <ref name="bitsInLau.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Memory Map Class </a:documentation>
+      <define name="memoryMapClass.content">
+        <group>
+          <text />
+        </group>
+      </define>
+      <define name="memoryMapClass.attributes">
+        <ref name="id-atts"/>
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="memoryMapClass.element">
+        <element name="memoryMapClass" dita:longName="Memory Map Class">
+          <a:documentation>&lt;memoryMapClass> element. 
+            Category: SISDC Memory Map elements</a:documentation>
+          <ref name="memoryMapClass.attlist"/>
+          <ref name="memoryMapClass.content"/>
+        </element>
+      </define>
+      <define name="memoryMapClass.attlist" combine="interleave">
+        <ref name="memoryMapClass.attributes"/>
+      </define>
+    </div>
+    
+  </div>
+  
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="memoryMap.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic reference/reference sidsc-memoryMap/memoryMap "/>
+      </optional>
+    </define>
+    <define name="memoryMapName.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title reference/title sidsc-memoryMap/memoryMapName "/>
+      </optional>
+    </define>
+    <define name="memoryMapBody.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body reference/refbody sidsc-memoryMap/memoryMapBody "/>
+      </optional>
+    </define>
+    <define name="bitsInLau.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/p reference/p sidsc-memoryMap/bitsInLau "/>
+      </optional>
+    </define>
+    <define name="memoryMapClass.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/p reference/p sidsc-memoryMap/memoryMapClass "/>
+      </optional>
+    </define>
+  </div>
+</grammar>

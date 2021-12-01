@@ -1,0 +1,13 @@
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">  
+    <public publicId="-//OASIS//DTD DITA BookMap//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Topic//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Concept//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Reference//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Task//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.1 Topic//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Concept//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Reference//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.1 Task//EN" uri="dummy.dtd"/> 
+    <public publicId="-//OASIS//DTD DITA 1.2 Topic//EN" uri="dummy.dtd"/> 
+    <system systemId="/SysSchema/dita/topic.dtd" uri="dummy.dtd"/>   
+</catalog>

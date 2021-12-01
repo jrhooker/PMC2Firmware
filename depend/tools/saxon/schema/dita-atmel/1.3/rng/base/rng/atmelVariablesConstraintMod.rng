@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>Atmel Variables Constraint</moduleTitle>
+    <headerComment xml:space="preserve">
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    Atmel Variables Constraint                  
+ VERSION:   1.3                                             
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+  </headerComment>
+    <moduleMetadata>
+      <moduleType>constraint</moduleType>
+      <moduleShortName>atmelVariables</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver" /> Variables Constraint//EN</dtdMod>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:atmelVariablesConstraintMod.xsd<var presep=":" name="ditaver" /></xsdMod>
+        <rncMod>urn:atmel:names:tc:dita:rnc:atmelVariablesConstraintMod.rnc<var presep=":" name="ditaver" /></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:atmelVariablesConstraintMod.rng<var presep=":" name="ditaver" /></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic atmelVariables-c)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+
+  <div>
+    <a:documentation>GENERAL DEFINITIONS</a:documentation>
+
+    <define name="variables-atts">
+      <ref name="varidAtt-d-attribute" />
+      <ref name="varrefAtt-d-attribute" />
+    </define>
+  </div>
+
+
+  <div>
+    <a:documentation>CONTENT MODEL OVERRIDES</a:documentation>
+
+    <!-- commonElementsMod.rng -->
+    <define name="ph.attributes">
+      <optional>
+        <attribute name="keyref" />
+      </optional>
+      <ref name="univ-atts" />
+      <optional>
+        <attribute name="outputclass" />
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+
+    <define name="cite.attributes">
+      <optional>
+        <attribute name="keyref" />
+      </optional>
+      <ref name="univ-atts" />
+      <optional>
+        <attribute name="outputclass" />
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+
+    <define name="image.attributes">
+      <optional>
+        <attribute name="href" />
+      </optional>
+      <optional>
+        <attribute name="scope">
+          <choice>
+            <value>external</value>
+            <value>local</value>
+            <value>peer</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="keyref" />
+      </optional>
+      <optional>
+        <attribute name="alt" />
+      </optional>
+      <optional>
+        <attribute name="longdescref" />
+      </optional>
+      <optional>
+        <attribute name="height">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="width">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="align" />
+      </optional>
+      <optional>
+        <attribute name="scale">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="scalefit">
+          <choice>
+            <value>yes</value>
+            <value>no</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="placement" a:defaultValue="inline">
+          <choice>
+            <value>break</value>
+            <value>inline</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="format" dita:since="1.3 errata 02" />
+      </optional>
+      <ref name="univ-atts" />
+      <optional>
+        <attribute name="outputclass" />
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+    
+    <define name="p.attributes">
+      <ref name="univ-atts"/>
+      <optional>
+        <attribute name="outputclass"/>
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+
+    <!-- softwareDomain.rng -->
+    <define name="msgph.attributes">
+      <ref name="univ-atts" />
+      <optional>
+        <attribute name="outputclass" />
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+
+    <!-- hazardstatementDomain.rng -->
+    <define name="hazardsymbol.attributes">
+      <optional dita:since="DITA 1.3">
+        <attribute name="href" />
+      </optional>
+      <optional>
+        <attribute name="scope">
+          <choice>
+            <value>external</value>
+            <value>local</value>
+            <value>peer</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="keyref" />
+      </optional>
+      <optional>
+        <attribute name="longdescref" />
+      </optional>
+      <optional>
+        <attribute name="height">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="width">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="align" />
+      </optional>
+      <optional>
+        <attribute name="scale">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="scalefit">
+          <choice>
+            <value>yes</value>
+            <value>no</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="placement" a:defaultValue="inline">
+          <choice>
+            <value>break</value>
+            <value>inline</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <ref name="univ-atts" />
+      <optional>
+        <attribute name="outputclass" />
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+
+    <!-- glossentryMod.rng -->
+    <define name="glossSymbol.attributes">
+      <optional dita:since="DITA 1.3">
+        <attribute name="href" />
+      </optional>
+      <optional>
+        <attribute name="scope">
+          <choice>
+            <value>external</value>
+            <value>local</value>
+            <value>peer</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="keyref" />
+      </optional>
+      <optional>
+        <attribute name="longdescref" />
+      </optional>
+      <optional>
+        <attribute name="height">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="width">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="align" />
+      </optional>
+      <optional>
+        <attribute name="scale">
+          <data type="NMTOKEN" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="scalefit">
+          <choice>
+            <value>yes</value>
+            <value>no</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="placement" a:defaultValue="inline">
+          <choice>
+            <value>break</value>
+            <value>inline</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <ref name="univ-atts" />
+      <optional>
+        <attribute name="outputclass" />
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+
+    <!-- metaDecl.mod -->
+    <define name="resourceid.attributes">
+      <ref name="select-atts"/>
+      <ref name="localization-atts"/>
+      <optional dita:since="1.3">
+        <attribute name="id"/>
+      </optional>
+      <ref name="conref-atts"/>
+      <optional>
+        <attribute name="appname"/>
+      </optional>
+      <optional>
+        <attribute name="appid" dita:since="1.3"/>
+      </optional>
+      <optional>
+        <attribute name="ux-context-string" dita:since="1.3"/>
+      </optional>
+      <optional>
+        <attribute name="ux-source-priority" dita:since="1.3"
+          a:defaultValue="topic-and-map"
+          >
+          <choice>
+            <value>topic-and-map</value>
+            <value>topic-only</value>
+            <value>map-only</value>
+            <value>map-takes-priority</value>
+            <value>topic-takes-priority</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ux-windowref" dita:since="1.3"/>
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+    
+    <!-- tblDecl.mod -->
+    <define name="dita.table.attributes">
+      <optional>
+        <attribute name="orient" dita:since="1.3">
+          <choice>
+            <value>port</value>
+            <value>land</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="rowheader">
+          <choice>
+            <value>firstcol</value>
+            <value dita:since="1.3">headers</value>
+            <value>norowheader</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="scale">
+          <choice>
+            <value>50</value>
+            <value>60</value>
+            <value>70</value>
+            <value>80</value>
+            <value>90</value>
+            <value>100</value>
+            <value>110</value>
+            <value>120</value>
+            <value>140</value>
+            <value>160</value>
+            <value>180</value>
+            <value>200</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <ref name="univ-atts"/>
+      <optional>
+        <attribute name="outputclass"/>
+      </optional>
+      <ref name="variables-atts" />
+    </define>
+
+    <!-- sdidsc-register.mod -->
+    <define name="ish-atts.registerName">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.registerNameMore">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.registerNameFull">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.registerBriefDescription">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.registerDescription">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.registerBitsInLau">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.addressOffset">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.registerSize">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.registerAccess">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.registerResetValue">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitOrder">
+      <ref name="variables-atts"/>
+    </define>
+
+    <!-- sdidsc-bitField.mod -->
+    <define name="ish-atts.bitFieldName">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitFieldBriefDescription">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitFieldDescription">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitWidth">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitOffset">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitFieldAccess">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitFieldResetValue">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitFieldValues">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitFieldValue">
+      <ref name="variables-atts"/>
+    </define>
+    <define name="ish-atts.bitFieldValueDescription">
+      <ref name="variables-atts"/>
+    </define>
+
+  </div>
+</grammar>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--Atmel Variables Constraint-->
+
+   <public publicId="-//Atmel//ELEMENTS DITA Variables Constraint//EN"
+           uri="dtd/atmelVariablesConstraint.mod"/>
+   <public publicId="-//Atmel//ELEMENTS DITA 1.x Variables Constraint//EN"
+           uri="dtd/atmelVariablesConstraint.mod"/>
+   <public publicId="-//Atmel//ELEMENTS DITA 1.3 Variables Constraint//EN"
+           uri="dtd/atmelVariablesConstraint.mod"/>
+</catalog>

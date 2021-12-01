@@ -1,0 +1,17 @@
+<!ENTITY % struct-d-tbody "struct" >
+
+<!ENTITY % struct-d-includes "includeslist" >
+
+<!ENTITY % struct-d-enumvalue "enumvalue" >
+
+<!ENTITY % struct-d-headerfile-name "headerfile-name" >
+
+<!ENTITY % struct-d-msg-name-main "msg-name-main" >
+
+<!ENTITY % struct-d-msg-desc  "msg-desc" >
+
+<!ENTITY  struct-d-att  "(topic struct-d)" >
+
+
+
+

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns="http://relaxng.org/ns/structure/1.0">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA SIDSC Domain</moduleTitle>
+    <headerComment xml:space="preserve">
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    DITA SIDSC dataTableDomain                     
+ VERSION:   1.3                                              
+ DATE:      March 2019                                    
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA SIDSC dataTable Domain//EN"
+      Delivered as file "sidscDomain.mod"                   
+
+=============================================================
+
+Copyright OASIS 2009
+Author: Seth Park
+ 
+=============================================================
+</headerComment>
+    <moduleMetadata>
+      <moduleType>elementdomain</moduleType>
+      <moduleShortName>dataTableDomain-d</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver"/> SIDSC dataTable Domain//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver"/> SIDSC dataTable Domain//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:dataTableDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <rncMod>urn:atmel:names:tc:dita:rnc:dataTableDomain.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:dataTableDomain.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic dataTableDomain-d)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+    <define name="dataTableDomain-d-simpletable">
+      <choice>
+        <ref name="dataTable.element"/>
+      </choice>
+    </define>
+    <define name="dataTable" combine="choice">
+      <ref name="dataTableDomain-d-simpletable"/>
+    </define>
+    
+    <define name="dataTableDomain-d-strow">
+      <choice>
+        <ref name="dataRow.element"/>
+      </choice>
+    </define>
+    <define name="dataRow" combine="choice">
+      <ref name="dataTableDomain-d-strow"/>
+    </define>
+    
+    <define name="dataTableDomain-d-stentry">
+      <choice>
+        <ref name="dataEntry.element"/>
+      </choice>
+    </define>
+    <define name="dataEntry" combine="choice">
+      <ref name="dataTableDomain-d-stentry"/>
+    </define>
+    
+    <define name="dataTableDomain-d-dl">
+      <choice>
+        <ref name="dataGroup.element"/>
+      </choice>
+    </define>
+    <define name="dataGroup" combine="choice">
+      <ref name="dataTableDomain-d-dl"/>
+    </define>
+    
+    <define name="dataTableDomain-d-dlentry">
+      <choice>
+        <ref name="dataInstance.element"/>
+      </choice>
+    </define>
+    <define name="dataInstance" combine="choice">
+      <ref name="dataTableDomain-d-dlentry"/>
+    </define>
+    
+    <define name="dataTableDomain-d-dt">
+      <choice>
+        <ref name="dataInstanceValue.element"/>
+      </choice>
+    </define>
+    <define name="dataInstanceValue" combine="choice">
+      <ref name="dataTableDomain-d-dt"/>
+    </define>
+    
+    <define name="dataTableDomain-d-dd">
+      <choice>
+        <ref name="dataInstanceMeaning.element"/>
+      </choice>
+    </define>
+    <define name="dataInstanceMeaning" combine="choice">
+      <ref name="dataTableDomain-d-dd"/>
+    </define>
+    
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+
+    <define name="dataTable">
+      <ref name="dataTable.element"/>
+    </define>
+    <define name="dataRow">
+      <ref name="dataRow.element"/>
+    </define>
+    <define name="dataEntry">
+      <ref name="dataEntry.element"/>
+    </define>
+    <define name="dataGroup">
+      <ref name="dataGroup.element"/>
+    </define>
+    <define name="dataInstance">
+      <ref name="dataInstance.element"/>
+    </define>
+    <define name="dataInstanceValue">
+      <ref name="dataInstanceValue.element"/>
+    </define>
+    <define name="dataInstanceMeaning">
+      <ref name="dataInstanceMeaning.element"/>
+    </define>
+    
+    <define name="dimension">
+      <ref name="dimension.element"/>
+    </define>
+    <define name="dimensionValue">
+      <ref name="dimensionValue.element"/>
+    </define>
+    <define name="dimensionIncrement">
+      <ref name="dimensionIncrement.element"/>
+    </define>
+    
+  </div>
+  <div>
+    <a:documentation>general purpose content models</a:documentation>
+    
+    <define name="dataPhrase.cnt">
+      <choice>
+        <text/>
+        <ref name="text" />
+        <ref name="ph.element"/>
+      </choice>
+    </define>
+    <a:documentation>GENERAL DECLARATION FOR PLAIN TEXT CONTENT</a:documentation>
+    <define name="sidsc.plain.text.cnt">
+      <choice>
+        <text />
+        <ref name="text" />
+        <ref name="ph.element" />
+      </choice>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation> LONG NAME: Data Table </a:documentation>
+      <define name="dataTable.content">
+        <oneOrMore>
+          <ref name="dataRow"/>
+        </oneOrMore>
+      </define>
+      <define name="dataTable.attributes">
+        <optional>
+          <attribute name="relcolwidth"/>
+        </optional>
+        <optional>
+          <attribute name="keycol">
+            <data type="NMTOKEN"/>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="refcols">
+            <data type="NMTOKENS"/>
+          </attribute>
+        </optional>
+        <ref name="display-atts"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="spectitle"/>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="dataTable.element">
+        <element name="dataTable" dita:longName="Data Table">
+          <a:documentation>
+            <![CDATA[Data Table
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dataTable.attlist"/>
+          <ref name="dataTable.content"/>
+        </element>
+      </define>
+      <define name="dataTable.attlist" combine="interleave">
+        <ref name="dataTable.attributes"/>
+      </define>
+    </div>
+  
+    <div>
+      <a:documentation> LONG NAME: Data Row </a:documentation>
+      <define name="dataRow.content">
+        <ref name="dataEntry" />
+      </define>
+      <define name="dataRow.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="dataRow.element">
+        <element name="dataRow" dita:longName="Data Row">
+          <a:documentation>
+            <![CDATA[Data Row
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dataRow.attlist"/>
+          <ref name="dataRow.content"/>
+        </element>
+      </define>
+      <define name="dataRow.attlist" combine="interleave">
+        <ref name="dataRow.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Data Entry </a:documentation>
+      <define name="dataEntry.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dataPhrase.cnt"/>
+            <ref name="dataPhrase"/>
+            <ref name="dataGroup"/>         
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dataEntry.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="specentry"/>
+        </optional>
+      </define>
+      <define name="dataEntry.element">
+        <element name="dataEntry" dita:longName="Data Entry">
+          <a:documentation>
+            <![CDATA[Data Entry
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dataEntry.attlist"/>
+          <ref name="dataEntry.content"/>
+        </element>
+      </define>
+      <define name="dataEntry.attlist" combine="interleave">
+        <ref name="dataEntry.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Data Phrase </a:documentation>
+      <define name="dataPhrase.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="dataPhrase.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="dataPhrase.element">
+        <element name="dataPhrase" dita:longName="Data Phrase">
+          <a:documentation>
+            <![CDATA[Data Phrase
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dataPhrase.attlist"/>
+          <ref name="dataPhrase.content"/>
+        </element>
+      </define>
+      <define name="dataPhrase.attlist" combine="interleave">
+        <ref name="dataPhrase.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Data Group </a:documentation>
+      <define name="dataGroup.content">
+        <ref name="dataInstance" />
+      </define>
+      <define name="dataGroup.attributes">
+        <ref name="univ-atts" />
+      </define>
+      <define name="dataGroup.element">
+        <element name="dataGroup" dita:longName="Data Group">
+          <a:documentation>
+            <![CDATA[Data Group
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dataGroup.attlist" />
+          <ref name="dataGroup.content" />
+        </element>
+      </define>
+      <define name="dataGroup.attlist" combine="interleave">
+        <ref name="dataGroup.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Data Instance </a:documentation>
+      <define name="dataInstance.content">
+        <oneOrMore>
+          <ref name="dataInstanceValue"/>
+          <ref name="dataInstanceMeaning"/>
+        </oneOrMore>
+      </define>
+      <define name="dataInstance.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="dataInstance.element">
+        <element name="dataInstance" dita:longName="Data Instance">
+          <a:documentation>
+            <![CDATA[Data Instance
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dataInstance.attlist"/>
+          <ref name="dataInstance.content"/>
+        </element>
+      </define>
+      <define name="dataInstance.attlist" combine="interleave">
+        <ref name="dataInstance.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Data Instance Value </a:documentation>
+      <define name="dataInstanceValue.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="dataInstanceValue.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="dataInstanceValue.element">
+        <element name="dataInstanceValue" dita:longName="Data Instance Value">
+          <a:documentation>
+            <![CDATA[Data Instance Value
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dataInstanceValue.attlist"/>
+          <ref name="dataInstanceValue.content"/>
+        </element>
+      </define>
+      <define name="dataInstanceValue.attlist" combine="interleave">
+        <ref name="dataInstanceValue.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Data Instance Meaning </a:documentation>
+      <define name="dataInstanceMeaning.content">
+        <zeroOrMore>
+          <ref name="sidsc.plain.text.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="dataInstanceMeaning.attributes">
+        <ref name="univ-atts"/>
+      </define>
+      <define name="dataInstanceMeaning.element">
+        <element name="dataInstanceMeaning" dita:longName="Data Instance Meaning">
+          <a:documentation>
+            <![CDATA[Data Instance Meaning
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dataInstanceMeaning.attlist"/>
+          <ref name="dataInstanceMeaning.content"/>
+        </element>
+      </define>
+      <define name="dataInstanceMeaning.attlist" combine="interleave">
+        <ref name="dataInstanceMeaning.attributes"/>
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dimension </a:documentation>
+      <define name="dimension.content">
+        <ref name="dimensionValue" />
+        <optional>
+          <ref name="dimensionIncrement" />
+        </optional>
+        <optional>
+          <ref name="unitQualifier.element" />
+        </optional>
+        <optional>
+          <ref name="namePattern.element" />
+        </optional>
+      </define>
+      <define name="dimension.attributes">
+        <ref name="id-atts" />
+        <ref name="localization-atts" />
+        <ref name="select-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dimension.element">
+        <element name="dimension" dita:longName="Dimension">
+          <a:documentation>
+            <![CDATA[Dimension
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dimension.attlist" />
+          <ref name="dimension.content" />
+        </element>
+      </define>
+      <define name="dimension.attlist" combine="interleave">
+        <ref name="dimension.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dimension Value </a:documentation>
+      <define name="dimensionValue.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />       
+        </zeroOrMore>
+      </define>
+      <define name="dimensionValue.attributes">
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dimensionValue.element">
+        <element name="dimensionValue" dita:longName="Dimension Value">
+          <a:documentation>
+            <![CDATA[Dimension Value
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dimensionValue.attlist" />
+          <ref name="dimensionValue.content" />
+        </element>
+      </define>
+      <define name="dimensionValue.attlist" combine="interleave">
+        <ref name="dimensionValue.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dimension Increment </a:documentation>
+      <define name="dimensionIncrement.content">
+        <zeroOrMore>
+          <ref name="dataPhrase.cnt" />       
+        </zeroOrMore>
+      </define>
+      <define name="dimensionIncrement.attributes">
+        <ref name="id-atts" />
+        <ref name="cidAtt-d-attribute" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dimensionIncrement.element">
+        <element name="dimensionIncrement" dita:longName="Dimension Increment">
+          <a:documentation>
+            <![CDATA[Dimension Increment
+    Category: SIDSC dataTableDomain
+  ]]></a:documentation>
+          <ref name="dimensionIncrement.attlist" />
+          <ref name="dimensionIncrement.content" />
+        </element>
+      </define>
+      <define name="dimensionIncrement.attlist" combine="interleave">
+        <ref name="dimensionIncrement.attributes" />
+      </define>
+    </div> 
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+    
+    <define name="dataTable.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable dataTableDomain/dataTable "/>
+      </optional>
+    </define>
+    <define name="dataRow.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow dataTableDomain/dataRow "/>
+      </optional>
+    </define>
+    <define name="dataEntry.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dataEntry "/>
+      </optional>
+    </define>
+    <define name="dataPhrase.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph dataTableDomain/dataPhrase "/>
+      </optional>
+    </define>
+    <define name="dataGroup.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/dl dataTableDomain/dataGroup "/>
+      </optional>
+    </define>
+    <define name="dataInstance.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/dlentry dataTableDomain/dataInstance "/>
+      </optional>
+    </define>
+    <define name="dataInstanceValue.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/dt dataTableDomain/dataInstanceValue "/>
+      </optional>
+    </define>
+    <define name="dataInstanceMeaning.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/dd dataTableDomain/dataInstanceMeaning "/>
+      </optional>
+    </define>
+    
+    <define name="dimension.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry dataTableDomain/dimension "/>
+      </optional>
+    </define>
+    <define name="dimensionIncrement.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph dataTableDomain/dimensionIncrement "/>
+      </optional>
+    </define>
+    <define name="dimensionValue.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph dataTableDomain/dimensionValue "/>
+      </optional>
+    </define>
+  </div>
+</grammar>

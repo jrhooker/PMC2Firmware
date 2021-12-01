@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    DITA SIDSC Component                              -->
+<!--  VERSION:   1.3                                               -->
+<!--  DATE:      March 2019                                        -->
+<!--                                                               -->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an  -->
+<!--       appropriate system identifier                           -->
+<!-- PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Component//EN"          -->
+<!--       Delivered as file "sidsc-component.mod"                 -->
+<!-- ============================================================= -->
+<!-- Copyright OASIS 2009                                          -->
+<!-- Author: Seth Park                                             -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY sidsc-component-att
+  "(topic reference sidsc-component)"
+>
+
+<!-- ================ End DITA SIDSC Component ================== -->
+ 

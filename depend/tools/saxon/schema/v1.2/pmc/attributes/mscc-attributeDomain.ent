@@ -1,0 +1,121 @@
+<!ENTITY % pcie-lanes-props-d-attribute 
+   "pcie-lanes 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY pcie-lanes-props-d-att
+  "a(props  pcie-lanes)" >   
+
+<!ENTITY % sp-version-props-d-attribute 
+   "sp-version 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY sp-version-props-d-att
+  "a(props  sp-version)" >   
+   
+<!ENTITY % pmc_switch-props-d-attribute 
+   "pmc_switch 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY pmc_switch-props-d-att
+  "a(props  pmc_switch)" >
+
+<!ENTITY %  pmc_package-props-d-attribute 
+   " pmc_package 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  pmc_package-props-d-att
+  "a(props   pmc_package)">
+
+<!ENTITY %  media-props-d-attribute 
+   " media 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  media-props-d-att
+  "a(props   media)"> 
+   
+<!ENTITY % component-props-d-attribute 
+   " component 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  component-props-d-att
+  "a(props   component)">  
+  
+ <!ENTITY %  pmc_phy-props-d-attribute 
+   " pmc_phy 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  pmc_phy-props-d-att
+  "a(props   pmc_phy)">  
+  
+<!ENTITY %  ddr-width-props-d-attribute 
+   " ddr-width 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  ddr-width-props-d-att
+  "a(props   ddr-width)">    
+ 
+
+ <!ENTITY %  package-props-d-attribute 
+   " package 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  package-props-d-att
+  "a(props   package)">  
+
+<!ENTITY %  fw_package-props-d-attribute 
+   " fw_package 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  fw_package-props-d-att
+  "a(props   fw_package)">  
+  
+<!ENTITY %  pcie-drive-ports-props-d-attribute 
+   " pcie-drive-ports  
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  pcie-drive-ports-props-d-att
+  "a(props   pcie-drive-ports )">
+
+<!ENTITY %  pcie-host-ports-props-d-attribute 
+   " pcie-host-ports 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  pcie-host-ports-props-d-att
+  "a(props   pcie-host-ports)">   
+  
+<!ENTITY %  raid-support-props-d-attribute 
+   " raid-support 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  raid-support-props-d-att
+  "a(props   raid-support )">   
+
+<!ENTITY %  sas-ports-props-d-attribute 
+   " sas-ports 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  sas-ports-props-d-att
+  "a(props   sas-ports )">    
+  
+  <!ENTITY %  revision-props-d-attribute 
+   " revision 
+     CDATA 
+     #IMPLIED
+   " >
+<!ENTITY  revision-props-d-att
+  "a(props   revision )">    
+ 

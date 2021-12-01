@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    DITA Bookmap DTD                                  -->
+<!--  VERSION:   1.2                                               -->
+<!--  DATE:      November 2009                                     -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+      Delivered as file "bookmap.dtd"                              -->
+
+<!-- The public ID above refers to the latest version of this DTD.
+     To refer to this specific version, you may use this value:
+PUBLIC "-//OASIS//DTD DITA 1.2 BookMap//EN"                        -->
+
+<!-- ============================================================= -->
+<!-- SYSTEM:     Darwin Information Typing Architecture (DITA)     -->
+<!--                                                               -->
+<!-- PURPOSE:    DTD to describe DITA Book Maps                    -->
+<!--                                                               -->
+<!-- ORIGINAL CREATION DATE:                                       -->
+<!--             March 2004                                        -->
+<!--                                                               -->
+<!--             (C) Copyright OASIS Open 2006, 2009.              -->
+<!--             (C) Copyright IBM Corporation 2004, 2005.         -->
+<!--             All Rights Reserved.                              -->
+<!--                                                               -->
+<!--  UPDATES:                                                     -->
+<!--    2008.02.01 RDA: Added reference to bookmap.ent             -->
+<!--    2008.02.12 RDA: Modify imbeds to use specific 1.2 version  -->
+<!--    2008.04.15 RDA: Added delay resolution domain              -->
+<!--    2010.09.21 RDA: Added base and tec. content topic domains  -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    MAP ENTITY DECLARATIONS                    -->
+<!-- ============================================================= -->
+
+<!ENTITY % bookmap-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 BookMap//EN" 
+         "bookmap.ent"
+>%bookmap-dec;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % mapgroup-d-dec 
+                        PUBLIC 
+"-//OASIS//ENTITIES DITA 1.2 Map Group Domain//EN" 
+"../../base/dtd/mapGroup.ent"                                                 >
+%mapgroup-d-dec;
+
+<!ENTITY % indexing-d-dec     PUBLIC 
+"-//OASIS//ENTITIES DITA 1.2 Indexing Domain//EN" 
+"../../base/dtd/indexingDomain.ent"                                           >
+%indexing-d-dec;
+
+<!ENTITY % delay-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Delayed Resolution Domain//EN" 
+         "../../base/dtd/delayResolutionDomain.ent"                                                       
+>%delay-d-dec;
+
+<!ENTITY % xnaldomain-d-dec 
+                        PUBLIC 
+"-//OASIS//ENTITIES DITA 1.2 XNAL Domain//EN" 
+"../../xnal/dtd/xnalDomain.ent"
+>%xnaldomain-d-dec;
+
+<!ENTITY % hi-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Highlight Domain//EN" 
+         "../../base/dtd/highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ut-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Utilities Domain//EN" 
+         "../../base/dtd/utilitiesDomain.ent"                                                
+>%ut-d-dec;
+
+<!ENTITY % hazard-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Hazard Statement Domain//EN" 
+         "../../base/dtd/hazardstatementDomain.ent"
+>%hazard-d-dec;
+
+<!ENTITY % abbrev-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Abbreviated Form Domain//EN" 
+         "../../technicalContent/dtd/abbreviateDomain.ent"
+>%abbrev-d-dec;
+
+<!ENTITY % pr-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Programming Domain//EN" 
+         "../../technicalContent/dtd/programmingDomain.ent"                                              
+>%pr-d-dec;
+
+<!ENTITY % sw-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Software Domain//EN" 
+         "../../technicalContent/dtd/softwareDomain.ent"                                                 
+>%sw-d-dec;
+
+<!ENTITY % ui-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 User Interface Domain//EN" 
+         "../../technicalContent/dtd/uiDomain.ent"                                                       
+>%ui-d-dec;
+
+<!ENTITY % pmciso-d-dec SYSTEM "../../pmc/dtd/pmcisoDomain.ent" >
+%pmciso-d-dec;
+
+
+<!ENTITY % firmtest-d-dec     
+   SYSTEM "../../pmc/dtd/firmtestDomain.ent"                                                
+>
+%firmtest-d-dec;  
+
+<!ENTITY % struct-d-dec     
+   SYSTEM "../../pmc/dtd/dwordDomain.ent"                                                
+>
+%struct-d-dec;  
+
+<!ENTITY % firmware-d-dec     
+   SYSTEM "../../pmc/dtd/firmwareDomain.ent"                                                
+>
+%firmware-d-dec;  
+
+<!ENTITY % csrreg-d-dec     
+   SYSTEM "../../pmc/dtd/csrregDomain.ent"                                                
+>
+%csrreg-d-dec;  
+
+<!ENTITY % pmcrevhis-d-dec     
+   SYSTEM "../../pmc/dtd/pmcRevHistoryDomain.ent"                                                
+>
+%pmcrevhis-d-dec;  
+
+<!ENTITY % pmcrequirements-d-dec     
+   SYSTEM "../../pmc/dtd/pmcRequirementDomain.ent"                                                
+>
+%pmcrequirements-d-dec;  
+
+<!ENTITY % m-softwareDomain-d-dec     
+   SYSTEM "../../pmc/dtd/m-softwareDomain.ent"                                                
+>
+%m-softwareDomain-d-dec;  
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ============================================================= -->
+<!ENTITY % sp-version-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%sp-version-props-d-dec;
+
+<!ENTITY % pmc_switch-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%pmc_switch-props-d-dec;
+
+<!ENTITY % pmc_package-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%pmc_package-props-d-dec;
+
+<!ENTITY % media-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%media-props-d-dec;
+
+<!ENTITY % component-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%component-props-d-dec;
+
+<!ENTITY % pmc_phy-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%pmc_phy-props-d-dec;
+
+<!ENTITY % ddr-width-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%ddr-width-props-d-dec;
+
+<!ENTITY % package-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%package-props-d-dec;
+
+<!ENTITY % fw_package-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%fw_package-props-d-dec;
+
+<!ENTITY % pcie-drive-ports-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%pcie-drive-ports-props-d-dec;
+
+<!ENTITY % pcie-host-ports-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%pcie-host-ports-props-d-dec;
+
+<!ENTITY % raid-support-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%raid-support-props-d-dec;
+
+<!ENTITY % sas-ports-props-d-dec     
+  SYSTEM "../../pmc/attributes/mscc-attributeDomain.ent"                                                
+>
+%sas-ports-props-d-dec;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+<!ENTITY % author       "author | 
+                         %xnal-d-author;
+                        ">
+<!ENTITY % topicref     "topicref |
+                         %mapgroup-d-topicref;
+                        ">
+<!ENTITY % index-base   "index-base |
+                         %indexing-d-index-base;
+                        ">
+<!ENTITY % keywords     "keywords | 
+                         %delay-d-keywords;
+                        ">
+<!ENTITY % keyword      "keyword | 
+                         %pr-d-keyword; | 
+                         %sw-d-keyword; |
+                         %ui-d-keyword;
+                        ">
+<!ENTITY % pre          "pre | 
+                         %pr-d-pre; | 
+                         %sw-d-pre; | 
+                         %ui-d-pre;
+                        ">
+<!ENTITY % ph           "ph | 
+                         %hi-d-ph; | 
+                         %pr-d-ph; | 
+                         %sw-d-ph; | 
+                         %ui-d-ph;
+                        ">
+<!ENTITY % term         "term | 
+                         %abbrev-d-term;
+                        ">
+<!ENTITY % fig          "fig |
+                         %pr-d-fig; |
+                         %ut-d-fig;
+                        ">
+<!ENTITY % dl           "dl | 
+                         %pr-d-dl;
+                        ">
+<!ENTITY % note         "note | 
+                         %hazard-d-note;
+                        ">
+                        
+<!ENTITY % bookchangehistory "bookchangehistory | %pmciso-d-bookchangehistory;" >
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+<!ENTITY % props-attribute-extensions  
+  "%pcie-lanes-props-d-attribute;
+  %sp-version-props-d-attribute;
+  %pmc_switch-props-d-attribute;
+  %pmc_package-props-d-attribute;
+  %media-props-d-attribute;
+  %component-props-d-attribute;
+  %pmc_phy-props-d-attribute;
+  %ddr-width-props-d-attribute;
+  %package-props-d-attribute;
+  %fw_package-props-d-attribute;
+  %pcie-drive-ports-props-d-attribute;
+  %pcie-host-ports-props-d-attribute;
+  %raid-support-props-d-attribute;
+  %sas-ports-props-d-attribute; 
+  %revision-props-d-attribute;
+  "
+>
+<!ENTITY % base-attribute-extensions   ""                            >
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+<!ENTITY included-domains 
+                        "&bookmap-att;
+                         &delay-d-att;
+                         &mapgroup-d-att;
+                         &indexing-d-att; 
+                         &xnal-d-att;
+                         &hi-d-att; 
+                         &ut-d-att; 
+                         &hazard-d-att;
+                         &abbrev-d-att;
+                         &pr-d-att; 
+                         &sw-d-att;
+                         &ui-d-att;                         
+                         &pmcrevhis-d-att;
+                         &struct-d-att;
+                           &firmware-d-att;
+                           &pmcrevhis-d-att;
+                           &pcie-lanes-props-d-att;
+                           &sp-version-props-d-att;
+                           &pmc_switch-props-d-att;
+                           &pmc_package-props-d-att;
+                           &pmc_phy-props-d-att;
+                           &ddr-width-props-d-att;
+                           &package-props-d-att;
+                           &fw_package-props-d-att;
+                           &pcie-drive-ports-props-d-att;
+                           &pcie-host-ports-props-d-att;
+                           &raid-support-props-d-att;
+                           &sas-ports-props-d-att; 
+                           &revision-props-d-att;
+                           &media-props-d-att;
+                           &component-props-d-att;
+                        ">
+
+
+
+<!-- ============================================================= -->
+<!--                    MAP ELEMENT INTEGRATION                    -->
+<!-- ============================================================= -->
+
+<!ENTITY % map-type PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 Map//EN" 
+"../../base/dtd/map.mod"                                                      >
+%map-type;
+
+<!ENTITY % bookmap-type PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 BookMap//EN" 
+"bookmap.mod"                                                        >
+%bookmap-type;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % mapgroup-d-def  
+                        PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 Map Group Domain//EN" 
+"../../base/dtd/mapGroup.mod"                                                 >
+%mapgroup-d-def;
+
+<!ENTITY % indexing-d-def
+                        PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 Indexing Domain//EN" 
+"../../base/dtd/indexingDomain.mod"                                           >
+%indexing-d-def;
+
+<!ENTITY % delay-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Delayed Resolution Domain//EN" 
+         "../../base/dtd/delayResolutionDomain.mod"
+>%delay-d-def;
+
+<!ENTITY % xnaldomain-d-def  
+                        PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 XNAL Domain//EN" 
+"../../xnal/dtd/xnalDomain.mod"
+>%xnaldomain-d-def;
+
+<!ENTITY % hi-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Highlight Domain//EN" 
+         "../../base/dtd/highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % ut-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Utilities Domain//EN" 
+         "../../base/dtd/utilitiesDomain.mod"
+>%ut-d-def;
+
+<!ENTITY % hazard-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Hazard Statement Domain//EN" 
+         "../../base/dtd/hazardstatementDomain.mod"
+>%hazard-d-def;
+
+<!ENTITY % abbrev-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Abbreviated Form Domain//EN" 
+         "../../technicalContent/dtd/abbreviateDomain.mod"
+>%abbrev-d-def;
+
+<!ENTITY % ui-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 User Interface Domain//EN" 
+         "../../technicalContent/dtd/uiDomain.mod"
+>%ui-d-def;
+
+<!ENTITY % pr-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Programming Domain//EN" 
+         "../../technicalContent/dtd/programmingDomain.mod"
+>%pr-d-def;
+
+<!ENTITY % sw-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Software Domain//EN" 
+         "../../technicalContent/dtd/softwareDomain.mod"
+>%sw-d-def;
+
+<!ENTITY % pmciso-d-def SYSTEM "../../pmc/dtd/pmcisoDomain.mod" >
+%pmciso-d-def;
+
+<!-- ================== End DITA Bookmap DTD  ==================== -->
