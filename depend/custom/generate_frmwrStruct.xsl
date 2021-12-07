@@ -13,7 +13,7 @@
  <xsl:import href="generate_topics.xsl"/>
   <xsl:param name="STARTING-DIR"/>
 
- <xsl:output method="xml" media-type="text/xml" indent="yes" encoding="UTF-8"
+  <xsl:output method="xml" media-type="text/xml" indent="yes" encoding="UTF-8"
     doctype-public="-//Atmel//DTD DITA frmwrStruct//EN" doctype-system="frmwrStruct.dtd"/> 
 
   <xsl:template match="topicref | chapter | appendix | topichead" name="topicref">
@@ -145,45 +145,45 @@
                   <xsl:otherwise>
                     <xsl:value-of select="p[1]"/>
                   </xsl:otherwise>
-                </xsl:choose>
-                <xsl:element name="dwordBody">
-                  <xsl:element name="dwordDescription">
-                    <xsl:apply-templates select="description" mode="field-desc"/>
-                  </xsl:element>
-                  <xsl:element name="dwordProperties">
-                    <xsl:element name="dwordPropset">
-                      <xsl:element name="dwordWidth">
-                        <xsl:call-template name="calc-bitwidth"/>
-                      </xsl:element>
-                      <xsl:element name="dwordOffset">
-                        <xsl:call-template name="calc-dwordoffset"/>
-                      </xsl:element>
-                      <xsl:element name="dwordNumberWidth">
-                        <xsl:call-template name="calc-dwordnumberwidth"/>
-                      </xsl:element>
-                      <xsl:element name="dwordNumberOffset">
-                        <xsl:call-template name="calc-dwordnumberoffset"/>
-                      </xsl:element>
-                    </xsl:element>
-                  </xsl:element>
-                  <xsl:if test="description/field-enum-list">
-                    <xsl:element name="dwordValueGroup">
-                      <xsl:for-each select="description/field-enum-list/field-enum">
-                        <xsl:element name="bitFieldValueGroup">
-                          <xsl:element name="dwordValue">
-                            <xsl:value-of select="field-enum-value"/>
-                          </xsl:element>
-                          <xsl:element name="dwordValueName">
-                            <xsl:value-of select="field-enum-def"/>
-                          </xsl:element>
-                          <xsl:element name="dwordValueDescription">
-                            <xsl:value-of select="field-enum-desc"/>
-                          </xsl:element>
-                        </xsl:element>
-                      </xsl:for-each>
-                    </xsl:element>
-                  </xsl:if>
+                </xsl:choose>                
+              </xsl:element>
+              <xsl:element name="dwordBody">
+                <xsl:element name="dwordDescription">
+                  <xsl:apply-templates select="description" mode="field-desc"/>
                 </xsl:element>
+                <xsl:element name="dwordProperties">
+                  <xsl:element name="dwordPropset">
+                    <xsl:element name="dwordWidth">
+                      <xsl:call-template name="calc-bitwidth"/>
+                    </xsl:element>
+                    <xsl:element name="dwordOffset">
+                      <xsl:call-template name="calc-dwordoffset"/>
+                    </xsl:element>
+                    <xsl:element name="dwordNumberWidth">
+                      <xsl:call-template name="calc-dwordnumberwidth"/>
+                    </xsl:element>
+                    <xsl:element name="dwordNumberOffset">
+                      <xsl:call-template name="calc-dwordnumberoffset"/>
+                    </xsl:element>
+                  </xsl:element>
+                </xsl:element>
+                <xsl:if test="description/field-enum-list">
+                  <xsl:element name="dwordValueGroup">
+                    <xsl:for-each select="description/field-enum-list/field-enum">
+                      <xsl:element name="bitFieldValueGroup">
+                        <xsl:element name="dwordValue">
+                          <xsl:value-of select="field-enum-value"/>
+                        </xsl:element>
+                        <xsl:element name="dwordValueName">
+                          <xsl:value-of select="field-enum-def"/>
+                        </xsl:element>
+                        <xsl:element name="dwordValueDescription">
+                          <xsl:value-of select="field-enum-desc"/>
+                        </xsl:element>
+                      </xsl:element>
+                    </xsl:for-each>
+                  </xsl:element>
+                </xsl:if>
               </xsl:element>
             </xsl:element>
           </xsl:for-each>
