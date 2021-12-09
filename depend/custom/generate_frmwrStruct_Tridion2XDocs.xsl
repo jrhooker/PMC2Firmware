@@ -103,11 +103,11 @@
                     </xsl:element>
                   </xsl:element>
                   <xsl:element name="struct">
-                    <xsl:if test="structBody/structProperties/structPropSet/structOpcode">
-                      <xsl:attribute name="opcode"><xsl:value-of select="structBody/structProperties/structPropSet/structOpcode"/></xsl:attribute>
+                    <xsl:if test="structBody/structProperties/structPropset/structOpcode">
+                      <xsl:attribute name="opcode"><xsl:value-of select="structBody/structProperties/structPropset/structOpcode"/></xsl:attribute>
                     </xsl:if>
-                    <xsl:if test="structBody/structProperties/structPropSet/structType">
-                      <xsl:attribute name="structure"><xsl:value-of select="structBody/structProperties/structPropSet/structType"/></xsl:attribute>
+                    <xsl:if test="structBody/structProperties/structPropset/structType">
+                      <xsl:attribute name="structure"><xsl:value-of select="structBody/structProperties/structPropset/structType"/></xsl:attribute>
                     </xsl:if>
                     <xsl:for-each select="structDword">
                       <xsl:element name="dword">

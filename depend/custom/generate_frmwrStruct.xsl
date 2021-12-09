@@ -121,7 +121,7 @@
               </xsl:choose>                 
             </xsl:element>
             <xsl:element name="structProperties">
-              <xsl:element name="structPropSet">
+              <xsl:element name="structPropset">
                 <xsl:element name="structOpcode">
                   <xsl:value-of select="tgroup/struct/@opcode"/>
                 </xsl:element>
