@@ -14,7 +14,7 @@
    <xsl:param name="STARTING-DIR"/>
 
  <xsl:output method="xml" media-type="text/xml" indent="yes" encoding="UTF-8"
-    doctype-public="-//OASIS//DTD DITA Topic//EN" doctype-system="topic.dtd"/> 
+   doctype-public="-//OASIS//DTD DITA 1.2 Topic//EN" doctype-system="topic.dtd"/> 
 
   <xsl:variable name="STARTING-DIR-VAR">
     <xsl:choose>
