@@ -92,9 +92,9 @@
           <xsl:if test="//includeslist">
             <xsl:element name="frmwrIncludelist">
               <xsl:for-each select="//includeslist/include">
-                <xsl:element name="include">
-                  <xsl:element name="includeName"><xsl:value-of select="name"/></xsl:element>
-                  <xsl:element name="description"><xsl:apply-templates select="description" mode="field-desc"></xsl:apply-templates></xsl:element>
+                <xsl:element name="frmwrInclude">
+                  <xsl:element name="frmwrIncludeName"><xsl:value-of select="name"/></xsl:element>
+                  <xsl:element name="frmwrIncluDesc"><xsl:apply-templates select="description" mode="field-desc"></xsl:apply-templates></xsl:element>
                 </xsl:element> 
               </xsl:for-each>
             </xsl:element>
