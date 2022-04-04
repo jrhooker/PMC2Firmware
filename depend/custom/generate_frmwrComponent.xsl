@@ -13,7 +13,7 @@
  <xsl:import href="generate_topics.xsl"/> 
 
   <xsl:output method="xml" media-type="text/xml" indent="yes" encoding="UTF-8"
-    doctype-public="-//Atmel//DTD DITA frmwrComponent//EN" doctype-system="frmwrComponent.dtd"/>
+    doctype-public="-//Atmel//DTD DITA FRMWR Component//EN" doctype-system="atmelFrmwrComponent.dtd"/>
 
   <xsl:template match="topicref | chapter | appendix | topichead" name="topicref">
     <xsl:param name="href-prefix"/>

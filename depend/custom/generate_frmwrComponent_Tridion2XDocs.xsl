@@ -90,7 +90,7 @@
               <xsl:element name="enumvalue"><xsl:value-of select="frmwrEnumvalue"/></xsl:element>
               <xsl:element name="headerfile-name"><xsl:value-of select="frmwrName"/></xsl:element>
             </xsl:element>
-            <xsl:if test="frmwrIncludelist/include">
+            <xsl:if test="frmwrIncludelist/frmwrInclude">
             <xsl:element name="table">
               <xsl:element name="tgroup">
                 <xsl:attribute name="cols">2</xsl:attribute>
@@ -102,13 +102,13 @@
                 </xsl:element>
               
                   <xsl:element name="includeslist">
-                    <xsl:for-each select="frmwrIncludelist/include">
+                    <xsl:for-each select="frmwrIncludelist/frmwrInclude">
                       <xsl:element name="include">
                         <xsl:element name="name">
-                          <xsl:value-of select="includeName"/>
+                          <xsl:value-of select="frmwrIncludeName"/>
                         </xsl:element>
                         <xsl:element name="description">
-                          <xsl:apply-templates select="description/*"/>
+                          <xsl:apply-templates select="frmwrIncluDesc/*"/>
                         </xsl:element>                
                       </xsl:element>  
                     </xsl:for-each>

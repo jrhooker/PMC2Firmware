@@ -14,7 +14,7 @@
   <xsl:param name="STARTING-DIR"/>
 
   <xsl:output method="xml" media-type="text/xml" indent="yes" encoding="UTF-8"
-    doctype-public="-//Atmel//DTD DITA frmwrStruct//EN" doctype-system="frmwrStruct.dtd"/> 
+    doctype-public="-//Atmel//DTD DITA FRMWR Structure//EN" doctype-system="atmelFrmwrStruct.dtd"/> 
 
   <xsl:template match="topicref | chapter | appendix | topichead" name="topicref">
     <xsl:param name="href-prefix"/>
@@ -110,12 +110,13 @@
             <xsl:element name="structDescription">
               <xsl:choose>
                 <xsl:when test="ancestor::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/body ')]/*[contains(@class, ' topic/p ')]">
-                  <xsl:for-each select="ancestor::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/body ')]/*[contains(@class, ' topic/p ')]">
+                 <!-- <xsl:for-each select="ancestor::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/body ')]/*[contains(@class, ' topic/p ')]">
                     <xsl:element name="p">
                       <xsl:call-template name="filtering-attribute-management"/>
                       <xsl:value-of select="."/>
                     </xsl:element>
-                  </xsl:for-each>              
+                  </xsl:for-each>          -->    
+                  [structDescription]
                 </xsl:when>    
                 <xsl:otherwise>[structDescription]</xsl:otherwise>
               </xsl:choose>                 

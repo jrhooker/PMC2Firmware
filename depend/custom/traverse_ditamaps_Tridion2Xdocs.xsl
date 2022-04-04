@@ -65,10 +65,10 @@
   <xsl:template match="bookmap | map">   
       <xsl:apply-templates/>   
   </xsl:template>
-  
+ 
   <xsl:template match="title">
     <xsl:element name="title">
-      <xsl:apply-templates />
+     <xsl:apply-templates />
     </xsl:element>
   </xsl:template>
   
@@ -107,11 +107,13 @@
       <xsl:apply-templates/>       
   </xsl:template>
   
-  <xsl:template match="topichead">   
-    <xsl:element name="topichead">   
-      <xsl:copy-of select="@*"/>     
+  <xsl:template match="topichead">
+    <xsl:element name="topichead">
+      <xsl:attribute name="navtitle">
+        <xsl:value-of select="@navtitle"/>
+      </xsl:attribute>
       <xsl:apply-templates/>
-    </xsl:element>   
+    </xsl:element>
   </xsl:template>
   
   <xsl:template name="create-topicrefs">
