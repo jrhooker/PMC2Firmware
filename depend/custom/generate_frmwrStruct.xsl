@@ -8,40 +8,40 @@
   xmlns:opentopic-func="http://www.idiominc.com/opentopic/exsl/function"
   xmlns:date="http://exslt.org/dates-and-times"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    
- <xsl:import href="filtering-attribute-resolver.xsl"/>
- <xsl:import href="generate_topics.xsl"/>
+
+  <xsl:import href="filtering-attribute-resolver.xsl"/>
+  <xsl:import href="generate_topics.xsl"/>
   <xsl:param name="STARTING-DIR"/>
 
   <xsl:output method="xml" media-type="text/xml" indent="yes" encoding="UTF-8"
-    doctype-public="-//Atmel//DTD DITA FRMWR Structure//EN" doctype-system="atmelFrmwrStruct.dtd"/> 
+    doctype-public="-//Atmel//DTD DITA FRMWR Structure//EN" doctype-system="atmelFrmwrStruct.dtd"/>
 
   <xsl:template match="topicref | chapter | appendix | topichead" name="topicref">
     <xsl:param name="href-prefix"/>
-    <xsl:variable name="topicref-id" select="generate-id()"/>      
-         <xsl:if test="document(@href)//struct">
-          <xsl:message>Found a struct</xsl:message>
-          <xsl:call-template name="create-struct-topic">
-            <xsl:with-param name="href">
-              <xsl:value-of select="@href"/>
-            </xsl:with-param>
-            <xsl:with-param name="href-prefix">
-              <xsl:value-of select="$href-prefix"/>
-            </xsl:with-param>
-          </xsl:call-template>
-        </xsl:if>      
-        <xsl:if test="contains(@href, '.ditamap')">
-          <xsl:message>Found a ditamap</xsl:message>
-          <xsl:call-template name="process-ditamap">
-            <xsl:with-param name="href">
-              <xsl:value-of select="@href"/>
-            </xsl:with-param>
-            <xsl:with-param name="href-prefix">
-              <xsl:value-of select="$href-prefix"/>
-            </xsl:with-param>
-          </xsl:call-template>
-        </xsl:if>           
-      <xsl:apply-templates/>
+    <xsl:variable name="topicref-id" select="generate-id()"/>
+    <xsl:if test="document(@href)//struct">
+      <xsl:message>Found a struct</xsl:message>
+      <xsl:call-template name="create-struct-topic">
+        <xsl:with-param name="href">
+          <xsl:value-of select="@href"/>
+        </xsl:with-param>
+        <xsl:with-param name="href-prefix">
+          <xsl:value-of select="$href-prefix"/>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:if>
+    <xsl:if test="contains(@href, '.ditamap')">
+      <xsl:message>Found a ditamap</xsl:message>
+      <xsl:call-template name="process-ditamap">
+        <xsl:with-param name="href">
+          <xsl:value-of select="@href"/>
+        </xsl:with-param>
+        <xsl:with-param name="href-prefix">
+          <xsl:value-of select="$href-prefix"/>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:if>
+    <xsl:apply-templates/>
   </xsl:template>
 
   <xsl:template name="create-struct-topic">
@@ -109,17 +109,17 @@
           <xsl:element name="structBody">
             <xsl:element name="structDescription">
               <xsl:choose>
-                <xsl:when test="ancestor::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/body ')]/*[contains(@class, ' topic/p ')]">
-                 <!-- <xsl:for-each select="ancestor::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/body ')]/*[contains(@class, ' topic/p ')]">
+                <xsl:when
+                  test="ancestor::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/body ')]/*[contains(@class, ' topic/p ')]">
+                  <!-- <xsl:for-each select="ancestor::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/body ')]/*[contains(@class, ' topic/p ')]">
                     <xsl:element name="p">
                       <xsl:call-template name="filtering-attribute-management"/>
                       <xsl:value-of select="."/>
                     </xsl:element>
-                  </xsl:for-each>          -->    
-                  [structDescription]
-                </xsl:when>    
+                  </xsl:for-each>          -->
+                  [structDescription] </xsl:when>
                 <xsl:otherwise>[structDescription]</xsl:otherwise>
-              </xsl:choose>                 
+              </xsl:choose>
             </xsl:element>
             <xsl:element name="structProperties">
               <xsl:element name="structPropset">
@@ -127,13 +127,27 @@
                   <xsl:value-of select="tgroup/struct/@opcode"/>
                 </xsl:element>
                 <xsl:element name="structType">
-                  <xsl:value-of select="tgroup/struct/@structure"/>
+                  <xsl:if test="tgroup/struct/@structure">
+                    <xsl:attribute name="structType">
+                      <xsl:value-of select="tgroup/struct/@structure"/>
+                    </xsl:attribute>
+                  </xsl:if>
                 </xsl:element>
               </xsl:element>
             </xsl:element>
           </xsl:element>
           <xsl:for-each select="tgroup/struct/dword">
             <xsl:element name="structDword">
+              <xsl:attribute name="id">
+                <xsl:choose>
+                  <xsl:when test="@id">
+                    <xsl:value-of select="@id"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="generate-id()"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:attribute>
               <xsl:call-template name="filtering-attribute-management"/>
               <xsl:element name="dwordName">
                 <xsl:value-of select="name"/>
@@ -146,7 +160,7 @@
                   <xsl:otherwise>
                     <xsl:value-of select="p[1]"/>
                   </xsl:otherwise>
-                </xsl:choose>                
+                </xsl:choose>
               </xsl:element>
               <xsl:element name="dwordBody">
                 <xsl:element name="dwordDescription">
@@ -192,4 +206,4 @@
       </xsl:result-document>
     </xsl:for-each>
   </xsl:template>
- </xsl:stylesheet>
+</xsl:stylesheet>
