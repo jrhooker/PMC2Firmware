@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://relaxng.org/ns/structure/1.0" 
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>Atmel DITA FRMWR Structure Dword</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    Atmel DITA FRMWR Structure Dword
+ VERSION:   1.3                                              
+ DATE:      March 2022  
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA FRMWR Structure Dword//EN"
+      Delivered as file "atmelStructDword.mod"               
+
+
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>structDword</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver" /> FRMWR Structure Dword//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver" /> FRMWR Structure Dword//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:atmelStructDwordMod.xsd<var presep=":" name="ditaver" /></xsdMod>
+        <xsdGrp>urn:atmel:names:tc:dita:xsd:atmelStructDwordGrp.xsd<var presep=":" name="ditaver" /></xsdGrp>
+        <rncMod>urn:atmel:names:tc:dita:rnc:atmelStructDwordMod.rnc<var presep=":" name="ditaver" /></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:atmelStructDwordMod.rng<var presep=":" name="ditaver" /></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic reference structDword)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+    <define name="structDword-info-types">
+      <choice>
+        <ref name="no-topic-nesting.element"/>
+      </choice>
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="structDword">
+      <ref name="structDword.element" />
+    </define>
+    <define name="dwordName">
+      <ref name="dwordName.element" />
+    </define>
+    <define name="dwordBriefDescription">
+      <ref name="dwordBriefDescription.element" />
+    </define>
+    <define name="dwordBody">
+      <ref name="dwordBody.element" />
+    </define>
+    <define name="dwordDescription">
+      <ref name="dwordDescription.element" />
+    </define>
+    <define name="dwordProperties">
+      <ref name="dwordProperties.element" />
+    </define>
+    <define name="dwordPropset">
+      <ref name="dwordPropset.element" />
+    </define>
+    <define name="dwordWidth">
+      <ref name="dwordWidth.element" />
+    </define>
+    <define name="dwordOffset">
+      <ref name="dwordOffset.element" />
+    </define>
+    <define name="dwordNumberWidth">
+      <ref name="dwordNumberWidth.element" />
+    </define>
+    <define name="dwordNumberOffset">
+      <ref name="dwordNumberOffset.element" />
+    </define>
+    <define name="dwordValues">
+      <ref name="dwordValues.element" />
+    </define>
+    <define name="dwordValueGroup">
+      <ref name="dwordValueGroup.element" />
+    </define>
+    <define name="dwordValue">
+      <ref name="dwordValue.element" />
+    </define>
+    <define name="dwordValueName">
+      <ref name="dwordValueName.element" />
+    </define>
+    <define name="dwordValueDescription">
+      <ref name="dwordValueDescription.element" />
+    </define>
+  </div>
+
+  <div>
+    <a:documentation>general purpose content models</a:documentation>
+    <define name="dword.atomicvalue.cnt">
+      <choice>
+        <text />
+        <ref name="text" />
+      </choice>
+    </define>
+  </div>
+   
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+   
+    <div>
+      <a:documentation> LONG NAME: Structure Dword </a:documentation>
+      <define name="structDword.content">
+        <ref name="dwordName" />
+        <ref name="dwordBriefDescription" />
+        <ref name="dwordBody" />
+      </define>
+
+      <define name="structDword.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structDword.element">
+        <element name="structDword" dita:longName="Structure Dword">
+          <a:documentation>The &lt;structDword> element is the top-level element for a structDword topic. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="structDword.attlist" />
+          <ref name="structDword.content" />
+        </element>
+      </define>
+      <define name="structDword.attlist" combine="interleave">
+        <ref name="structDword.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="structDword.element"/>
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Dword Name </a:documentation>
+      <define name="dwordName.content">
+        <zeroOrMore>
+          <ref name="title.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="dwordName.attributes">
+        <!--
+        <ref name="ish-atts.dwordName" />
+        -->
+        <ref name="id-atts"/>
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="base"/>
+        </optional>
+        <ref name="base-attribute-extensions"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+        <optional>
+          <attribute name="rev" dita:since="1.3"/>
+        </optional>
+      </define>
+      <define name="dwordName.element">
+        <element name="dwordName" dita:longName="Dword Name">
+          <a:documentation>&lt;dwordName> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordName.attlist" />
+          <ref name="dwordName.content" />
+        </element>
+      </define>
+      <define name="dwordName.attlist" combine="interleave">
+        <ref name="dwordName.attributes" />
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Dword Brief Description </a:documentation>
+      <define name="dwordBriefDescription.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="title.cnt" />
+            <ref name="xref" dita:since="1.3" />
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordBriefDescription.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordBriefDescription.element">
+        <element name="dwordBriefDescription" dita:longName="Bit Field Brief Description">
+          <a:documentation>&lt;dwordBriefDescription> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordBriefDescription.attlist" />
+          <ref name="dwordBriefDescription.content" />
+        </element>
+      </define>
+      <define name="dwordBriefDescription.attlist" combine="interleave">
+        <ref name="dwordBriefDescription.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Body </a:documentation>
+      <define name="dwordBody.content">
+        <ref name="dwordDescription"/>
+        <ref name="dwordProperties"/>
+        <optional>
+          <ref name="dwordValues"/>
+        </optional>
+      </define>
+      <define name="dwordBody.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordBody.element">
+        <element name="dwordBody" dita:longName="Dword Body">
+          <a:documentation>&lt;dwordBody> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordBody.attlist" />
+          <ref name="dwordBody.content" />
+        </element>
+      </define>
+      <define name="dwordBody.attlist" combine="interleave">
+        <ref name="dwordBody.attributes" />
+      </define>
+    </div>
+    
+        <div>
+      <a:documentation> LONG NAME: Dword Description </a:documentation>
+      <define name="dwordDescription.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="section.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordDescription.attributes">
+        <optional>
+          <attribute name="spectitle"/>
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordDescription.element">
+        <element name="dwordDescription" dita:longName="Dword Description">
+          <a:documentation>&lt;dwordDescription> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordDescription.attlist" />
+          <ref name="dwordDescription.content" />
+        </element>
+      </define>
+      <define name="dwordDescription.attlist" combine="interleave">
+        <ref name="dwordDescription.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Properties </a:documentation>
+      <define name="dwordProperties.content">
+        <ref name="dwordPropset" />
+      </define>
+      <define name="dwordProperties.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordProperties.element">
+        <element name="dwordProperties" dita:longName="Dword Properties">
+          <a:documentation>&lt;dwordProperties> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordProperties.attlist" />
+          <ref name="dwordProperties.content" />
+        </element>
+      </define>
+      <define name="dwordProperties.attlist" combine="interleave">
+        <ref name="dwordProperties.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Property Set </a:documentation>
+      <define name="dwordPropset.content">
+        <ref name="dwordWidth" />
+        <ref name="dwordOffset" />
+        <ref name="dwordNumberWidth" />
+        <ref name="dwordNumberOffset" />
+      </define>
+      <define name="dwordPropset.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordPropset.element">
+        <element name="dwordPropset" dita:longName="Dword Property Set">
+          <a:documentation>&lt;dwordPropset> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordPropset.attlist" />
+          <ref name="dwordPropset.content" />
+        </element>
+      </define>
+      <define name="dwordPropset.attlist" combine="interleave">
+        <ref name="dwordPropset.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Width </a:documentation>
+      <define name="dwordWidth.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dword.atomicvalue.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordWidth.attributes">
+        <ref name="univ-atts" />
+        <ref name="variables-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordWidth.element">
+        <element name="dwordWidth" dita:longName="Dword Width">
+          <a:documentation>&lt;dwordWidth> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordWidth.attlist" />
+          <ref name="dwordWidth.content" />
+        </element>
+      </define>
+      <define name="dwordWidth.attlist" combine="interleave">
+        <ref name="dwordWidth.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Offset </a:documentation>
+      <define name="dwordOffset.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dword.atomicvalue.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordOffset.attributes">
+        <ref name="univ-atts" />
+        <ref name="variables-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordOffset.element">
+        <element name="dwordOffset" dita:longName="Dword Offset">
+          <a:documentation>&lt;dwordOffset> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordOffset.attlist" />
+          <ref name="dwordOffset.content" />
+        </element>
+      </define>
+      <define name="dwordOffset.attlist" combine="interleave">
+        <ref name="dwordOffset.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Number Width </a:documentation>
+      <define name="dwordNumberWidth.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dword.atomicvalue.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordNumberWidth.attributes">
+        <ref name="univ-atts" />
+        <ref name="variables-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordNumberWidth.element">
+        <element name="dwordNumberWidth" dita:longName="Dword Number Width">
+          <a:documentation>&lt;dwordNumberWidth> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordNumberWidth.attlist" />
+          <ref name="dwordNumberWidth.content" />
+        </element>
+      </define>
+      <define name="dwordNumberWidth.attlist" combine="interleave">
+        <ref name="dwordNumberWidth.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Number Offset </a:documentation>
+      <define name="dwordNumberOffset.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dword.atomicvalue.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordNumberOffset.attributes">
+        <ref name="univ-atts" />
+        <ref name="variables-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordNumberOffset.element">
+        <element name="dwordNumberOffset" dita:longName="Dword Number Offset">
+          <a:documentation>&lt;dwordNumberOffset> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordNumberOffset.attlist" />
+          <ref name="dwordNumberOffset.content" />
+        </element>
+      </define>
+      <define name="dwordNumberOffset.attlist" combine="interleave">
+        <ref name="dwordNumberOffset.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Values </a:documentation>
+      <define name="dwordValues.content">
+        <ref name="dwordValueGroup" />
+      </define>
+      <define name="dwordValues.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordValues.element">
+        <element name="dwordValues" dita:longName="Dword Values">
+          <a:documentation>&lt;dwordValues> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordValues.attlist" />
+          <ref name="dwordValues.content" />
+        </element>
+      </define>
+      <define name="dwordValues.attlist" combine="interleave">
+        <ref name="dwordValues.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Value Group </a:documentation>
+      <define name="dwordValueGroup.content">
+        <ref name="dwordValue" />
+        <ref name="dwordValueName" />
+        <ref name="dwordValueDescription" />
+      </define>
+      <define name="dwordValueGroup.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordValueGroup.element">
+        <element name="dwordValueGroup" dita:longName="Dword Value Group">
+          <a:documentation>&lt;dwordValueGroup> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordValueGroup.attlist" />
+          <ref name="dwordValueGroup.content" />
+        </element>
+      </define>
+      <define name="dwordValueGroup.attlist" combine="interleave">
+        <ref name="dwordValueGroup.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Value </a:documentation>
+      <define name="dwordValue.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dword.atomicvalue.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordValue.attributes">
+        <ref name="univ-atts" />
+        <ref name="variables-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordValue.element">
+        <element name="dwordValue" dita:longName="Dword Value">
+          <a:documentation>&lt;dwordValue> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordValue.attlist" />
+          <ref name="dwordValue.content" />
+        </element>
+      </define>
+      <define name="dwordValue.attlist" combine="interleave">
+        <ref name="dwordValue.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Value Name </a:documentation>
+      <define name="dwordValueName.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dword.atomicvalue.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordValueName.attributes">
+        <ref name="univ-atts" />
+        <ref name="variables-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordValueName.element">
+        <element name="dwordValueName" dita:longName="Dword Value Name">
+          <a:documentation>&lt;dwordValueName> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordValueName.attlist" />
+          <ref name="dwordValueName.content" />
+        </element>
+      </define>
+      <define name="dwordValueName.attlist" combine="interleave">
+        <ref name="dwordValueName.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Dword Value Description </a:documentation>
+      <define name="dwordValueDescription.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dword.atomicvalue.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="dwordValueDescription.attributes">
+        <ref name="univ-atts" />
+        <ref name="variables-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="dwordValueDescription.element">
+        <element name="dwordValueDescription" dita:longName="Dword Value Description">
+          <a:documentation>&lt;dwordValueDescription> element. Category: FRMWR Structure Dword elements</a:documentation>
+          <ref name="dwordValueDescription.attlist" />
+          <ref name="dwordValueDescription.content" />
+        </element>
+      </define>
+      <define name="dwordValueDescription.attlist" combine="interleave">
+        <ref name="dwordValueDescription.attributes" />
+      </define>
+    </div>
+    
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="structDword.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic reference/reference structDword/structDword " />
+      </optional>
+    </define>
+    <define name="dwordName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title reference/title structDword/dwordName " />
+      </optional>
+    </define>
+    <define name="dwordBriefDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/shortdesc reference/shortdesc structDword/dwordBriefDescription " />
+      </optional>
+    </define>
+    <define name="dwordBody.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body reference/refbody structDword/dwordBody " />
+      </optional>
+    </define>
+    <define name="dwordDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section reference/section structDword/dwordDescription " />
+      </optional>
+    </define>
+    <define name="dwordProperties.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable reference/simpletable structDword/dwordProperties " />
+      </optional>
+    </define>
+    <define name="dwordPropset.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow reference/strow structDword/dwordPropset " />
+      </optional>
+    </define>
+    <define name="dwordWidth.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry structDword/dwordWidth " />
+      </optional>
+    </define>
+    <define name="dwordOffset.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry structDword/dwordOffset " />
+      </optional>
+    </define>
+    <define name="dwordNumberWidth.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry structDword/dwordNumberWidth " />
+      </optional>
+    </define>
+    <define name="dwordNumberOffset.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry structDword/dwordNumberOffset " />
+      </optional>
+    </define>
+    <define name="dwordValues.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable reference/simpletable structDword/dwordValues " />
+      </optional>
+    </define>
+    <define name="dwordValueGroup.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow reference/strow structDword/dwordValueGroup " />
+      </optional>
+    </define>
+    <define name="dwordValue.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry structDword/dwordValue " />
+      </optional>
+    </define>
+    <define name="dwordValueName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry structDword/dwordValueName " />
+      </optional>
+    </define>
+    <define name="dwordValueDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry structDword/dwordValueDescription " />
+      </optional>
+    </define>
+  </div>
+</grammar>

@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Register                              -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Register//EN"          -->
+<!--      Delivered as file "sidsc-register.mod"                 -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3" />
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference sidsc-register)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="register-info-types">
+      <xs:choice>
+         <xs:group ref="bitField" />
+         <xs:group ref="reference" />
+      </xs:choice>
+    </xs:group>
+   <xs:group name="reg.dataPhrase.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:element ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="sidsc.registerBitsInLau.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:group ref="foreign" />
+            <xs:group ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="sidsc.reg.plain.text.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:element ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ish-atts.registerBody" />
+   <xs:attributeGroup name="ish-atts.registerProperties" />
+   <xs:attributeGroup name="ish-atts.registerPropset" />
+   <xs:attributeGroup name="ish-atts.resetTrig" />
+   <xs:element name="register">
+      <xs:annotation>
+         <xs:documentation>The &lt;register&gt; element is the top-level element for a SIDSC register topic. Category: SIDSC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="register.class">
+               <xs:attribute ref="class" default="- topic/topic reference/reference sidsc-register/register " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="register.class">
+      <xs:sequence>
+         <xs:group ref="register.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="register.attributes" />
+   </xs:complexType>
+   <xs:group name="register.content">
+      <xs:sequence>
+         <xs:group ref="registerName" />
+         <xs:group ref="registerNameMore" />
+         <xs:group ref="registerBody" />
+         <xs:group ref="register-info-types" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="register.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID" />
+      <xs:attributeGroup ref="conref-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:attributeGroup name="register.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+   </xs:attributeGroup>
+   <xs:element name="registerName">
+      <xs:annotation>
+         <xs:documentation>&lt;registerName&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerName.class">
+               <xs:attribute ref="class" default="- topic/title reference/title sidsc-register/registerName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="registerName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerName.attributes" />
+   </xs:complexType>
+   <xs:group name="registerName.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerName.attributes">
+      <xs:attributeGroup ref="ish-atts.registerName" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerNameMore">
+      <xs:annotation>
+         <xs:documentation>&lt;registerNameMore&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerNameMore.class">
+               <xs:attribute ref="class" default="- topic/abstract reference/abstract sidsc-register/registerNameMore " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerNameMore.class">
+      <xs:sequence>
+         <xs:group ref="registerNameMore.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerNameMore.attributes" />
+   </xs:complexType>
+   <xs:group name="registerNameMore.content">
+      <xs:sequence>
+         <xs:group ref="registerNameFull" />
+         <xs:group ref="registerBriefDescription" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerNameMore.attributes">
+      <xs:attributeGroup ref="ish-atts.registerNameMore" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerNameFull">
+      <xs:annotation>
+         <xs:documentation>&lt;registerNameFull&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerNameFull.class">
+               <xs:attribute ref="class" default="- topic/shortdesc reference/shortdesc sidsc-register/registerNameFull " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerNameFull.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="registerNameFull.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerNameFull.attributes" />
+   </xs:complexType>
+   <xs:group name="registerNameFull.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerNameFull.attributes">
+      <xs:attributeGroup ref="ish-atts.registerNameFull" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerBriefDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;registerBriefDescription&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerBriefDescription.class">
+               <xs:attribute ref="class" default="- topic/p reference/p sidsc-register/registerBriefDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerBriefDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="registerBriefDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerBriefDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="registerBriefDescription.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerBriefDescription.attributes">
+      <xs:attributeGroup ref="ish-atts.registerBriefDescription" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerBody">
+      <xs:annotation>
+         <xs:documentation>&lt;registerBody&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerBody.class">
+               <xs:attribute ref="class" default="- topic/body reference/refbody sidsc-register/registerBody " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerBody.class">
+      <xs:sequence>
+         <xs:group ref="registerBody.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerBody.attributes" />
+   </xs:complexType>
+   <xs:group name="registerBody.content">
+      <xs:sequence>
+         <xs:group ref="registerDescription" />
+         <xs:group ref="registerProperties" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerBody.attributes">
+      <xs:attributeGroup ref="ish-atts.registerBody" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;registerDescription&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerDescription.class">
+               <xs:attribute ref="class" default="- topic/section reference/section sidsc-register/registerDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="registerDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="registerDescription.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="sidsc.reg.plain.text.cnt" />
+            <xs:group ref="body.cnt" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerDescription.attributes">
+      <xs:attributeGroup ref="ish-atts.registerDescription" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerProperties">
+      <xs:annotation>
+         <xs:documentation>&lt;registerProperties&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerProperties.class">
+               <xs:attribute ref="class" default="- topic/simpletable dataTableDomain/dataTable sidsc-register/registerProperties " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerProperties.class">
+      <xs:sequence>
+         <xs:group ref="registerProperties.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerProperties.attributes" />
+   </xs:complexType>
+   <xs:group name="registerProperties.content">
+      <xs:sequence>
+         <xs:group ref="registerPropset" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerProperties.attributes">
+      <xs:attributeGroup ref="ish-atts.registerProperties" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerPropset">
+      <xs:annotation>
+         <xs:documentation>&lt;registerPropset&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerPropset.class">
+               <xs:attribute ref="class" default="- topic/strow dataTableDomain/dataRow sidsc-register/registerPropset " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerPropset.class">
+      <xs:sequence>
+         <xs:group ref="registerPropset.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerPropset.attributes" />
+   </xs:complexType>
+   <xs:group name="registerPropset.content">
+      <xs:sequence>
+         <xs:group ref="registerBitsInLau" minOccurs="0" />
+         <xs:group ref="addressOffset" />
+         <xs:group ref="registerSize" />
+         <xs:group ref="registerAccess" minOccurs="0" />
+         <xs:group ref="registerResetValue" minOccurs="0" />
+         <xs:group ref="bitOrder" />
+         <xs:group ref="resetTrig" minOccurs="0" />
+         <xs:element ref="dimension" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerPropset.attributes">
+      <xs:attributeGroup ref="ish-atts.registerPropset" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerBitsInLau">
+      <xs:annotation>
+         <xs:documentation>&lt;registerBitsInLau&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerBitsInLau.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-register/registerBitsInLau " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerBitsInLau.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="registerBitsInLau.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerBitsInLau.attributes" />
+   </xs:complexType>
+   <xs:group name="registerBitsInLau.content">
+      <xs:sequence>
+         <xs:group ref="sidsc.registerBitsInLau.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerBitsInLau.attributes">
+      <xs:attributeGroup ref="ish-atts.registerBitsInLau" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="addressOffset">
+      <xs:annotation>
+         <xs:documentation>&lt;addressOffset&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="addressOffset.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-register/addressOffset " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="addressOffset.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="addressOffset.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="addressOffset.attributes" />
+   </xs:complexType>
+   <xs:group name="addressOffset.content">
+      <xs:sequence>
+         <xs:group ref="reg.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="addressOffset.attributes">
+      <xs:attributeGroup ref="ish-atts.addressOffset" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerSize">
+      <xs:annotation>
+         <xs:documentation>&lt;registerSize&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerSize.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-register/registerSize " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerSize.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="registerSize.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerSize.attributes" />
+   </xs:complexType>
+   <xs:group name="registerSize.content">
+      <xs:sequence>
+         <xs:group ref="reg.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerSize.attributes">
+      <xs:attributeGroup ref="ish-atts.registerSize" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerAccess">
+      <xs:annotation>
+         <xs:documentation>&lt;registerAccess&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerAccess.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-register/registerAccess " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerAccess.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="registerAccess.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerAccess.attributes" />
+   </xs:complexType>
+   <xs:group name="registerAccess.content">
+      <xs:sequence>
+         <xs:group ref="reg.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerAccess.attributes">
+      <xs:attributeGroup ref="ish-atts.registerAccess" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="registerResetValue">
+      <xs:annotation>
+         <xs:documentation>&lt;registerResetValue&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="registerResetValue.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-register/registerResetValue " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="registerResetValue.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="registerResetValue.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="registerResetValue.attributes" />
+   </xs:complexType>
+   <xs:group name="registerResetValue.content">
+      <xs:sequence>
+         <xs:group ref="reg.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="registerResetValue.attributes">
+      <xs:attributeGroup ref="ish-atts.registerResetValue" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitOrder">
+      <xs:annotation>
+         <xs:documentation>&lt;bitOrder&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitOrder.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-register/bitOrder " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitOrder.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitOrder.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitOrder.attributes" />
+   </xs:complexType>
+   <xs:group name="bitOrder.content">
+      <xs:sequence>
+         <xs:group ref="sidsc.reg.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitOrder.attributes">
+      <xs:attributeGroup ref="ish-atts.bitOrder" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="resetTrig">
+      <xs:annotation>
+         <xs:documentation>&lt;resetTrig&gt; element. Category: SISDC Register elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="resetTrig.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-register/resetTrig " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="resetTrig.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="resetTrig.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="resetTrig.attributes" />
+   </xs:complexType>
+   <xs:group name="resetTrig.content">
+      <xs:sequence>
+         <xs:group ref="sidsc.reg.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="resetTrig.attributes">
+      <xs:attributeGroup ref="ish-atts.resetTrig" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

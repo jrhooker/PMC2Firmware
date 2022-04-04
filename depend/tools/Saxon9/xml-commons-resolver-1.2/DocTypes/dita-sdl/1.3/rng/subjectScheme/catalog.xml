@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--SDL DITA Classification Map Shell-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:sdl:names:tc:dita:spec:classification:rng:classifyMap.rng"
+              uri="rng/sdlClassifyMap.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:spec:classification:rng:classifyMap.rng:1.x"
+              uri="rng/sdlClassifyMap.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:spec:classification:rng:classifyMap.rng:1.3"
+              uri="rng/sdlClassifyMap.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:spec:classification:rng:subjectScheme.rng"
+              uri="rng/sdlSubjectScheme.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:spec:classification:rng:subjectScheme.rng:1.x"
+              uri="rng/sdlSubjectScheme.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:spec:classification:rng:subjectScheme.rng:1.3"
+              uri="rng/sdlSubjectScheme.rng"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:sdl:names:tc:dita:spec:classification:rng:classifyMap.rng"
+           uri="rng/sdlClassifyMap.rng"/>
+      <uri name="urn:sdl:names:tc:dita:spec:classification:rng:classifyMap.rng:1.x"
+           uri="rng/sdlClassifyMap.rng"/>
+      <uri name="urn:sdl:names:tc:dita:spec:classification:rng:classifyMap.rng:1.3"
+           uri="rng/sdlClassifyMap.rng"/>
+      <uri name="urn:sdl:names:tc:dita:spec:classification:rng:subjectScheme.rng"
+           uri="rng/sdlSubjectScheme.rng"/>
+      <uri name="urn:sdl:names:tc:dita:spec:classification:rng:subjectScheme.rng:1.x"
+           uri="rng/sdlSubjectScheme.rng"/>
+      <uri name="urn:sdl:names:tc:dita:spec:classification:rng:subjectScheme.rng:1.3"
+           uri="rng/sdlSubjectScheme.rng"/>
+   </group>
+</catalog>

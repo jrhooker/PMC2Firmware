@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--SDL Comment Identifier Attribute Domain-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:sdl:names:tc:dita:rng:cidAttDomain.rng"
+              uri="rng/cidAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:cidAttDomain.rng:1.x"
+              uri="rng/cidAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:cidAttDomain.rng:1.3"
+              uri="rng/cidAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:ishconditionAttDomain.rng"
+              uri="rng/ishconditionAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:ishconditionAttDomain.rng:1.x"
+              uri="rng/ishconditionAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:ishconditionAttDomain.rng:1.3"
+              uri="rng/ishconditionAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:basemap.rng"
+              uri="rng/sdlBasemap.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:basemap.rng:1.x"
+              uri="rng/sdlBasemap.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:basemap.rng:1.3"
+              uri="rng/sdlBasemap.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:basetopic.rng"
+              uri="rng/sdlBasetopic.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:basetopic.rng:1.x"
+              uri="rng/sdlBasetopic.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:basetopic.rng:1.3"
+              uri="rng/sdlBasetopic.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:sdlVariablesConstraintMod.rng"
+              uri="rng/sdlVariablesConstraintMod.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:sdlVariablesConstraintMod.rng:1.x"
+              uri="rng/sdlVariablesConstraintMod.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:sdlVariablesConstraintMod.rng:1.3"
+              uri="rng/sdlVariablesConstraintMod.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:varidAttDomain.rng"
+              uri="rng/varidAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:varidAttDomain.rng:1.x"
+              uri="rng/varidAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:varidAttDomain.rng:1.3"
+              uri="rng/varidAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:varrefAttDomain.rng"
+              uri="rng/varrefAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:varrefAttDomain.rng:1.x"
+              uri="rng/varrefAttDomain.rng"/>
+      <system systemId="urn:sdl:names:tc:dita:rng:varrefAttDomain.rng:1.3"
+              uri="rng/varrefAttDomain.rng"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:sdl:names:tc:dita:rng:cidAttDomain.rng"
+           uri="rng/cidAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:cidAttDomain.rng:1.x"
+           uri="rng/cidAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:cidAttDomain.rng:1.3"
+           uri="rng/cidAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:ishconditionAttDomain.rng"
+           uri="rng/ishconditionAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:ishconditionAttDomain.rng:1.x"
+           uri="rng/ishconditionAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:ishconditionAttDomain.rng:1.3"
+           uri="rng/ishconditionAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:basemap.rng" uri="rng/sdlBasemap.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:basemap.rng:1.x"
+           uri="rng/sdlBasemap.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:basemap.rng:1.3"
+           uri="rng/sdlBasemap.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:basetopic.rng"
+           uri="rng/sdlBasetopic.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:basetopic.rng:1.x"
+           uri="rng/sdlBasetopic.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:basetopic.rng:1.3"
+           uri="rng/sdlBasetopic.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:sdlVariablesConstraintMod.rng"
+           uri="rng/sdlVariablesConstraintMod.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:sdlVariablesConstraintMod.rng:1.x"
+           uri="rng/sdlVariablesConstraintMod.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:sdlVariablesConstraintMod.rng:1.3"
+           uri="rng/sdlVariablesConstraintMod.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:varidAttDomain.rng"
+           uri="rng/varidAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:varidAttDomain.rng:1.x"
+           uri="rng/varidAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:varidAttDomain.rng:1.3"
+           uri="rng/varidAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:varrefAttDomain.rng"
+           uri="rng/varrefAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:varrefAttDomain.rng:1.x"
+           uri="rng/varrefAttDomain.rng"/>
+      <uri name="urn:sdl:names:tc:dita:rng:varrefAttDomain.rng:1.3"
+           uri="rng/varrefAttDomain.rng"/>
+   </group>
+</catalog>

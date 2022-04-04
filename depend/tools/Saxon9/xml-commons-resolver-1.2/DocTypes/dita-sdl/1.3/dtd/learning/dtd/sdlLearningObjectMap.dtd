@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    SDL DITA learningObjectMap                        -->
+<!--  VERSION:   1.3                                               -->
+<!--  DATE:      June 2018                                         -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                MAP ENTITY DECLARATIONS                        -->
+<!-- ============================================================= -->
+
+<!ENTITY % learningObjectMap-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Learning Object Map//EN"
+         "../../../../../dita-oasis/1.3/dtd/learning/dtd/learningObjectMap.ent"
+>%learningObjectMap-dec;
+
+<!-- ============================================================= -->
+<!--             DOMAIN CONSTRAINT INTEGRATION                     -->
+<!-- ============================================================= -->
+
+<!ENTITY % learningAggregationsTopicref-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Learning Aggregations Topicref Constraint//EN"
+         "../../../../../dita-oasis/1.3/dtd/learning/dtd/learningAggregationsTopicrefConstraint.mod"
+>%learningAggregationsTopicref-def;
+
+<!-- ============================================================= -->
+<!--             DOMAIN ENTITY DECLARATIONS                        -->
+<!-- ============================================================= -->
+
+<!ENTITY % mapgroup-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Map Group Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/mapGroup.ent"
+>%mapgroup-d-dec;
+
+<!ENTITY % delay-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delayed Resolution Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/delayResolutionDomain.ent"
+>%delay-d-dec;
+
+<!ENTITY % ditavalref-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 DITAVAL Ref Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/ditavalrefDomain.ent"
+>%ditavalref-d-dec;
+
+<!ENTITY % hazard-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Hazard Statement Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/hazardstatementDomain.ent"
+>%hazard-d-dec;
+
+<!ENTITY % hi-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Highlight Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % indexing-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Indexing Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/indexingDomain.ent"
+>%indexing-d-dec;
+
+<!ENTITY % learningmap-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Learning Map Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/learning/dtd/learningMapDomain.ent"
+>%learningmap-d-dec;
+
+<!ENTITY % learningmeta-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Learning Metadata Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/learning/dtd/learningMetadataDomain.ent"
+>%learningmeta-d-dec;
+
+<!ENTITY % relmgmt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Release Management Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/releaseManagementDomain.ent"
+>%relmgmt-d-dec;
+
+<!ENTITY % ut-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Utilities Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/utilitiesDomain.ent"
+>%ut-d-dec;
+
+<!-- ============================================================= -->
+<!--             DOMAIN ATTRIBUTES DECLARATIONS                    -->
+<!-- ============================================================= -->
+
+<!ENTITY % deliveryTargetAtt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/deliveryTargetAttDomain.ent"
+>%deliveryTargetAtt-d-dec;
+
+<!ENTITY % ishconditionAtt-d-dec
+  PUBLIC "-//SDL//ENTITIES DITA 1.3 Condition Attribute Domain//EN"
+         "../../base/dtd/ishconditionAttDomain.ent"
+>%ishconditionAtt-d-dec;
+
+<!ENTITY % varidAtt-d-dec
+  PUBLIC "-//SDL//ENTITIES DITA 1.3 Variable Identifier Attribute Domain//EN"
+         "../../base/dtd/varidAttDomain.ent"
+>%varidAtt-d-dec;
+
+<!ENTITY % varrefAtt-d-dec
+  PUBLIC "-//SDL//ENTITIES DITA 1.3 Variable Reference Attribute Domain//EN"
+         "../../base/dtd/varrefAttDomain.ent"
+>%varrefAtt-d-dec;
+
+<!ENTITY % cidAtt-d-dec
+  PUBLIC "-//SDL//ENTITIES DITA 1.3 Comment Identifier Attribute Domain//EN"
+         "../../base/dtd/cidAttDomain.ent"
+>%cidAtt-d-dec;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+
+<!ENTITY % note         "note |
+                         %hazard-d-note;
+                        ">
+<!ENTITY % ph           "ph |
+                         %hi-d-ph;
+                        ">
+<!ENTITY % index-base   "index-base |
+                         %indexing-d-index-base;
+                        ">
+<!ENTITY % metadata     "metadata |
+                         %relmgmt-d-metadata; |
+                         %learningmeta-d-metadata;
+                        ">
+<!ENTITY % fig          "fig |
+                         %ut-d-fig;
+                        ">
+<!ENTITY % data         "data |
+                         %ut-d-data;
+                        ">
+<!-- NOTE: The learningAggregationsTopicref-c constraint also requires
+           omitting topicref from the %topicref group.
+  -->
+<!ENTITY % topicref     "%mapgroup-d-topicref; |
+                         %ditavalref-d-topicref; |
+                         %learningmap-d-topicref;
+                        ">
+<!ENTITY % keywords     "keywords |
+                         %delay-d-keywords;
+                        ">
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+
+<!ENTITY % props-attribute-extensions
+  "%deliveryTargetAtt-d-attribute;"
+>
+<!ENTITY % base-attribute-extensions
+  "%ishconditionAtt-d-attribute;
+   %cidAtt-d-attribute;"
+>
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+
+<!ENTITY included-domains
+                          "&mapgroup-d-att;
+                           &learningObjectMap-att;
+                           &delay-d-att;
+                           &deliveryTargetAtt-d-att;
+                           &ditavalref-d-att;
+                           &hazard-d-att;
+                           &hi-d-att;
+                           &indexing-d-att;
+                           &learningmap-d-att;
+                           &learningmeta-d-att;
+                           &relmgmt-d-att;
+                           &ut-d-att;
+                           &ishconditionAtt-d-att;
+                           &varidAtt-d-att;
+                           &varrefAtt-d-att;
+                           &cidAtt-d-att;
+                           &sdlVariables-constraints;
+                           &learningAggregationsTopicref-constraints;
+  "
+>
+
+<!-- ============================================================= -->
+<!--                    CONTENT CONSTRAINT INTEGRATION             -->
+<!-- ============================================================= -->
+
+<!ENTITY % sdlVariables-def
+  PUBLIC "-//SDL//ELEMENTS DITA 1.3 Variables Constraint//EN"
+         "../../base/dtd/sdlVariablesConstraint.mod"
+>%sdlVariables-def;
+
+<!-- ============================================================= -->
+<!--                      MAP ELEMENT INTEGRATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY % map-type
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Map//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/map.mod"
+>%map-type;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % mapgroup-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Map Group Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/mapGroup.mod"
+>%mapgroup-d-def;
+
+<!ENTITY % delay-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Delayed Resolution Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/delayResolutionDomain.mod"
+>%delay-d-def;
+
+<!ENTITY % ditavalref-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 DITAVAL Ref Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/ditavalrefDomain.mod"
+>%ditavalref-d-def;
+
+<!ENTITY % hazard-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Hazard Statement Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/hazardstatementDomain.mod"
+>%hazard-d-def;
+
+<!ENTITY % hi-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Highlight Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % indexing-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Indexing Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/indexingDomain.mod"
+>%indexing-d-def;
+
+<!ENTITY % learningmap-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Learning Map Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/learning/dtd/learningMapDomain.mod"
+>%learningmap-d-def;
+
+<!ENTITY % learningmeta-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Learning Metadata Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/learning/dtd/learningMetadataDomain.mod"
+>%learningmeta-d-def;
+
+<!ENTITY % relmgmt-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Release Management Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/technicalContent/dtd/releaseManagementDomain.mod"
+>%relmgmt-d-def;
+
+<!ENTITY % ut-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Utilities Domain//EN"
+         "../../../../../dita-oasis/1.3/dtd/base/dtd/utilitiesDomain.mod"
+>%ut-d-def;
+
+<!-- ============================================================= -->
+<!--                        ELEMENT INTEGRATION                    -->
+<!-- ============================================================= -->
+
+<!ENTITY % learningObjectMap-type
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Learning Object Map//EN"
+         "../../../../../dita-oasis/1.3/dtd/learning/dtd/learningObjectMap.mod"
+>%learningObjectMap-type;
+
+<!-- ================= End of SDL DITA learningObjectMap Shell ================= -->

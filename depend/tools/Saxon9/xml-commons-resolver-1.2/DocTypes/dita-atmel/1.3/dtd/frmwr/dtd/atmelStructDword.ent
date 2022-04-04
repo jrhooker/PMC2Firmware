@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    Atmel DITA FRMWR Structure Dword                  -->
+<!--  VERSION:   1.3                                               -->
+<!--  DATE:      March 2022                                        -->
+<!--                                                               -->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an  -->
+<!--       appropriate system identifier                           -->
+<!-- PUBLIC "-//Atmel//ELEMENTS DITA FRMWR Structure Dword//EN"    -->
+<!--       Delivered as file "atmelStructDword.mod"                -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY structDword-att
+  "(topic reference structDword)"
+>
+
+<!-- ================ End Atmel DITA FRMWR Structure Dword ================== -->
+ 

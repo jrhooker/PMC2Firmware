@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                               -->
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    SDL Condition Attribute Domain                    -->
+<!--  VERSION:   1.3                                               -->
+<!--  DATE:      June 2018                                         -->
+<!-- ============================================================= -->
+<!ENTITY % ishconditionAtt-d-attribute
+  "ishcondition
+                          CDATA
+                                    #IMPLIED"
+>
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY ishconditionAtt-d-att
+  "a(base ishcondition)"
+>
+
+<!-- ================ End SDL Condition Attribute Domain ================== -->
+ 

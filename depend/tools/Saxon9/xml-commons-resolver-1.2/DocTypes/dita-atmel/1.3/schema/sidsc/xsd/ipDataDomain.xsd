@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC IP Data Domain                        -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC IP Data Domain//EN"    -->
+<!--      Delivered as file "ipDataDomain.mod"                   -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic ipDataDomain-d)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:group name="ip-data">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="ip-data" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="ip-name">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="ip-name" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="ip-system-name">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="ip-system-name" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="ip-system-uid">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="ip-system-uid" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="technology">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="technology" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="ip-version">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="ip-version" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+
+   <xs:group name="ipDataDomain-d-data">
+      <xs:choice>
+         <xs:element ref="ip-data" />
+         <xs:element ref="ip-name" />
+         <xs:element ref="ip-system-name" />
+         <xs:element ref="ip-system-uid" />
+         <xs:element ref="technology" />
+         <xs:element ref="ip-version" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="ipd.plain.text.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:element ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:element name="ip-data">
+      <xs:annotation>
+         <xs:documentation>&lt;ip-data&gt; element. 
+            Category: SISDC IP Data elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="ip-data.class">
+               <xs:attribute ref="class" default="- topic/data  ipDataDomain/ip-data " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="ip-data.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="ip-data.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="ip-data.attributes" />
+   </xs:complexType>
+   <xs:group name="ip-data.content">
+      <xs:sequence>
+         <xs:group ref="ipd.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ip-data.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="ip-name">
+      <xs:annotation>
+         <xs:documentation>&lt;ip-name&gt; element. 
+            Category: SISDC IP Data elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="ip-name.class">
+               <xs:attribute ref="class" default="- topic/data  ipDataDomain/ip-name " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="ip-name.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="ip-name.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="ip-name.attributes" />
+   </xs:complexType>
+   <xs:group name="ip-name.content">
+      <xs:sequence>
+         <xs:group ref="ipd.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ip-name.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="ip-system-name">
+      <xs:annotation>
+         <xs:documentation>&lt;ip-system-name&gt; element. 
+            Category: SISDC IP Data elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="ip-system-name.class">
+               <xs:attribute ref="class" default="- topic/data ipDataDomain/ip-system-name " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="ip-system-name.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="ip-system-name.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="ip-system-name.attributes" />
+   </xs:complexType>
+   <xs:group name="ip-system-name.content">
+      <xs:sequence>
+         <xs:group ref="ipd.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ip-system-name.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="ip-system-uid">
+      <xs:annotation>
+         <xs:documentation>&lt;ip-system-uid&gt; element. 
+            Category: SISDC IP Data elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="ip-system-uid.class">
+               <xs:attribute ref="class" default="- topic/data ipDataDomain/ip-system-name " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="ip-system-uid.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="ip-system-uid.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="ip-system-uid.attributes" />
+   </xs:complexType>
+   <xs:group name="ip-system-uid.content">
+      <xs:sequence>
+         <xs:group ref="ipd.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ip-system-uid.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="technology">
+      <xs:annotation>
+         <xs:documentation>&lt;technology&gt; element. 
+            Category: SISDC IP Data elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="technology.class">
+               <xs:attribute ref="class" default="- topic/data ipDataDomain/technology " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="technology.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="technology.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="technology.attributes" />
+   </xs:complexType>
+   <xs:group name="technology.content">
+      <xs:sequence>
+         <xs:group ref="ipd.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="technology.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="ip-version">
+      <xs:annotation>
+         <xs:documentation>&lt;ip-version&gt; element. 
+            Category: SISDC IP Data elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="ip-version.class">
+               <xs:attribute ref="class" default="- topic/data ipDataDomain/ip-version " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="ip-version.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="ip-version.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="ip-version.attributes" />
+   </xs:complexType>
+   <xs:group name="ip-version.content">
+      <xs:sequence>
+         <xs:group ref="ipd.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ip-version.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Address Block                         -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Address Block//EN"     -->
+<!--      Delivered as file "sidsc-addressBlock.mod"             -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3" />
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference sidsc-addressBlock)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="addressBlock-info-types">
+      <xs:choice>
+         <xs:group ref="register" />
+      </xs:choice>
+    </xs:group>
+   <xs:element name="addressBlock">
+      <xs:annotation>
+         <xs:documentation>The &lt;addressBlock&gt; element is the top-level element for a SIDSC addressBlock topic. Category: SIDSC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="addressBlock.class">
+               <xs:attribute ref="class" default="- topic/topic reference/reference sidsc-addressBlock/addressBlock " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="addressBlock.class">
+      <xs:sequence>
+         <xs:group ref="addressBlock.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="addressBlock.attributes" />
+   </xs:complexType>
+   <xs:group name="addressBlock.content">
+      <xs:sequence>
+         <xs:group ref="addressBlockName" />
+         <xs:group ref="addressBlockBriefDescription" />
+         <xs:group ref="addressBlockBody" />
+         <xs:group ref="addressBlock-info-types" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="addressBlock.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID" />
+      <xs:attributeGroup ref="conref-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:attributeGroup name="addressBlock.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+   </xs:attributeGroup>
+   <xs:element name="addressBlockName">
+      <xs:annotation>
+         <xs:documentation>&lt;addressBlockName&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="addressBlockName.class">
+               <xs:attribute ref="class" default="- topic/title reference/title sidsc-addressBlock/addressBlockName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="addressBlockName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="addressBlockName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="addressBlockName.attributes" />
+   </xs:complexType>
+   <xs:group name="addressBlockName.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="addressBlockName.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="addressBlockBriefDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;addressBlockBriefDescription&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="addressBlockBriefDescription.class">
+               <xs:attribute ref="class" default="- topic/shortdesc reference/shortdesc sidsc-addressBlock/addressBlockBriefDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="addressBlockBriefDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="addressBlockBriefDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="addressBlockBriefDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="addressBlockBriefDescription.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="addressBlockBriefDescription.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="addressBlockBody">
+      <xs:annotation>
+         <xs:documentation>&lt;addressBlockBody&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="addressBlockBody.class">
+               <xs:attribute ref="class" default="- topic/body reference/refbody sidsc-addressBlock/addressBlockBody " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="addressBlockBody.class">
+      <xs:sequence>
+         <xs:group ref="addressBlockBody.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="addressBlockBody.attributes" />
+   </xs:complexType>
+   <xs:group name="addressBlockBody.content">
+      <xs:sequence>
+         <xs:group ref="addressBlockDescription" />
+         <xs:group ref="addressBlockProperties" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="addressBlockBody.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="addressBlockDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;addressBlockDescription&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="addressBlockDescription.class">
+               <xs:attribute ref="class" default="- topic/section reference/section sidsc-addressBlock/addressBlockDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="addressBlockDescription.class">
+      <xs:sequence>
+         <xs:group ref="addressBlockDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="addressBlockDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="addressBlockDescription.content">
+      <xs:sequence>
+         <xs:group ref="body.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="addressBlockDescription.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="addressBlockProperties">
+      <xs:annotation>
+         <xs:documentation>&lt;addressBlockProperties&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="addressBlockProperties.class">
+               <xs:attribute ref="class" default="- topic/simpletable dataTableDomain/dataTable sidsc-addressBlock/addressBlockProperties " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="addressBlockProperties.class">
+      <xs:sequence>
+         <xs:group ref="addressBlockProperties.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="addressBlockProperties.attributes" />
+   </xs:complexType>
+   <xs:group name="addressBlockProperties.content">
+      <xs:sequence>
+         <xs:group ref="addressBlockPropset" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="addressBlockProperties.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="addressBlockPropset">
+      <xs:annotation>
+         <xs:documentation>&lt;addressBlockPropset&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="addressBlockPropset.class">
+               <xs:attribute ref="class" default="- topic/strow dataTableDomain/dataRow sidsc-addressBlock/addressBlockPropset " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="addressBlockPropset.class">
+      <xs:sequence>
+         <xs:group ref="addressBlockPropset.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="addressBlockPropset.attributes" />
+   </xs:complexType>
+   <xs:group name="addressBlockPropset.content">
+      <xs:sequence>
+         <xs:group ref="baseAddress" />
+         <xs:group ref="range" minOccurs="0" />
+         <xs:group ref="width" minOccurs="0" />
+         <xs:group ref="byteOrder" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="addressBlockPropset.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="baseAddress">
+      <xs:annotation>
+         <xs:documentation>&lt;baseAddress&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="baseAddress.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-addressBlock/baseAddress " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="baseAddress.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="baseAddress.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="baseAddress.attributes" />
+   </xs:complexType>
+   <xs:group name="baseAddress.content">
+      <xs:sequence>
+         <xs:sequence />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="baseAddress.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="range">
+      <xs:annotation>
+         <xs:documentation>&lt;range&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="range.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-addressBlock/range " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="range.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="range.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="range.attributes" />
+   </xs:complexType>
+   <xs:group name="range.content">
+      <xs:sequence>
+         <xs:sequence />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="range.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="width">
+      <xs:annotation>
+         <xs:documentation>&lt;width&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="width.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-addressBlock/width " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="width.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="width.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="width.attributes" />
+   </xs:complexType>
+   <xs:group name="width.content">
+      <xs:sequence>
+         <xs:sequence />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="width.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="byteOrder">
+      <xs:annotation>
+         <xs:documentation>&lt;byteOrder&gt; element. 
+            Category: SISDC Address Block elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="byteOrder.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-addressBlock/byteOrder " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="byteOrder.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="byteOrder.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="byteOrder.attributes" />
+   </xs:complexType>
+   <xs:group name="byteOrder.content">
+      <xs:sequence>
+         <xs:sequence />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="byteOrder.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--SDL DITA Machinery Task Shell-->
+
+   <public publicId="-//SDL//DTD DITA Machinery Task//EN"
+           uri="dtd/sdlMachineryTask.dtd"/>
+   <public publicId="-//SDL//DTD DITA 1.x Machinery Task//EN"
+           uri="dtd/sdlMachineryTask.dtd"/>
+   <public publicId="-//SDL//DTD DITA 1.3 Machinery Task//EN"
+           uri="dtd/sdlMachineryTask.dtd"/>
+</catalog>

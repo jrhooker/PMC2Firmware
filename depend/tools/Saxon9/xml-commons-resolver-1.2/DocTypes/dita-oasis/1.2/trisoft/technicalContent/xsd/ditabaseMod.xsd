@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:ditabaseModInt.xsd:1.2">
+		<xs:complexType name="dita.class">
+			<xs:complexContent>      
+				<xs:extension  base="dita.class">
+					<!--Trisoft cutomization-->
+					<xs:attribute name="id" type="xs:ID" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+</xs:schema>

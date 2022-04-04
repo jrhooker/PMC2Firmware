@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <!-- ...................................................................... -->
+  <!-- IN THIS OASIS XML CATALOG:                                             -->
+  <!--   [B] XML Catalog data for OASIS DITA V1.0 [compatibility,deprecated]  -->
+  <!-- ...................................................................... -->
+
+  <!-- Base DITA -->
+  <public publicId="-//OASIS//DTD DITA 1.0 Composite//EN" uri="ditabase.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.0 Concept//EN" uri="concept.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.0 Reference//EN" uri="reference.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.0 Task//EN" uri="task.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.0 Topic//EN" uri="topic.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.0 Map//EN" uri="map.dtd" />
+  <!-- topicAttr.mod is only used in DITA 1.0 -->
+  <public publicId="-//OASIS//ENTITIES DITA Topic Class//EN" uri="topicAttr.mod" />
+  <!-- DITA Specializations -->
+  <public publicId="-//Trisoft//DTD DITA 1.0 Apiref//EN" uri="apiref.dtd" />
+
+</catalog>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--SDL DITA Machinery Task Shell-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:sdl:names:tc:dita:spec:machinery:xsd:machinerytask.xsd"
+              uri="xsd/sdlMachineryTask.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:spec:machinery:xsd:machinerytask.xsd:1.x"
+              uri="xsd/sdlMachineryTask.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:spec:machinery:xsd:machinerytask.xsd:1.3"
+              uri="xsd/sdlMachineryTask.xsd"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:sdl:names:tc:dita:spec:machinery:xsd:machinerytask.xsd"
+           uri="xsd/sdlMachineryTask.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:spec:machinery:xsd:machinerytask.xsd:1.x"
+           uri="xsd/sdlMachineryTask.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:spec:machinery:xsd:machinerytask.xsd:1.3"
+           uri="xsd/sdlMachineryTask.xsd"/>
+   </group>
+</catalog>

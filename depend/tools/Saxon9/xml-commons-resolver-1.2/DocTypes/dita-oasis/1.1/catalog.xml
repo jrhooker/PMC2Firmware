@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <!-- ...................................................................... -->
+  <!-- IN THIS OASIS XML CATALOG:                                             -->
+  <!--   [C] XML Catalog data for OASIS DITA V1.1                             -->
+  <!-- ...................................................................... -->
+
+  <public publicId="-//OASIS//DTD DITA 1.1 Composite//EN" uri="ditabase.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.1 Topic//EN" uri="topic.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.1 Task//EN" uri="task.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.1 Reference//EN" uri="reference.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.1 Map//EN" uri="map.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.1 Glossary//EN" uri="glossary.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.1 Concept//EN" uri="concept.dtd" />
+  <public publicId="-//OASIS//DTD DITA 1.1 BookMap//EN" uri="bookmap.dtd" />
+  <!-- DITA Specializations -->
+  <public publicId="-//Trisoft//DTD DITA 1.1 Apiref//EN" uri="apiref.dtd" />
+  <!-- DITA Specializations: since there is no apiref 1.2 dtd yet, point latest to version 1.1 -->
+  <public publicId="-//Trisoft//DTD DITA Apiref//EN" uri="apiref.dtd" />
+  <public publicId="-//Trisoft//ELEMENTS DITA Apiref//EN" uri="apiref.mod" />
+</catalog>

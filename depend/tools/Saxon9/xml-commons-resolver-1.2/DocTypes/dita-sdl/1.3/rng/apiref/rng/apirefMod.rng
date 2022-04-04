@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>SDL DITA API Reference</moduleTitle>
+    <headerComment xml:space="preserve">
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    SDL DITA API Reference                   
+ VERSION:   1.3                                              
+ DATE:      June 2018                                    
+                                                             
+=============================================================
+</headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>apiref</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//SDL//ELEMENTS DITA<var presep=" " name="ditaver" /> API Reference//EN</dtdMod>
+        <dtdEnt>-//SDL//ENTITIES DITA<var presep=" " name="ditaver" /> API Reference//EN</dtdEnt>
+        <xsdMod>urn:sdl:names:tc:dita:spec:apiref:xsd:apirefMod.xsd<var presep=":" name="ditaver" /></xsdMod>
+        <xsdGrp>urn:sdl:names:tc:dita:spec:apiref:xsd:apirefGrp.xsd<var presep=":" name="ditaver" /></xsdGrp>
+        <rncMod>urn:sdl:names:tc:dita:spec:apiref:rnc:apirefMod.rnc<var presep=":" name="ditaver" /></rncMod>
+        <rngMod>urn:sdl:names:tc:dita:spec:apiref:rng:apirefMod.rng<var presep=":" name="ditaver" /></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic apiref)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+    <define name="apiref-info-types" combine="choice">
+      <ref name="info-types" />
+    </define>
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="apiref">
+      <ref name="apiref.element" />
+    </define>
+    <define name="apifunction">
+      <ref name="apifunction.element" />
+    </define>
+    <define name="classname">
+      <ref name="classname.element" />
+    </define>
+    <define name="classversion">
+      <ref name="classversion.element" />
+    </define>
+    <define name="functionname">
+      <ref name="functionname.element" />
+    </define>
+    <define name="apidesc">
+      <ref name="apidesc.element" />
+    </define>
+    <define name="paramlist">
+      <ref name="paramlist.element" />
+    </define>
+    <define name="paramStringIn">
+      <ref name="paramStringIn.element" />
+    </define>
+    <define name="paramStringOut">
+      <ref name="paramStringOut.element" />
+    </define>
+    <define name="paramStringInOut">
+      <ref name="paramStringInOut.element" />
+    </define>
+    <define name="paramLongIn">
+      <ref name="paramLongIn.element" />
+    </define>
+    <define name="paramLongOut">
+      <ref name="paramLongOut.element" />
+    </define>
+    <define name="paramLongInOut">
+      <ref name="paramLongInOut.element" />
+    </define>
+    <define name="paramIntegerIn">
+      <ref name="paramIntegerIn.element" />
+    </define>
+    <define name="paramIntegerOut">
+      <ref name="paramIntegerOut.element" />
+    </define>
+    <define name="paramIntegerInOut">
+      <ref name="paramIntegerInOut.element" />
+    </define>
+    <define name="paramBooleanIn">
+      <ref name="paramBooleanIn.element" />
+    </define>
+    <define name="paramBooleanOut">
+      <ref name="paramBooleanOut.element" />
+    </define>
+    <define name="paramBooleanInOut">
+      <ref name="paramBooleanInOut.element" />
+    </define>
+    <define name="paramDateIn">
+      <ref name="paramDateIn.element" />
+    </define>
+    <define name="paramDateOut">
+      <ref name="paramDateOut.element" />
+    </define>
+    <define name="paramEnumIn">
+      <ref name="paramEnumIn.element" />
+    </define>
+    <define name="paramEnumOut">
+      <ref name="paramEnumOut.element" />
+    </define>
+    <define name="paramEnumInOut">
+      <ref name="paramEnumInOut.element" />
+    </define>
+    <define name="paramBlobIn">
+      <ref name="paramBlobIn.element" />
+    </define>
+    <define name="paramBlobOut">
+      <ref name="paramBlobOut.element" />
+    </define>
+    <define name="paramBlobInOut">
+      <ref name="paramBlobInOut.element" />
+    </define>
+    <define name="paramStringArrayIn">
+      <ref name="paramStringArrayIn.element" />
+    </define>
+    <define name="paramStringArrayOut">
+      <ref name="paramStringArrayOut.element" />
+    </define>
+    <define name="paramStringArrayInOut">
+      <ref name="paramStringArrayInOut.element" />
+    </define>
+    <define name="paramLongArrayIn">
+      <ref name="paramLongArrayIn.element" />
+    </define>
+    <define name="paramLongArrayOut">
+      <ref name="paramLongArrayOut.element" />
+    </define>
+    <define name="paramLongArrayInOut">
+      <ref name="paramLongArrayInOut.element" />
+    </define>
+    <define name="paramName">
+      <ref name="paramName.element" />
+    </define>
+    <define name="paramDesc">
+      <ref name="paramDesc.element" />
+    </define>
+    <define name="paramEnumName">
+      <ref name="paramEnumName.element" />
+    </define>
+    <define name="remarks">
+      <ref name="remarks.element" />
+    </define>
+    <define name="knownissues">
+      <ref name="knownissues.element" />
+    </define>
+    <define name="purpose">
+      <ref name="purpose.element" />
+    </define>
+    <define name="apiExample">
+      <ref name="apiExample.element" />
+    </define>
+    <define name="history">
+      <ref name="history.element" />
+    </define>
+    <define name="since">
+      <ref name="since.element" />
+    </define>
+    <define name="deprecated">
+      <ref name="deprecated.element" />
+    </define>
+    <define name="knownissue">
+      <ref name="knownissue.element" />
+    </define>
+    <define name="limitation">
+      <ref name="limitation.element" />
+    </define>
+    <define name="workaround">
+      <ref name="workaround.element" />
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+
+    <div>
+      <define name="apiref.content">
+        <ref name="apifunction" />
+        <ref name="apidesc" />
+      </define>
+      <define name="apiref.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="apiref.element">
+        <element name="apiref" dita:longName="API reference topic">
+          <a:documentation>The &lt;apiref> element is the top-level element in a API reference topic.</a:documentation>
+          <ref name="apiref.attlist" />
+          <ref name="apiref.content" />
+        </element>
+      </define>
+      <define name="apiref.attlist" combine="interleave">
+        <ref name="apiref.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+    </div>
+    <div>
+      <define name="apifunction.content">
+        <ref name="classname" />
+        <ref name="classversion" />
+        <optional>
+          <ref name="functionname" />
+        </optional>
+      </define>
+      <define name="apifunction.attributes">
+        <ref name="id-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="base" />
+        </optional>
+        <ref name="base-attribute-extensions" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+        <optional>
+          <attribute name="rev" dita:since="1.3" />
+        </optional>
+      </define>
+      <define name="apifunction.element">
+        <element name="apifunction" dita:longName="API function">
+          <a:documentation>The &lt;apifunction> element is an element in a API reference topic.</a:documentation>
+          <ref name="apifunction.attlist" />
+          <ref name="apifunction.content" />
+        </element>
+      </define>
+      <define name="apifunction.attlist" combine="interleave">
+        <ref name="apifunction.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="classname.content">
+        <zeroOrMore>
+          <ref name="ph.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="classname.attributes">
+        <optional>
+          <attribute name="keyref" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="classname.element">
+        <element name="classname" dita:longName="Class name">
+          <a:documentation>The &lt;classname> element is an element in a API reference topic.</a:documentation>
+          <ref name="classname.attlist" />
+          <ref name="classname.content" />
+        </element>
+      </define>
+      <define name="classname.attlist" combine="interleave">
+        <ref name="classname.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="classversion.content">
+        <zeroOrMore>
+          <ref name="ph.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="classversion.attributes">
+        <optional>
+          <attribute name="keyref" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="classversion.element">
+        <element name="classversion" dita:longName="Class version">
+          <a:documentation>The &lt;classversion> element is an element in a API reference topic.</a:documentation>
+          <ref name="classversion.attlist" />
+          <ref name="classversion.content" />
+        </element>
+      </define>
+      <define name="classversion.attlist" combine="interleave">
+        <ref name="classversion.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="functionname.content">
+        <zeroOrMore>
+          <ref name="ph.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="functionname.attributes">
+        <optional>
+          <attribute name="keyref" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="functionname.element">
+        <element name="functionname" dita:longName="Function name">
+          <a:documentation>The &lt;functionname> element is an element in a API reference topic.</a:documentation>
+          <ref name="functionname.attlist" />
+          <ref name="functionname.content" />
+        </element>
+      </define>
+      <define name="functionname.attlist" combine="interleave">
+        <ref name="functionname.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="apidesc.content">
+        <ref name="purpose" />
+        <optional>
+          <ref name="paramlist" />
+        </optional>
+        <optional>
+          <ref name="remarks" />
+        </optional>
+        <optional>
+          <ref name="knownissues" />
+        </optional>
+        <optional>
+          <ref name="history" />
+        </optional>
+        <zeroOrMore>
+          <ref name="example" />
+        </zeroOrMore>
+      </define>
+      <define name="apidesc.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="apidesc.element">
+        <element name="apidesc" dita:longName="API description">
+          <a:documentation>The &lt;apidesc> element is an element in a API reference topic.</a:documentation>
+          <ref name="apidesc.attlist" />
+          <ref name="apidesc.content" />
+        </element>
+      </define>
+      <define name="apidesc.attlist" combine="interleave">
+        <ref name="apidesc.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramlist.content">
+        <oneOrMore>
+          <choice>
+            <ref name="paramStringIn" />
+            <ref name="paramStringOut" />
+            <ref name="paramStringInOut" />
+            <ref name="paramIntegerIn" />
+            <ref name="paramIntegerOut" />
+            <ref name="paramIntegerInOut" />
+            <ref name="paramBooleanIn" />
+            <ref name="paramBooleanOut" />
+            <ref name="paramBooleanInOut" />
+            <ref name="paramEnumIn" />
+            <ref name="paramEnumOut" />
+            <ref name="paramEnumInOut" />
+            <ref name="paramDateIn" />
+            <ref name="paramDateOut" />
+            <ref name="paramBlobIn" />
+            <ref name="paramBlobOut" />
+            <ref name="paramBlobInOut" />
+            <ref name="paramLongIn" />
+            <ref name="paramLongOut" />
+            <ref name="paramLongInOut" />
+            <ref name="paramStringArrayIn" />
+            <ref name="paramStringArrayOut" />
+            <ref name="paramStringArrayInOut" />
+            <ref name="paramLongArrayIn" />
+            <ref name="paramLongArrayOut" />
+            <ref name="paramLongArrayInOut" />
+          </choice>
+        </oneOrMore>
+      </define>
+      <define name="paramlist.attributes">
+        <optional>
+          <attribute name="relcolwidth" />
+        </optional>
+        <optional>
+          <attribute name="keycol">
+            <data type="NMTOKEN" />
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="refcols">
+            <data type="NMTOKENS" />
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="spectitle" />
+        </optional>
+        <ref name="display-atts" />
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramlist.element">
+        <element name="paramlist" dita:longName="Parameter list">
+          <a:documentation>The &lt;paramlist> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramlist.attlist" />
+          <ref name="paramlist.content" />
+        </element>
+      </define>
+      <define name="paramlist.attlist" combine="interleave">
+        <ref name="paramlist.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramStringIn.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramStringIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramStringIn.element">
+        <element name="paramStringIn" dita:longName="String data In parameter">
+          <a:documentation>The &lt;paramStringIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramStringIn.attlist" />
+          <ref name="paramStringIn.content" />
+        </element>
+      </define>
+      <define name="paramStringIn.attlist" combine="interleave">
+        <ref name="paramStringIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramStringOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramStringOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramStringOut.element">
+        <element name="paramStringOut" dita:longName="String data Out parameter">
+          <a:documentation>The &lt;paramStringOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramStringOut.attlist" />
+          <ref name="paramStringOut.content" />
+        </element>
+      </define>
+      <define name="paramStringOut.attlist" combine="interleave">
+        <ref name="paramStringOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramStringInOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramStringInOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramStringInOut.element">
+        <element name="paramStringInOut" dita:longName="String In/Out parameter">
+          <a:documentation>The &lt;paramStringInOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramStringInOut.attlist" />
+          <ref name="paramStringInOut.content" />
+        </element>
+      </define>
+      <define name="paramStringInOut.attlist" combine="interleave">
+        <ref name="paramStringInOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramLongIn.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramLongIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramLongIn.element">
+        <element name="paramLongIn" dita:longName="Long data In parameter">
+          <a:documentation>The &lt;paramLongIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramLongIn.attlist" />
+          <ref name="paramLongIn.content" />
+        </element>
+      </define>
+      <define name="paramLongIn.attlist" combine="interleave">
+        <ref name="paramLongIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramLongOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramLongOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramLongOut.element">
+        <element name="paramLongOut" dita:longName="Long data Out parameter">
+          <a:documentation>The &lt;paramLongOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramLongOut.attlist" />
+          <ref name="paramLongOut.content" />
+        </element>
+      </define>
+      <define name="paramLongOut.attlist" combine="interleave">
+        <ref name="paramLongOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramLongInOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramLongInOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramLongInOut.element">
+        <element name="paramLongInOut" dita:longName="Long In/Out parameter">
+          <a:documentation>The &lt;paramLongInOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramLongInOut.attlist" />
+          <ref name="paramLongInOut.content" />
+        </element>
+      </define>
+      <define name="paramLongInOut.attlist" combine="interleave">
+        <ref name="paramLongInOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramIntegerIn.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramIntegerIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramIntegerIn.element">
+        <element name="paramIntegerIn" dita:longName="Integer data In parameter">
+          <a:documentation>The &lt;paramIntegerIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramIntegerIn.attlist" />
+          <ref name="paramIntegerIn.content" />
+        </element>
+      </define>
+      <define name="paramIntegerIn.attlist" combine="interleave">
+        <ref name="paramIntegerIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramIntegerOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramIntegerOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramIntegerOut.element">
+        <element name="paramIntegerOut" dita:longName="Integer data Out parameter">
+          <a:documentation>The &lt;paramIntegerOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramIntegerOut.attlist" />
+          <ref name="paramIntegerOut.content" />
+        </element>
+      </define>
+      <define name="paramIntegerOut.attlist" combine="interleave">
+        <ref name="paramIntegerOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramIntegerInOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramIntegerInOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramIntegerInOut.element">
+        <element name="paramIntegerInOut" dita:longName="Integer In/Out parameter">
+          <a:documentation>The &lt;paramIntegerInOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramIntegerInOut.attlist" />
+          <ref name="paramIntegerInOut.content" />
+        </element>
+      </define>
+      <define name="paramIntegerInOut.attlist" combine="interleave">
+        <ref name="paramIntegerInOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramBooleanIn.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramBooleanIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramBooleanIn.element">
+        <element name="paramBooleanIn" dita:longName="Boolean data In parameter">
+          <a:documentation>The &lt;paramBooleanIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramBooleanIn.attlist" />
+          <ref name="paramBooleanIn.content" />
+        </element>
+      </define>
+      <define name="paramBooleanIn.attlist" combine="interleave">
+        <ref name="paramBooleanIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramBooleanOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramBooleanOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramBooleanOut.element">
+        <element name="paramBooleanOut" dita:longName="Boolean data Out parameter">
+          <a:documentation>The &lt;paramBooleanOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramBooleanOut.attlist" />
+          <ref name="paramBooleanOut.content" />
+        </element>
+      </define>
+      <define name="paramBooleanOut.attlist" combine="interleave">
+        <ref name="paramBooleanOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramBooleanInOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramBooleanInOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramBooleanInOut.element">
+        <element name="paramBooleanInOut" dita:longName="Boolean In/Out parameter">
+          <a:documentation>The &lt;paramBooleanInOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramBooleanInOut.attlist" />
+          <ref name="paramBooleanInOut.content" />
+        </element>
+      </define>
+      <define name="paramBooleanInOut.attlist" combine="interleave">
+        <ref name="paramBooleanInOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramBlobIn.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramBlobIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramBlobIn.element">
+        <element name="paramBlobIn" dita:longName="Binary data In parameter">
+          <a:documentation>The &lt;paramBlobIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramBlobIn.attlist" />
+          <ref name="paramBlobIn.content" />
+        </element>
+      </define>
+      <define name="paramBlobIn.attlist" combine="interleave">
+        <ref name="paramBlobIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramBlobOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramBlobOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramBlobOut.element">
+        <element name="paramBlobOut" dita:longName="Binary data Out parameter">
+          <a:documentation>The &lt;paramBlobOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramBlobOut.attlist" />
+          <ref name="paramBlobOut.content" />
+        </element>
+      </define>
+      <define name="paramBlobOut.attlist" combine="interleave">
+        <ref name="paramBlobOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramBlobInOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramBlobInOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramBlobInOut.element">
+        <element name="paramBlobInOut" dita:longName="Binary data In/Out parameter">
+          <a:documentation>The &lt;paramBlobInOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramBlobInOut.attlist" />
+          <ref name="paramBlobInOut.content" />
+        </element>
+      </define>
+      <define name="paramBlobInOut.attlist" combine="interleave">
+        <ref name="paramBlobInOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramDateIn.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramDateIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramDateIn.element">
+        <element name="paramDateIn" dita:longName="Date In parameter">
+          <a:documentation>The &lt;paramDateIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramDateIn.attlist" />
+          <ref name="paramDateIn.content" />
+        </element>
+      </define>
+      <define name="paramDateIn.attlist" combine="interleave">
+        <ref name="paramDateIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramDateOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramDateOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramDateOut.element">
+        <element name="paramDateOut" dita:longName="Date Out parameter">
+          <a:documentation>The &lt;paramDateOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramDateOut.attlist" />
+          <ref name="paramDateOut.content" />
+        </element>
+      </define>
+      <define name="paramDateOut.attlist" combine="interleave">
+        <ref name="paramDateOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramEnumIn.content">
+        <ref name="paramEnumName" />
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramEnumIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramEnumIn.element">
+        <element name="paramEnumIn" dita:longName="Enumeration In parameter">
+          <a:documentation>The &lt;paramEnumIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramEnumIn.attlist" />
+          <ref name="paramEnumIn.content" />
+        </element>
+      </define>
+      <define name="paramEnumIn.attlist" combine="interleave">
+        <ref name="paramEnumIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramEnumOut.content">
+        <ref name="paramEnumName" />
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramEnumOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramEnumOut.element">
+        <element name="paramEnumOut" dita:longName="Enumeration Out parameter">
+          <a:documentation>The &lt;paramEnumOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramEnumOut.attlist" />
+          <ref name="paramEnumOut.content" />
+        </element>
+      </define>
+      <define name="paramEnumOut.attlist" combine="interleave">
+        <ref name="paramEnumOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramEnumInOut.content">
+        <ref name="paramEnumName" />
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramEnumInOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramEnumInOut.element">
+        <element name="paramEnumInOut" dita:longName="Enumeration In/Out parameter">
+          <a:documentation>The &lt;paramEnumInOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramEnumInOut.attlist" />
+          <ref name="paramEnumInOut.content" />
+        </element>
+      </define>
+      <define name="paramEnumInOut.attlist" combine="interleave">
+        <ref name="paramEnumInOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramEnumName.content">
+        <zeroOrMore>
+          <ref name="ph.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="paramEnumName.attributes">
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramEnumName.element">
+        <element name="paramEnumName" dita:longName="Parameter enumeration name">
+          <a:documentation>The &lt;paramEnumName> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramEnumName.attlist" />
+          <ref name="paramEnumName.content" />
+        </element>
+      </define>
+      <define name="paramEnumName.attlist" combine="interleave">
+        <ref name="paramEnumName.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramName.content">
+        <zeroOrMore>
+          <ref name="ph.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="paramName.attributes">
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramName.element">
+        <element name="paramName" dita:longName="Parameter name">
+          <a:documentation>The &lt;paramName> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramName.attlist" />
+          <ref name="paramName.content" />
+        </element>
+      </define>
+      <define name="paramName.attlist" combine="interleave">
+        <ref name="paramName.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramDesc.content">
+        <zeroOrMore>
+          <ref name="desc.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="paramDesc.attributes">
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramDesc.element">
+        <element name="paramDesc" dita:longName="Parameter description">
+          <a:documentation>The &lt;paramDesc> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramDesc.attlist" />
+          <ref name="paramDesc.content" />
+        </element>
+      </define>
+      <define name="paramDesc.attlist" combine="interleave">
+        <ref name="paramDesc.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramStringArrayIn.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramStringArrayIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramStringArrayIn.element">
+        <element name="paramStringArrayIn" dita:longName="StringArray In parameter">
+          <a:documentation>The &lt;paramStringArrayIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramStringArrayIn.attlist" />
+          <ref name="paramStringArrayIn.content" />
+        </element>
+      </define>
+      <define name="paramStringArrayIn.attlist" combine="interleave">
+        <ref name="paramStringArrayIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramStringArrayOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramStringArrayOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramStringArrayOut.element">
+        <element name="paramStringArrayOut" dita:longName="StringArray Out parameter">
+          <a:documentation>The &lt;paramStringArrayOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramStringArrayOut.attlist" />
+          <ref name="paramStringArrayOut.content" />
+        </element>
+      </define>
+      <define name="paramStringArrayOut.attlist" combine="interleave">
+        <ref name="paramStringArrayOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramStringArrayInOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramStringArrayInOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramStringArrayInOut.element">
+        <element name="paramStringArrayInOut" dita:longName="StringArray In/Out parameter">
+          <a:documentation>The &lt;paramStringArrayInOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramStringArrayInOut.attlist" />
+          <ref name="paramStringArrayInOut.content" />
+        </element>
+      </define>
+      <define name="paramStringArrayInOut.attlist" combine="interleave">
+        <ref name="paramStringArrayInOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramLongArrayIn.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramLongArrayIn.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramLongArrayIn.element">
+        <element name="paramLongArrayIn" dita:longName="LongArray In parameter">
+          <a:documentation>The &lt;paramLongArrayIn> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramLongArrayIn.attlist" />
+          <ref name="paramLongArrayIn.content" />
+        </element>
+      </define>
+      <define name="paramLongArrayIn.attlist" combine="interleave">
+        <ref name="paramLongArrayIn.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramLongArrayOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramLongArrayOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramLongArrayOut.element">
+        <element name="paramLongArrayOut" dita:longName="LongArray Out parameter">
+          <a:documentation>The &lt;paramLongArrayOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramLongArrayOut.attlist" />
+          <ref name="paramLongArrayOut.content" />
+        </element>
+      </define>
+      <define name="paramLongArrayOut.attlist" combine="interleave">
+        <ref name="paramLongArrayOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="paramLongArrayInOut.content">
+        <ref name="paramName" />
+        <ref name="paramDesc" />
+      </define>
+      <define name="paramLongArrayInOut.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="paramLongArrayInOut.element">
+        <element name="paramLongArrayInOut" dita:longName="LongArray In/Out parameter">
+          <a:documentation>The &lt;paramLongArrayInOut> element is an element in a API reference topic.</a:documentation>
+          <ref name="paramLongArrayInOut.attlist" />
+          <ref name="paramLongArrayInOut.content" />
+        </element>
+      </define>
+      <define name="paramLongArrayInOut.attlist" combine="interleave">
+        <ref name="paramLongArrayInOut.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="purpose.content">
+        <zeroOrMore>
+          <ref name="section.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="purpose.attributes">
+        <optional>
+          <attribute name="spectitle" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="purpose.element">
+        <element name="purpose" dita:longName="Purpose">
+          <a:documentation>The &lt;purpose> element is an element in a API reference topic.</a:documentation>
+          <ref name="purpose.attlist" />
+          <ref name="purpose.content" />
+        </element>
+      </define>
+      <define name="purpose.attlist" combine="interleave">
+        <ref name="purpose.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="remarks.content">
+        <zeroOrMore>
+          <ref name="section.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="remarks.attributes">
+        <optional>
+          <attribute name="spectitle" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="remarks.element">
+        <element name="remarks" dita:longName="Remarks">
+          <a:documentation>The &lt;remarks> element is an element in a API reference topic.</a:documentation>
+          <ref name="remarks.attlist" />
+          <ref name="remarks.content" />
+        </element>
+      </define>
+      <define name="remarks.attlist" combine="interleave">
+        <ref name="remarks.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="knownissues.content">
+        <oneOrMore>
+          <ref name="knownissue" />
+        </oneOrMore>
+      </define>
+      <define name="knownissues.attributes">
+        <optional>
+          <attribute name="compact">
+            <choice>
+              <value>yes</value>
+              <value>no</value>
+            </choice>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="spectitle" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="knownissues.element">
+        <element name="knownissues" dita:longName="Known issues">
+          <a:documentation>The &lt;knownissues> element is an element in a API reference topic.</a:documentation>
+          <ref name="knownissues.attlist" />
+          <ref name="knownissues.content" />
+        </element>
+      </define>
+      <define name="knownissues.attlist" combine="interleave">
+        <ref name="knownissues.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="knownissue.content">
+        <ref name="limitation" />
+        <optional>
+          <ref name="workaround" />
+        </optional>
+      </define>
+      <define name="knownissue.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="knownissue.element">
+        <element name="knownissue" dita:longName="Known issue">
+          <a:documentation>The &lt;knownissue> element is an element in a API reference topic.</a:documentation>
+          <ref name="knownissue.attlist" />
+          <ref name="knownissue.content" />
+        </element>
+      </define>
+      <define name="knownissue.attlist" combine="interleave">
+        <ref name="knownissue.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="limitation.content">
+        <zeroOrMore>
+          <ref name="itemgroup.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="limitation.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="limitation.element">
+        <element name="limitation" dita:longName="Limitation">
+          <a:documentation>The &lt;limitation> element is an element in a API reference topic.</a:documentation>
+          <ref name="limitation.attlist" />
+          <ref name="limitation.content" />
+        </element>
+      </define>
+      <define name="limitation.attlist" combine="interleave">
+        <ref name="limitation.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="workaround.content">
+        <zeroOrMore>
+          <ref name="itemgroup.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="workaround.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="workaround.element">
+        <element name="workaround" dita:longName="Workaround">
+          <a:documentation>The &lt;workaround> element is an element in a API reference topic.</a:documentation>
+          <ref name="workaround.attlist" />
+          <ref name="workaround.content" />
+        </element>
+      </define>
+      <define name="workaround.attlist" combine="interleave">
+        <ref name="workaround.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="history.content">
+        <optional>
+          <ref name="since" />
+        </optional>
+        <optional>
+          <ref name="deprecated" />
+        </optional>
+      </define>
+      <define name="history.attributes">
+        <optional>
+          <attribute name="spectitle" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="history.element">
+        <element name="history" dita:longName="History">
+          <a:documentation>The &lt;history> element is an element in a API reference topic.</a:documentation>
+          <ref name="history.attlist" />
+          <ref name="history.content" />
+        </element>
+      </define>
+      <define name="history.attlist" combine="interleave">
+        <ref name="history.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="since.content">
+        <zeroOrMore>
+          <ref name="ph.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="since.attributes">
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="since.element">
+        <element name="since" dita:longName="Since version">
+          <a:documentation>The &lt;since> element is an element in a API reference topic.</a:documentation>
+          <ref name="since.attlist" />
+          <ref name="since.content" />
+        </element>
+      </define>
+      <define name="since.attlist" combine="interleave">
+        <ref name="since.attributes" />
+      </define>
+    </div>
+    <div>
+      <define name="deprecated.content">
+        <zeroOrMore>
+          <ref name="ph.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="deprecated.attributes">
+        <optional>
+          <attribute name="specentry" />
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="deprecated.element">
+        <element name="deprecated" dita:longName="Deprecated in version">
+          <a:documentation>The &lt;deprecated> element is an element in a API reference topic.</a:documentation>
+          <ref name="deprecated.attlist" />
+          <ref name="deprecated.content" />
+        </element>
+      </define>
+      <define name="deprecated.attlist" combine="interleave">
+        <ref name="deprecated.attributes" />
+      </define>
+    </div>
+  </div>
+  <div>
+    <a:documentation> Specialization attributes. Global attributes and class defaults </a:documentation>
+    <define name="apiref.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic apiref/apiref " />
+      </optional>
+    </define>
+    <define name="apifunction.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title  apiref/apifunction " />
+      </optional>
+    </define>
+    <define name="classname.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph  apiref/classname " />
+      </optional>
+    </define>
+    <define name="classversion.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph  apiref/classversion " />
+      </optional>
+    </define>
+    <define name="functionname.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph  apiref/functionname " />
+      </optional>
+    </define>
+    <define name="apidesc.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body  apiref/apidesc " />
+      </optional>
+    </define>
+    <define name="paramlist.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable  apiref/paramlist " />
+      </optional>
+    </define>
+    <define name="paramLongIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramLongIn " />
+      </optional>
+    </define>
+    <define name="paramLongOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramLongOut " />
+      </optional>
+    </define>
+    <define name="paramLongInOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramLongInOut " />
+      </optional>
+    </define>
+    <define name="paramStringIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramStringIn " />
+      </optional>
+    </define>
+    <define name="paramStringOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramStringOut " />
+      </optional>
+    </define>
+    <define name="paramStringInOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramStringInOut " />
+      </optional>
+    </define>
+    <define name="paramIntegerIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramIntegerIn " />
+      </optional>
+    </define>
+    <define name="paramIntegerOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramIntegerOut " />
+      </optional>
+    </define>
+    <define name="paramIntegerInOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramIntegerInOut " />
+      </optional>
+    </define>
+    <define name="paramBooleanIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramBooleanIn " />
+      </optional>
+    </define>
+    <define name="paramBooleanOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramBooleanOut " />
+      </optional>
+    </define>
+    <define name="paramBooleanInOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramBooleanInOut " />
+      </optional>
+    </define>
+    <define name="paramDateIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramDateIn " />
+      </optional>
+    </define>
+    <define name="paramDateOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramDateOut " />
+      </optional>
+    </define>
+    <define name="paramEnumIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramEnumIn " />
+      </optional>
+    </define>
+    <define name="paramEnumOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramEnumOut " />
+      </optional>
+    </define>
+    <define name="paramEnumInOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramEnumInOut " />
+      </optional>
+    </define>
+    <define name="paramBlobIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramBlobIn " />
+      </optional>
+    </define>
+    <define name="paramBlobOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramBlobOut " />
+      </optional>
+    </define>
+    <define name="paramBlobInOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramBlobInOut " />
+      </optional>
+    </define>
+    <define name="paramStringArrayIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramStringArrayIn " />
+      </optional>
+    </define>
+    <define name="paramStringArrayOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramStringArrayOut " />
+      </optional>
+    </define>
+    <define name="paramStringArrayInOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramStringArrayInOut " />
+      </optional>
+    </define>
+    <define name="paramLongArrayIn.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramLongArrayIn " />
+      </optional>
+    </define>
+    <define name="paramLongArrayOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramLongArrayOut " />
+      </optional>
+    </define>
+    <define name="paramLongArrayInOut.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow  apiref/paramLongArrayInOut " />
+      </optional>
+    </define>
+    <define name="paramName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry  apiref/paramName " />
+      </optional>
+    </define>
+    <define name="paramDesc.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry  apiref/paramDesc " />
+      </optional>
+    </define>
+    <define name="paramEnumName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry  apiref/paramEnumName " />
+      </optional>
+    </define>
+    <define name="purpose.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section  apiref/purpose " />
+      </optional>
+    </define>
+    <define name="remarks.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section  apiref/remarks " />
+      </optional>
+    </define>
+    <define name="knownissues.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ul  apiref/knownissues " />
+      </optional>
+    </define>
+    <define name="knownissue.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/li  apiref/knownissue " />
+      </optional>
+    </define>
+    <define name="history.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section  apiref/history " />
+      </optional>
+    </define>
+    <define name="since.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph  apiref/since " />
+      </optional>
+    </define>
+    <define name="deprecated.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ph  apiref/deprecated " />
+      </optional>
+    </define>
+    <define name="limitation.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/itemgroup  apiref/limitation " />
+      </optional>
+    </define>
+    <define name="workaround.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/itemgroup  apiref/workaround " />
+      </optional>
+    </define>
+  </div>
+</grammar>

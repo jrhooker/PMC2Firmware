@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Memory Map                            -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Memory Map//EN"        -->
+<!--      Delivered as file "sidsc-memoryMap.mod"                -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:group name="memoryMap">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="memoryMap" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="memoryMapName">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="memoryMapName" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="memoryMapBody">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="memoryMapBody" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitsInLau">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitsInLau" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="memoryMapClass">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="memoryMapClass" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+</xs:schema>

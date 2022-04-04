@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://relaxng.org/ns/structure/1.0" 
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>Atmel DITA FRMWR Structure</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    Atmel DITA FRMWR Structure
+ VERSION:   1.3                                              
+ DATE:      March 2022  
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA FRMWR Structure//EN"
+      Delivered as file "atmelFrmwrStruct.mod"               
+
+
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>frmwrStruct</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver" /> FRMWR Structure//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver" /> FRMWR Structure//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:atmelFrmwrStructMod.xsd<var presep=":" name="ditaver" /></xsdMod>
+        <xsdGrp>urn:atmel:names:tc:dita:xsd:atmelFrmwrStructGrp.xsd<var presep=":" name="ditaver" /></xsdGrp>
+        <rncMod>urn:atmel:names:tc:dita:rnc:atmelFrmwrStructMod.rnc<var presep=":" name="ditaver" /></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:atmelFrmwrStructMod.rng<var presep=":" name="ditaver" /></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic reference frmwrStruct)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+    <define name="frmwrStruct-info-types">
+      <choice>
+        <ref name="structDword.element"/>
+      </choice>
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="frmwrStruct">
+      <ref name="frmwrStruct.element" />
+    </define>
+    <define name="structName">
+      <ref name="structName.element" />
+    </define>
+    <define name="structNameMore">
+      <ref name="structNameMore.element" />
+    </define>
+    <define name="structNameFull">
+      <ref name="structNameFull.element" />
+    </define>
+    <define name="structNameDescription">
+      <ref name="structNameDescription.element" />
+    </define>
+    <define name="structBody">
+      <ref name="structBody.element" />
+    </define>
+    <define name="structDescription">
+      <ref name="structDescription.element" />
+    </define>
+    <define name="structProperties">
+      <ref name="structProperties.element" />
+    </define>
+    <define name="structPropset">
+      <ref name="structPropset.element" />
+    </define>
+    <define name="structOpcode">
+      <ref name="structOpcode.element" />
+    </define>
+    <define name="structType">
+      <ref name="structType.element" />
+    </define>
+  </div>
+
+  <div>
+    <a:documentation>general purpose content models</a:documentation>
+    <!-- defined in structDword module -->
+    <!--
+    <define name="dword.atomicvalue.cnt">
+      <choice>
+        <text />
+        <ref name="text" />
+      </choice>
+    </define>
+    -->
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+   
+    <div>
+      <a:documentation> LONG NAME: Structure </a:documentation>
+      <define name="frmwrStruct.content">
+        <ref name="structName" />
+        <optional>
+          <ref name="structNameMore" />
+        </optional>
+        <ref name="structBody" />
+        <zeroOrMore>
+          <ref name="frmwrStruct-info-types"/>
+        </zeroOrMore>
+      </define>
+
+      <define name="frmwrStruct.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrStruct.element">
+        <element name="frmwrStruct" dita:longName="Structure">
+          <a:documentation>The &lt;frmwrStruct> element is the top-level element for a frmwrStruct topic. Category: FRMWR Structure elements</a:documentation>
+          <ref name="frmwrStruct.attlist" />
+          <ref name="frmwrStruct.content" />
+        </element>
+      </define>
+      <define name="frmwrStruct.attlist" combine="interleave">
+        <ref name="frmwrStruct.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="frmwrStruct.element"/>
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Structure Name </a:documentation>
+      <define name="structName.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="title.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="structName.attributes">
+        <ref name="id-atts"/>
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="base"/>
+        </optional>
+        <ref name="base-attribute-extensions"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+        <optional>
+          <attribute name="rev" dita:since="1.3"/>
+        </optional>
+      </define>
+      <define name="structName.element">
+        <element name="structName" dita:longName="Structure Name">
+          <a:documentation>&lt;structName> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structName.attlist" />
+          <ref name="structName.content" />
+        </element>
+      </define>
+      <define name="structName.attlist" combine="interleave">
+        <ref name="structName.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Name More </a:documentation>
+      <define name="structNameMore.content">
+        <ref name="structNameFull" />
+        <optional>
+          <ref name="structNameDescription" />
+        </optional>
+      </define>
+      <define name="structNameMore.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structNameMore.element">
+        <element name="structNameMore" dita:longName="Structure Name More">
+          <a:documentation>&lt;structNameMore> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structNameMore.attlist" />
+          <ref name="structNameMore.content" />
+        </element>
+      </define>
+      <define name="structNameMore.attlist" combine="interleave">
+        <ref name="structNameMore.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Name Full </a:documentation>
+      <define name="structNameFull.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="title.cnt" />
+            <ref name="xref" dita:since="1.3" />
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="structNameFull.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structNameFull.element">
+        <element name="structNameFull" dita:longName="Structure Name Full">
+          <a:documentation>&lt;structNameFull> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structNameFull.attlist" />
+          <ref name="structNameFull.content" />
+        </element>
+      </define>
+      <define name="structNameFull.attlist" combine="interleave">
+        <ref name="structNameFull.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Name Description </a:documentation>
+      <define name="structNameDescription.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="para.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="structNameDescription.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structNameDescription.element">
+        <element name="structNameDescription" dita:longName="Structure Name Description">
+          <a:documentation>&lt;structNameDescription> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structNameDescription.attlist" />
+          <ref name="structNameDescription.content" />
+        </element>
+      </define>
+      <define name="structNameDescription.attlist" combine="interleave">
+        <ref name="structNameDescription.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Body </a:documentation>
+      <define name="structBody.content">
+        <ref name="structDescription" />
+        <ref name="structProperties" />
+      </define>
+      <define name="structBody.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structBody.element">
+        <element name="structBody" dita:longName="Structure Body">
+          <a:documentation>&lt;structBody> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structBody.attlist" />
+          <ref name="structBody.content" />
+        </element>
+      </define>
+      <define name="structBody.attlist" combine="interleave">
+        <ref name="structBody.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Description </a:documentation>
+      <define name="structDescription.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="section.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="structDescription.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structDescription.element">
+        <element name="structDescription" dita:longName="Structure Description">
+          <a:documentation>&lt;structDescription> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structDescription.attlist" />
+          <ref name="structDescription.content" />
+        </element>
+      </define>
+      <define name="structDescription.attlist" combine="interleave">
+        <ref name="structDescription.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Properties </a:documentation>
+      <define name="structProperties.content">
+        <ref name="structPropset" />
+      </define>
+      <define name="structProperties.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structProperties.element">
+        <element name="structProperties" dita:longName="Structure Properties">
+          <a:documentation>&lt;structProperties> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structProperties.attlist" />
+          <ref name="structProperties.content" />
+        </element>
+      </define>
+      <define name="structProperties.attlist" combine="interleave">
+        <ref name="structProperties.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Properties Set </a:documentation>
+      <define name="structPropset.content">
+        <ref name="structOpcode" />
+        <ref name="structType" />
+      </define>
+      <define name="structPropset.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structPropset.element">
+        <element name="structPropset" dita:longName="Structure Properties Set">
+          <a:documentation>&lt;structPropset> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structPropset.attlist" />
+          <ref name="structPropset.content" />
+        </element>
+      </define>
+      <define name="structPropset.attlist" combine="interleave">
+        <ref name="structPropset.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Operation Code </a:documentation>
+      <define name="structOpcode.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="dword.atomicvalue.cnt"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="structOpcode.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structOpcode.element">
+        <element name="structOpcode" dita:longName="Structure Operation Code">
+          <a:documentation>&lt;structOpcode> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structOpcode.attlist" />
+          <ref name="structOpcode.content" />
+        </element>
+      </define>
+      <define name="structOpcode.attlist" combine="interleave">
+        <ref name="structOpcode.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Structure Type </a:documentation>
+      <define name="structType.content">
+        <empty/>
+      </define>
+      <define name="structType.attributes">
+        <optional>
+          <attribute name="structType">
+            <choice>
+              <value>msg</value>
+              <value>sub</value>
+            </choice>
+          </attribute>
+        </optional>
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="structType.element">
+        <element name="structType" dita:longName="Structure Type">
+          <a:documentation>&lt;structType> element. Category: FRMWR Structure elements</a:documentation>
+          <ref name="structType.attlist" />
+          <ref name="structType.content" />
+        </element>
+      </define>
+      <define name="structType.attlist" combine="interleave">
+        <ref name="structType.attributes" />
+      </define>
+    </div>
+    
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="frmwrStruct.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic reference/reference frmwrStruct/frmwrStruct " />
+      </optional>
+    </define>
+    <define name="structName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title reference/title frmwrStruct/structName " />
+      </optional>
+    </define>
+    <define name="structNameMore.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/abstract reference/abstract frmwrStruct/structNameMore " />
+      </optional>
+    </define>
+    <define name="structNameFull.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/shortdesc reference/shortdesc frmwrStruct/structNameFull " />
+      </optional>
+    </define>
+    <define name="structNameDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/p reference/p frmwrStruct/structNameDescription " />
+      </optional>
+    </define>
+    <define name="structBody.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body reference/refbody frmwrStruct/structBody " />
+      </optional>
+    </define>
+    <define name="structDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section reference/section frmwrStruct/structDescription " />
+      </optional>
+    </define>
+    <define name="structProperties.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/simpletable reference/simpletable frmwrStruct/structProperties " />
+      </optional>
+    </define>
+    <define name="structPropset.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/strow reference/strow frmwrStruct/structPropset " />
+      </optional>
+    </define>
+    <define name="structOpcode.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry frmwrStruct/structOpcode " />
+      </optional>
+    </define>
+    <define name="structType.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/stentry reference/stentry frmwrStruct/structType " />
+      </optional>
+    </define>
+  </div>
+</grammar>

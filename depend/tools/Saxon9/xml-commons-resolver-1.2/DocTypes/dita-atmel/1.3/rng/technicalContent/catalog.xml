@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--Atmel DITA Concept Shell-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:atmel:names:tc:dita:rng:concept.rng"
+              uri="rng/atmelConcept.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:concept.rng:1.x"
+              uri="rng/atmelConcept.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:concept.rng:1.3"
+              uri="rng/atmelConcept.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:ditabase.rng"
+              uri="rng/atmelDitabase.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:ditabase.rng:1.x"
+              uri="rng/atmelDitabase.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:ditabase.rng:1.3"
+              uri="rng/atmelDitabase.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:generalTask.rng"
+              uri="rng/atmelGeneralTask.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:generalTask.rng:1.x"
+              uri="rng/atmelGeneralTask.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:generalTask.rng:1.3"
+              uri="rng/atmelGeneralTask.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:glossentry.rng"
+              uri="rng/atmelGlossentry.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:glossentry.rng:1.x"
+              uri="rng/atmelGlossentry.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:glossentry.rng:1.3"
+              uri="rng/atmelGlossentry.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:glossgroup.rng"
+              uri="rng/atmelGlossgroup.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:glossgroup.rng:1.x"
+              uri="rng/atmelGlossgroup.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:glossgroup.rng:1.3"
+              uri="rng/atmelGlossgroup.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:map.rng" uri="rng/atmelMap.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:map.rng:1.x"
+              uri="rng/atmelMap.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:map.rng:1.3"
+              uri="rng/atmelMap.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:reference.rng"
+              uri="rng/atmelReference.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:reference.rng:1.x"
+              uri="rng/atmelReference.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:reference.rng:1.3"
+              uri="rng/atmelReference.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:task.rng" uri="rng/atmelTask.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:task.rng:1.x"
+              uri="rng/atmelTask.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:task.rng:1.3"
+              uri="rng/atmelTask.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:topic.rng"
+              uri="rng/atmelTopic.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:topic.rng:1.x"
+              uri="rng/atmelTopic.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:topic.rng:1.3"
+              uri="rng/atmelTopic.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:troubleshooting.rng"
+              uri="rng/atmelTroubleshooting.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:troubleshooting.rng:1.x"
+              uri="rng/atmelTroubleshooting.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:troubleshooting.rng:1.3"
+              uri="rng/atmelTroubleshooting.rng"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:atmel:names:tc:dita:rng:concept.rng"
+           uri="rng/atmelConcept.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:concept.rng:1.x"
+           uri="rng/atmelConcept.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:concept.rng:1.3"
+           uri="rng/atmelConcept.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:ditabase.rng"
+           uri="rng/atmelDitabase.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:ditabase.rng:1.x"
+           uri="rng/atmelDitabase.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:ditabase.rng:1.3"
+           uri="rng/atmelDitabase.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:generalTask.rng"
+           uri="rng/atmelGeneralTask.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:generalTask.rng:1.x"
+           uri="rng/atmelGeneralTask.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:generalTask.rng:1.3"
+           uri="rng/atmelGeneralTask.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:glossentry.rng"
+           uri="rng/atmelGlossentry.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:glossentry.rng:1.x"
+           uri="rng/atmelGlossentry.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:glossentry.rng:1.3"
+           uri="rng/atmelGlossentry.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:glossgroup.rng"
+           uri="rng/atmelGlossgroup.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:glossgroup.rng:1.x"
+           uri="rng/atmelGlossgroup.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:glossgroup.rng:1.3"
+           uri="rng/atmelGlossgroup.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:map.rng" uri="rng/atmelMap.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:map.rng:1.x" uri="rng/atmelMap.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:map.rng:1.3" uri="rng/atmelMap.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:reference.rng"
+           uri="rng/atmelReference.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:reference.rng:1.x"
+           uri="rng/atmelReference.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:reference.rng:1.3"
+           uri="rng/atmelReference.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:task.rng" uri="rng/atmelTask.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:task.rng:1.x" uri="rng/atmelTask.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:task.rng:1.3" uri="rng/atmelTask.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:topic.rng" uri="rng/atmelTopic.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:topic.rng:1.x"
+           uri="rng/atmelTopic.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:topic.rng:1.3"
+           uri="rng/atmelTopic.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:troubleshooting.rng"
+           uri="rng/atmelTroubleshooting.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:troubleshooting.rng:1.x"
+           uri="rng/atmelTroubleshooting.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:troubleshooting.rng:1.3"
+           uri="rng/atmelTroubleshooting.rng"/>
+   </group>
+</catalog>

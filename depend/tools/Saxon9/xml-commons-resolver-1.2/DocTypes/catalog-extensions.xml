@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <!-- SDL Trisoft, 2009-2013   -->
+  <!-- XML Catalogs Extensions -->
+
+  <!-- XML Catalog data used by Arbortext Editor only (Document Type Configuration Files (.dcf)) .. -->
+  <public publicId="-//SDL Trisoft//InfoShare DCF Module//EN" uri="../dcfmodules/infoShare.dcf" />
+
+  <!-- .................................................................................. -->
+</catalog>

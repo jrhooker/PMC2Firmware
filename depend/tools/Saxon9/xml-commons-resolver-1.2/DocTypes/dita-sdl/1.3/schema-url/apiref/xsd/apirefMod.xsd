@@ -1,0 +1,1390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    SDL DITA API Reference                           -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      June 2018                                        -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="../../../../../dita-oasis/1.3/xsd/base/xsd/ditaarch.xsd" />
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic apiref)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="apiref-info-types">
+      <xs:choice>
+         <xs:group ref="apiref" />
+         <xs:group ref="info-types" />
+      </xs:choice>
+   </xs:group>
+   <xs:element name="apiref">
+      <xs:annotation>
+         <xs:documentation>The &lt;apiref&gt; element is the top-level element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="apiref.class">
+               <xs:attribute ref="class" default="- topic/topic apiref/apiref " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="apiref.class">
+      <xs:sequence>
+         <xs:group ref="apiref.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="apiref.attributes" />
+   </xs:complexType>
+   <xs:group name="apiref.content">
+      <xs:sequence>
+         <xs:group ref="apifunction" />
+         <xs:group ref="apidesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="apiref.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID" />
+      <xs:attributeGroup ref="conref-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:attributeGroup name="apiref.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+   </xs:attributeGroup>
+   <xs:element name="apifunction">
+      <xs:annotation>
+         <xs:documentation>The &lt;apifunction&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="apifunction.class">
+               <xs:attribute ref="class" default="- topic/title  apiref/apifunction " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="apifunction.class">
+      <xs:sequence>
+         <xs:group ref="apifunction.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="apifunction.attributes" />
+   </xs:complexType>
+   <xs:group name="apifunction.content">
+      <xs:sequence>
+         <xs:group ref="classname" />
+         <xs:group ref="classversion" />
+         <xs:group ref="functionname" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="apifunction.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="base" type="xs:string" />
+      <xs:attributeGroup ref="base-attribute-extensions" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute name="rev" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="classname">
+      <xs:annotation>
+         <xs:documentation>The &lt;classname&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="classname.class">
+               <xs:attribute ref="class" default="- topic/ph  apiref/classname " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="classname.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="classname.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="classname.attributes" />
+   </xs:complexType>
+   <xs:group name="classname.content">
+      <xs:sequence>
+         <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="classname.attributes">
+      <xs:attribute name="keyref" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="classversion">
+      <xs:annotation>
+         <xs:documentation>The &lt;classversion&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="classversion.class">
+               <xs:attribute ref="class" default="- topic/ph  apiref/classversion " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="classversion.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="classversion.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="classversion.attributes" />
+   </xs:complexType>
+   <xs:group name="classversion.content">
+      <xs:sequence>
+         <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="classversion.attributes">
+      <xs:attribute name="keyref" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="functionname">
+      <xs:annotation>
+         <xs:documentation>The &lt;functionname&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="functionname.class">
+               <xs:attribute ref="class" default="- topic/ph  apiref/functionname " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="functionname.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="functionname.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="functionname.attributes" />
+   </xs:complexType>
+   <xs:group name="functionname.content">
+      <xs:sequence>
+         <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="functionname.attributes">
+      <xs:attribute name="keyref" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="apidesc">
+      <xs:annotation>
+         <xs:documentation>The &lt;apidesc&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="apidesc.class">
+               <xs:attribute ref="class" default="- topic/body  apiref/apidesc " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="apidesc.class">
+      <xs:sequence>
+         <xs:group ref="apidesc.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="apidesc.attributes" />
+   </xs:complexType>
+   <xs:group name="apidesc.content">
+      <xs:sequence>
+         <xs:group ref="purpose" />
+         <xs:group ref="paramlist" minOccurs="0" />
+         <xs:group ref="remarks" minOccurs="0" />
+         <xs:group ref="knownissues" minOccurs="0" />
+         <xs:group ref="history" minOccurs="0" />
+         <xs:group ref="example" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="apidesc.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramlist">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramlist&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramlist.class">
+               <xs:attribute ref="class" default="- topic/simpletable  apiref/paramlist " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramlist.class">
+      <xs:sequence>
+         <xs:group ref="paramlist.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramlist.attributes" />
+   </xs:complexType>
+   <xs:group name="paramlist.content">
+      <xs:sequence>
+         <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:group ref="paramStringIn" />
+            <xs:group ref="paramStringOut" />
+            <xs:group ref="paramStringInOut" />
+            <xs:group ref="paramIntegerIn" />
+            <xs:group ref="paramIntegerOut" />
+            <xs:group ref="paramIntegerInOut" />
+            <xs:group ref="paramBooleanIn" />
+            <xs:group ref="paramBooleanOut" />
+            <xs:group ref="paramBooleanInOut" />
+            <xs:group ref="paramEnumIn" />
+            <xs:group ref="paramEnumOut" />
+            <xs:group ref="paramEnumInOut" />
+            <xs:group ref="paramDateIn" />
+            <xs:group ref="paramDateOut" />
+            <xs:group ref="paramBlobIn" />
+            <xs:group ref="paramBlobOut" />
+            <xs:group ref="paramBlobInOut" />
+            <xs:group ref="paramLongIn" />
+            <xs:group ref="paramLongOut" />
+            <xs:group ref="paramLongInOut" />
+            <xs:group ref="paramStringArrayIn" />
+            <xs:group ref="paramStringArrayOut" />
+            <xs:group ref="paramStringArrayInOut" />
+            <xs:group ref="paramLongArrayIn" />
+            <xs:group ref="paramLongArrayOut" />
+            <xs:group ref="paramLongArrayInOut" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramlist.attributes">
+      <xs:attribute name="relcolwidth" type="xs:string" />
+      <xs:attribute name="keycol" type="xs:NMTOKEN" />
+      <xs:attribute name="refcols" type="xs:string" />
+      <xs:attribute name="spectitle" type="xs:string" />
+      <xs:attributeGroup ref="display-atts" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramStringIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramStringIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramStringIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramStringIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramStringIn.class">
+      <xs:sequence>
+         <xs:group ref="paramStringIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramStringIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramStringIn.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramStringIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramStringOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramStringOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramStringOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramStringOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramStringOut.class">
+      <xs:sequence>
+         <xs:group ref="paramStringOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramStringOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramStringOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramStringOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramStringInOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramStringInOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramStringInOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramStringInOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramStringInOut.class">
+      <xs:sequence>
+         <xs:group ref="paramStringInOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramStringInOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramStringInOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramStringInOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramLongIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramLongIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramLongIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramLongIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramLongIn.class">
+      <xs:sequence>
+         <xs:group ref="paramLongIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramLongIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramLongIn.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramLongIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramLongOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramLongOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramLongOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramLongOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramLongOut.class">
+      <xs:sequence>
+         <xs:group ref="paramLongOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramLongOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramLongOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramLongOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramLongInOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramLongInOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramLongInOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramLongInOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramLongInOut.class">
+      <xs:sequence>
+         <xs:group ref="paramLongInOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramLongInOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramLongInOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramLongInOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramIntegerIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramIntegerIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramIntegerIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramIntegerIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramIntegerIn.class">
+      <xs:sequence>
+         <xs:group ref="paramIntegerIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramIntegerIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramIntegerIn.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramIntegerIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramIntegerOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramIntegerOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramIntegerOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramIntegerOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramIntegerOut.class">
+      <xs:sequence>
+         <xs:group ref="paramIntegerOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramIntegerOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramIntegerOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramIntegerOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramIntegerInOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramIntegerInOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramIntegerInOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramIntegerInOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramIntegerInOut.class">
+      <xs:sequence>
+         <xs:group ref="paramIntegerInOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramIntegerInOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramIntegerInOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramIntegerInOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramBooleanIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramBooleanIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramBooleanIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramBooleanIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramBooleanIn.class">
+      <xs:sequence>
+         <xs:group ref="paramBooleanIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramBooleanIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramBooleanIn.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramBooleanIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramBooleanOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramBooleanOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramBooleanOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramBooleanOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramBooleanOut.class">
+      <xs:sequence>
+         <xs:group ref="paramBooleanOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramBooleanOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramBooleanOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramBooleanOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramBooleanInOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramBooleanInOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramBooleanInOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramBooleanInOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramBooleanInOut.class">
+      <xs:sequence>
+         <xs:group ref="paramBooleanInOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramBooleanInOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramBooleanInOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramBooleanInOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramBlobIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramBlobIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramBlobIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramBlobIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramBlobIn.class">
+      <xs:sequence>
+         <xs:group ref="paramBlobIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramBlobIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramBlobIn.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramBlobIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramBlobOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramBlobOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramBlobOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramBlobOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramBlobOut.class">
+      <xs:sequence>
+         <xs:group ref="paramBlobOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramBlobOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramBlobOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramBlobOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramBlobInOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramBlobInOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramBlobInOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramBlobInOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramBlobInOut.class">
+      <xs:sequence>
+         <xs:group ref="paramBlobInOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramBlobInOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramBlobInOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramBlobInOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramDateIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramDateIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramDateIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramDateIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramDateIn.class">
+      <xs:sequence>
+         <xs:group ref="paramDateIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramDateIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramDateIn.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramDateIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramDateOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramDateOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramDateOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramDateOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramDateOut.class">
+      <xs:sequence>
+         <xs:group ref="paramDateOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramDateOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramDateOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramDateOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramEnumIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramEnumIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramEnumIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramEnumIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramEnumIn.class">
+      <xs:sequence>
+         <xs:group ref="paramEnumIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramEnumIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramEnumIn.content">
+      <xs:sequence>
+         <xs:group ref="paramEnumName" />
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramEnumIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramEnumOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramEnumOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramEnumOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramEnumOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramEnumOut.class">
+      <xs:sequence>
+         <xs:group ref="paramEnumOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramEnumOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramEnumOut.content">
+      <xs:sequence>
+         <xs:group ref="paramEnumName" />
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramEnumOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramEnumInOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramEnumInOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramEnumInOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramEnumInOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramEnumInOut.class">
+      <xs:sequence>
+         <xs:group ref="paramEnumInOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramEnumInOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramEnumInOut.content">
+      <xs:sequence>
+         <xs:group ref="paramEnumName" />
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramEnumInOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramEnumName">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramEnumName&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramEnumName.class">
+               <xs:attribute ref="class" default="- topic/stentry  apiref/paramEnumName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramEnumName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="paramEnumName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramEnumName.attributes" />
+   </xs:complexType>
+   <xs:group name="paramEnumName.content">
+      <xs:sequence>
+         <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramEnumName.attributes">
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramName">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramName&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramName.class">
+               <xs:attribute ref="class" default="- topic/stentry  apiref/paramName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="paramName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramName.attributes" />
+   </xs:complexType>
+   <xs:group name="paramName.content">
+      <xs:sequence>
+         <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramName.attributes">
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramDesc">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramDesc&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramDesc.class">
+               <xs:attribute ref="class" default="- topic/stentry  apiref/paramDesc " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramDesc.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="paramDesc.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramDesc.attributes" />
+   </xs:complexType>
+   <xs:group name="paramDesc.content">
+      <xs:sequence>
+         <xs:group ref="desc.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramDesc.attributes">
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramStringArrayIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramStringArrayIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramStringArrayIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramStringArrayIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramStringArrayIn.class">
+      <xs:sequence>
+         <xs:group ref="paramStringArrayIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramStringArrayIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramStringArrayIn.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramStringArrayIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramStringArrayOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramStringArrayOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramStringArrayOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramStringArrayOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramStringArrayOut.class">
+      <xs:sequence>
+         <xs:group ref="paramStringArrayOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramStringArrayOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramStringArrayOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramStringArrayOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramStringArrayInOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramStringArrayInOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramStringArrayInOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramStringArrayInOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramStringArrayInOut.class">
+      <xs:sequence>
+         <xs:group ref="paramStringArrayInOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramStringArrayInOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramStringArrayInOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramStringArrayInOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramLongArrayIn">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramLongArrayIn&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramLongArrayIn.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramLongArrayIn " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramLongArrayIn.class">
+      <xs:sequence>
+         <xs:group ref="paramLongArrayIn.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramLongArrayIn.attributes" />
+   </xs:complexType>
+   <xs:group name="paramLongArrayIn.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramLongArrayIn.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramLongArrayOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramLongArrayOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramLongArrayOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramLongArrayOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramLongArrayOut.class">
+      <xs:sequence>
+         <xs:group ref="paramLongArrayOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramLongArrayOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramLongArrayOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramLongArrayOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="paramLongArrayInOut">
+      <xs:annotation>
+         <xs:documentation>The &lt;paramLongArrayInOut&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="paramLongArrayInOut.class">
+               <xs:attribute ref="class" default="- topic/strow  apiref/paramLongArrayInOut " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="paramLongArrayInOut.class">
+      <xs:sequence>
+         <xs:group ref="paramLongArrayInOut.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="paramLongArrayInOut.attributes" />
+   </xs:complexType>
+   <xs:group name="paramLongArrayInOut.content">
+      <xs:sequence>
+         <xs:group ref="paramName" />
+         <xs:group ref="paramDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="paramLongArrayInOut.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="purpose">
+      <xs:annotation>
+         <xs:documentation>The &lt;purpose&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="purpose.class">
+               <xs:attribute ref="class" default="- topic/section  apiref/purpose " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="purpose.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="purpose.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="purpose.attributes" />
+   </xs:complexType>
+   <xs:group name="purpose.content">
+      <xs:sequence>
+         <xs:group ref="section.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="purpose.attributes">
+      <xs:attribute name="spectitle" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="remarks">
+      <xs:annotation>
+         <xs:documentation>The &lt;remarks&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="remarks.class">
+               <xs:attribute ref="class" default="- topic/section  apiref/remarks " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="remarks.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="remarks.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="remarks.attributes" />
+   </xs:complexType>
+   <xs:group name="remarks.content">
+      <xs:sequence>
+         <xs:group ref="section.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="remarks.attributes">
+      <xs:attribute name="spectitle" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="knownissues">
+      <xs:annotation>
+         <xs:documentation>The &lt;knownissues&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="knownissues.class">
+               <xs:attribute ref="class" default="- topic/ul  apiref/knownissues " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="knownissues.class">
+      <xs:sequence>
+         <xs:group ref="knownissues.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="knownissues.attributes" />
+   </xs:complexType>
+   <xs:group name="knownissues.content">
+      <xs:sequence>
+         <xs:group ref="knownissue" minOccurs="1" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="knownissues.attributes">
+      <xs:attribute name="compact">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:enumeration value="yes" />
+               <xs:enumeration value="no" />
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="spectitle" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="knownissue">
+      <xs:annotation>
+         <xs:documentation>The &lt;knownissue&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="knownissue.class">
+               <xs:attribute ref="class" default="- topic/li  apiref/knownissue " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="knownissue.class">
+      <xs:sequence>
+         <xs:group ref="knownissue.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="knownissue.attributes" />
+   </xs:complexType>
+   <xs:group name="knownissue.content">
+      <xs:sequence>
+         <xs:group ref="limitation" />
+         <xs:group ref="workaround" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="knownissue.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="limitation">
+      <xs:annotation>
+         <xs:documentation>The &lt;limitation&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="limitation.class">
+               <xs:attribute ref="class" default="- topic/itemgroup  apiref/limitation " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="limitation.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="limitation.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="limitation.attributes" />
+   </xs:complexType>
+   <xs:group name="limitation.content">
+      <xs:sequence>
+         <xs:group ref="itemgroup.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="limitation.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="workaround">
+      <xs:annotation>
+         <xs:documentation>The &lt;workaround&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="workaround.class">
+               <xs:attribute ref="class" default="- topic/itemgroup  apiref/workaround " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="workaround.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="workaround.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="workaround.attributes" />
+   </xs:complexType>
+   <xs:group name="workaround.content">
+      <xs:sequence>
+         <xs:group ref="itemgroup.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="workaround.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="history">
+      <xs:annotation>
+         <xs:documentation>The &lt;history&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="history.class">
+               <xs:attribute ref="class" default="- topic/section  apiref/history " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="history.class">
+      <xs:sequence>
+         <xs:group ref="history.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="history.attributes" />
+   </xs:complexType>
+   <xs:group name="history.content">
+      <xs:sequence>
+         <xs:group ref="since" minOccurs="0" />
+         <xs:group ref="deprecated" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="history.attributes">
+      <xs:attribute name="spectitle" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="since">
+      <xs:annotation>
+         <xs:documentation>The &lt;since&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="since.class">
+               <xs:attribute ref="class" default="- topic/ph  apiref/since " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="since.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="since.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="since.attributes" />
+   </xs:complexType>
+   <xs:group name="since.content">
+      <xs:sequence>
+         <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="since.attributes">
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="deprecated">
+      <xs:annotation>
+         <xs:documentation>The &lt;deprecated&gt; element is an element in a API reference topic.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="deprecated.class">
+               <xs:attribute ref="class" default="- topic/ph  apiref/deprecated " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="deprecated.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="deprecated.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="deprecated.attributes" />
+   </xs:complexType>
+   <xs:group name="deprecated.content">
+      <xs:sequence>
+         <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="deprecated.attributes">
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

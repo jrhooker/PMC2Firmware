@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    Atmel DITA FRMWR Component                       -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2022                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA FRMWR Component//EN"         -->
+<!--      Delivered as file "atmelFrmwrComponent.mod"               -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3" />
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference frmwrComponent)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="frmwrComponent-info-types">
+      <xs:choice>
+         <xs:group ref="no-topic-nesting" />
+      </xs:choice>
+    </xs:group>
+   <xs:element name="frmwrComponent">
+      <xs:annotation>
+         <xs:documentation>The &lt;frmwrComponent&gt; element is the top-level element for a frmwrComponent topic. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrComponent.class">
+               <xs:attribute ref="class" default="- topic/topic reference/reference frmwrComponent/frmwrComponent " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrComponent.class">
+      <xs:sequence>
+         <xs:group ref="frmwrComponent.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrComponent.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrComponent.content">
+      <xs:sequence>
+         <xs:group ref="frmwrName" />
+         <xs:group ref="frmwrBody" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrComponent.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID" />
+      <xs:attributeGroup ref="conref-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:attributeGroup name="frmwrComponent.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+   </xs:attributeGroup>
+   <xs:element name="frmwrName">
+      <xs:annotation>
+         <xs:documentation>&lt;frmwrName&gt; element. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrName.class">
+               <xs:attribute ref="class" default="- topic/title reference/title frmwrComponent/frmwrName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="frmwrName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrName.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrName.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrName.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="base" type="xs:string" />
+      <xs:attributeGroup ref="base-attribute-extensions" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute name="rev" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="frmwrBody">
+      <xs:annotation>
+         <xs:documentation>&lt;frmwrBody&gt; element. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrBody.class">
+               <xs:attribute ref="class" default="- topic/body reference/refbody frmwrComponent/frmwrBody " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrBody.class">
+      <xs:sequence>
+         <xs:group ref="frmwrBody.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrBody.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrBody.content">
+      <xs:sequence>
+         <xs:group ref="frmwrDescription" minOccurs="0" />
+         <xs:group ref="frmwrEnumvalue" />
+         <xs:group ref="frmwrIncludelist" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrBody.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="frmwrDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;frmwrDescription&gt; element. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrDescription.class">
+               <xs:attribute ref="class" default="- topic/section reference/section frmwrComponent/frmwrDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="frmwrDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrDescription.content">
+      <xs:sequence>
+         <xs:group ref="section.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrDescription.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="frmwrEnumvalue">
+      <xs:annotation>
+         <xs:documentation>&lt;frmwrEnumvalue&gt; element. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrEnumvalue.class">
+               <xs:attribute ref="class" default="- topic/p reference/p frmwrComponent/frmwrEnumvalue " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrEnumvalue.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="frmwrEnumvalue.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrEnumvalue.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrEnumvalue.content">
+      <xs:sequence>
+         <xs:group ref="para.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrEnumvalue.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="frmwrIncludelist">
+      <xs:annotation>
+         <xs:documentation>&lt;frmwrIncludelist&gt; element. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrIncludelist.class">
+               <xs:attribute ref="class" default="- topic/dl reference/dl frmwrComponent/frmwrIncludelist " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrIncludelist.class">
+      <xs:sequence>
+         <xs:group ref="frmwrIncludelist.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrIncludelist.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrIncludelist.content">
+      <xs:sequence>
+         <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:group ref="frmwrInclude" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrIncludelist.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="frmwrInclude">
+      <xs:annotation>
+         <xs:documentation>&lt;frmwrInclude&gt; element. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrInclude.class">
+               <xs:attribute ref="class" default="- topic/dlentry reference/dlentry frmwrComponent/frmwrInclude " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrInclude.class">
+      <xs:sequence>
+         <xs:group ref="frmwrInclude.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrInclude.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrInclude.content">
+      <xs:sequence>
+         <xs:group ref="frmwrIncludeName" />
+         <xs:group ref="frmwrIncludeDesc" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrInclude.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="frmwrIncludeName">
+      <xs:annotation>
+         <xs:documentation>&lt;frmwrIncludeName&gt; element. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrIncludeName.class">
+               <xs:attribute ref="class" default="- topic/dt reference/dt frmwrComponent/frmwrIncludeName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrIncludeName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="frmwrIncludeName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrIncludeName.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrIncludeName.content">
+      <xs:sequence>
+         <xs:group ref="term.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrIncludeName.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="frmwrIncludeDesc">
+      <xs:annotation>
+         <xs:documentation>&lt;frmwrIncludeDesc&gt; element. Category: FRMWR Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrIncludeDesc.class">
+               <xs:attribute ref="class" default="- topic/dd reference/dd frmwrComponent/frmwrIncludeDesc " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrIncludeDesc.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="frmwrIncludeDesc.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrIncludeDesc.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrIncludeDesc.content">
+      <xs:sequence>
+         <xs:group ref="defn.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrIncludeDesc.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

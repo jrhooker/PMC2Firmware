@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--Atmel DITA Concept Shell-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:atmel:names:tc:dita:xsd:concept.xsd"
+              uri="xsd/atmelConcept.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:concept.xsd:1.x"
+              uri="xsd/atmelConcept.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:concept.xsd:1.3"
+              uri="xsd/atmelConcept.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:ditabase.xsd"
+              uri="xsd/atmelDitabase.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:ditabase.xsd:1.x"
+              uri="xsd/atmelDitabase.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:ditabase.xsd:1.3"
+              uri="xsd/atmelDitabase.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:generalTask.xsd"
+              uri="xsd/atmelGeneralTask.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:generalTask.xsd:1.x"
+              uri="xsd/atmelGeneralTask.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:generalTask.xsd:1.3"
+              uri="xsd/atmelGeneralTask.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:glossentry.xsd"
+              uri="xsd/atmelGlossentry.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:glossentry.xsd:1.x"
+              uri="xsd/atmelGlossentry.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:glossentry.xsd:1.3"
+              uri="xsd/atmelGlossentry.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:glossgroup.xsd"
+              uri="xsd/atmelGlossgroup.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:glossgroup.xsd:1.x"
+              uri="xsd/atmelGlossgroup.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:glossgroup.xsd:1.3"
+              uri="xsd/atmelGlossgroup.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:map.xsd" uri="xsd/atmelMap.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:map.xsd:1.x"
+              uri="xsd/atmelMap.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:map.xsd:1.3"
+              uri="xsd/atmelMap.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:reference.xsd"
+              uri="xsd/atmelReference.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:reference.xsd:1.x"
+              uri="xsd/atmelReference.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:reference.xsd:1.3"
+              uri="xsd/atmelReference.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:task.xsd" uri="xsd/atmelTask.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:task.xsd:1.x"
+              uri="xsd/atmelTask.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:task.xsd:1.3"
+              uri="xsd/atmelTask.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:topic.xsd"
+              uri="xsd/atmelTopic.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:topic.xsd:1.x"
+              uri="xsd/atmelTopic.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:topic.xsd:1.3"
+              uri="xsd/atmelTopic.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:troubleshooting.xsd"
+              uri="xsd/atmelTroubleshooting.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:troubleshooting.xsd:1.x"
+              uri="xsd/atmelTroubleshooting.xsd"/>
+      <system systemId="urn:atmel:names:tc:dita:xsd:troubleshooting.xsd:1.3"
+              uri="xsd/atmelTroubleshooting.xsd"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:atmel:names:tc:dita:xsd:concept.xsd"
+           uri="xsd/atmelConcept.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:concept.xsd:1.x"
+           uri="xsd/atmelConcept.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:concept.xsd:1.3"
+           uri="xsd/atmelConcept.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:ditabase.xsd"
+           uri="xsd/atmelDitabase.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:ditabase.xsd:1.x"
+           uri="xsd/atmelDitabase.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:ditabase.xsd:1.3"
+           uri="xsd/atmelDitabase.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:generalTask.xsd"
+           uri="xsd/atmelGeneralTask.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:generalTask.xsd:1.x"
+           uri="xsd/atmelGeneralTask.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:generalTask.xsd:1.3"
+           uri="xsd/atmelGeneralTask.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:glossentry.xsd"
+           uri="xsd/atmelGlossentry.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:glossentry.xsd:1.x"
+           uri="xsd/atmelGlossentry.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:glossentry.xsd:1.3"
+           uri="xsd/atmelGlossentry.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:glossgroup.xsd"
+           uri="xsd/atmelGlossgroup.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:glossgroup.xsd:1.x"
+           uri="xsd/atmelGlossgroup.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:glossgroup.xsd:1.3"
+           uri="xsd/atmelGlossgroup.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:map.xsd" uri="xsd/atmelMap.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:map.xsd:1.x" uri="xsd/atmelMap.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:map.xsd:1.3" uri="xsd/atmelMap.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:reference.xsd"
+           uri="xsd/atmelReference.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:reference.xsd:1.x"
+           uri="xsd/atmelReference.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:reference.xsd:1.3"
+           uri="xsd/atmelReference.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:task.xsd" uri="xsd/atmelTask.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:task.xsd:1.x" uri="xsd/atmelTask.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:task.xsd:1.3" uri="xsd/atmelTask.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:topic.xsd" uri="xsd/atmelTopic.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:topic.xsd:1.x"
+           uri="xsd/atmelTopic.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:topic.xsd:1.3"
+           uri="xsd/atmelTopic.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:troubleshooting.xsd"
+           uri="xsd/atmelTroubleshooting.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:troubleshooting.xsd:1.x"
+           uri="xsd/atmelTroubleshooting.xsd"/>
+      <uri name="urn:atmel:names:tc:dita:xsd:troubleshooting.xsd:1.3"
+           uri="xsd/atmelTroubleshooting.xsd"/>
+   </group>
+</catalog>

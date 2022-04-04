@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--Atmel DITA FRMWR Component Shell-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrComponent.rng"
+              uri="rng/atmelFrmwrComponent.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrComponent.rng:1.x"
+              uri="rng/atmelFrmwrComponent.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrComponent.rng:1.3"
+              uri="rng/atmelFrmwrComponent.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrComponentMod.rng"
+              uri="rng/atmelFrmwrComponentMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrComponentMod.rng:1.x"
+              uri="rng/atmelFrmwrComponentMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrComponentMod.rng:1.3"
+              uri="rng/atmelFrmwrComponentMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrStruct.rng"
+              uri="rng/atmelFrmwrStruct.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrStruct.rng:1.x"
+              uri="rng/atmelFrmwrStruct.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrStruct.rng:1.3"
+              uri="rng/atmelFrmwrStruct.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrStructMod.rng"
+              uri="rng/atmelFrmwrStructMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrStructMod.rng:1.x"
+              uri="rng/atmelFrmwrStructMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelFrmwrStructMod.rng:1.3"
+              uri="rng/atmelFrmwrStructMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelStructDword.rng"
+              uri="rng/atmelStructDword.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelStructDword.rng:1.x"
+              uri="rng/atmelStructDword.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelStructDword.rng:1.3"
+              uri="rng/atmelStructDword.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelStructDwordMod.rng"
+              uri="rng/atmelStructDwordMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelStructDwordMod.rng:1.x"
+              uri="rng/atmelStructDwordMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelStructDwordMod.rng:1.3"
+              uri="rng/atmelStructDwordMod.rng"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrComponent.rng"
+           uri="rng/atmelFrmwrComponent.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrComponent.rng:1.x"
+           uri="rng/atmelFrmwrComponent.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrComponent.rng:1.3"
+           uri="rng/atmelFrmwrComponent.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrComponentMod.rng"
+           uri="rng/atmelFrmwrComponentMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrComponentMod.rng:1.x"
+           uri="rng/atmelFrmwrComponentMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrComponentMod.rng:1.3"
+           uri="rng/atmelFrmwrComponentMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrStruct.rng"
+           uri="rng/atmelFrmwrStruct.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrStruct.rng:1.x"
+           uri="rng/atmelFrmwrStruct.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrStruct.rng:1.3"
+           uri="rng/atmelFrmwrStruct.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrStructMod.rng"
+           uri="rng/atmelFrmwrStructMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrStructMod.rng:1.x"
+           uri="rng/atmelFrmwrStructMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelFrmwrStructMod.rng:1.3"
+           uri="rng/atmelFrmwrStructMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelStructDword.rng"
+           uri="rng/atmelStructDword.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelStructDword.rng:1.x"
+           uri="rng/atmelStructDword.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelStructDword.rng:1.3"
+           uri="rng/atmelStructDword.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelStructDwordMod.rng"
+           uri="rng/atmelStructDwordMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelStructDwordMod.rng:1.x"
+           uri="rng/atmelStructDwordMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelStructDwordMod.rng:1.3"
+           uri="rng/atmelStructDwordMod.rng"/>
+   </group>
+</catalog>

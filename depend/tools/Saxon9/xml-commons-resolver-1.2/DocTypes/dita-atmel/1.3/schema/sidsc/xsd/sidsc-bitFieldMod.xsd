@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Bit Field                             -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Bit Field//EN"         -->
+<!--      Delivered as file "sidsc-bitField.mod"                 -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3" />
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference sidsc-bitField)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="bitField-info-types">
+      <xs:choice>
+         <xs:group ref="reference" />
+      </xs:choice>
+    </xs:group>
+   <xs:group name="bit.dataPhrase.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:element ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ish-atts.bitFieldProperties" />
+   <xs:attributeGroup name="ish-atts.bitFieldPropset" />
+   <xs:attributeGroup name="ish-atts.bitFieldBody" />
+   <xs:attributeGroup name="ish-atts.bitNumbers" />
+   <xs:attributeGroup name="ish-atts.bitFieldRadix" />
+   <xs:attributeGroup name="ish-atts.bitFieldReset" />
+   <xs:attributeGroup name="ish-atts.bitFieldResetTrig" />
+   <xs:attributeGroup name="ish-atts.bitFieldResetValueSource" />
+   <xs:attributeGroup name="ish-atts.bitFieldValueGroup" />
+   <xs:attributeGroup name="ish-atts.bitFieldValueName" />
+   <xs:element name="bitField">
+      <xs:annotation>
+         <xs:documentation>The &lt;bitField&gt; element is the top-level element for a SIDSC bitField topic. Category: SIDSC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitField.class">
+               <xs:attribute ref="class" default="- topic/topic reference/reference sidsc-bitField/bitField " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitField.class">
+      <xs:sequence>
+         <xs:group ref="bitField.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitField.attributes" />
+   </xs:complexType>
+   <xs:group name="bitField.content">
+      <xs:sequence>
+         <xs:group ref="bitFieldName" />
+         <xs:group ref="bitFieldBriefDescription" />
+         <xs:group ref="bitFieldBody" />
+         <xs:group ref="bitField-info-types" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitField.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID" />
+      <xs:attributeGroup ref="conref-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:attributeGroup name="bitField.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldName">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldName&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldName.class">
+               <xs:attribute ref="class" default="- topic/title reference/title sidsc-bitField/bitFieldName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldName.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldName.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldName.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldName" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldBriefDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldBriefDescription&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldBriefDescription.class">
+               <xs:attribute ref="class" default="- topic/shortdesc reference/shortdesc sidsc-bitField/bitFieldBriefDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldBriefDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldBriefDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldBriefDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldBriefDescription.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="bit.dataPhrase.cnt" />
+            <xs:group ref="body.cnt" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldBriefDescription.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldBriefDescription" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldDescription&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldDescription.class">
+               <xs:attribute ref="class" default="- topic/section reference/section sidsc-bitField/bitFieldDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldDescription.content">
+      <xs:sequence>
+         <xs:group ref="section.notitle.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldDescription.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldDescription" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldProperties">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldProperties&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldProperties.class">
+               <xs:attribute ref="class" default="- topic/simpletable dataTableDomain/dataTable sidsc-bitField/bitFieldProperties " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldProperties.class">
+      <xs:sequence>
+         <xs:group ref="bitFieldProperties.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldProperties.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldProperties.content">
+      <xs:sequence>
+         <xs:group ref="bitFieldPropset" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldProperties.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldProperties" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldPropset">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldPropset&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldPropset.class">
+               <xs:attribute ref="class" default="- topic/strow dataTableDomain/dataRow sidsc-bitField/bitFieldPropset " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldPropset.class">
+      <xs:sequence>
+         <xs:group ref="bitFieldPropset.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldPropset.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldPropset.content">
+      <xs:sequence>
+         <xs:group ref="bitNumbers" minOccurs="0" />
+         <xs:group ref="bitWidth" />
+         <xs:group ref="bitOffset" minOccurs="0" />
+         <xs:group ref="bitFieldAccess" minOccurs="0" />
+         <xs:group ref="bitFieldRadix" minOccurs="0" />
+         <xs:group ref="bitFieldReset" minOccurs="0" maxOccurs="unbounded" />
+         <xs:element ref="dimension" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldPropset.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldPropset" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldBody">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldBody&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldBody.class">
+               <xs:attribute ref="class" default="- topic/body reference/refbody sidsc-bitField/bitFieldBody " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldBody.class">
+      <xs:sequence>
+         <xs:group ref="bitFieldBody.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldBody.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldBody.content">
+      <xs:sequence>
+         <xs:group ref="bitFieldDescription" />
+         <xs:group ref="bitFieldProperties" />
+         <xs:group ref="bitFieldValues" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldBody.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldBody" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitNumbers">
+      <xs:annotation>
+         <xs:documentation>&lt;bitNumbers&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitNumbers.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitNumbers " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitNumbers.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitNumbers.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitNumbers.attributes" />
+   </xs:complexType>
+   <xs:group name="bitNumbers.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitNumbers.attributes">
+      <xs:attributeGroup ref="ish-atts.bitNumbers" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitWidth">
+      <xs:annotation>
+         <xs:documentation>&lt;bitWidth&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitWidth.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitWidth " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitWidth.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitWidth.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitWidth.attributes" />
+   </xs:complexType>
+   <xs:group name="bitWidth.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitWidth.attributes">
+      <xs:attributeGroup ref="ish-atts.bitWidth" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitOffset">
+      <xs:annotation>
+         <xs:documentation>&lt;bitOffset&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitOffset.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitOffset " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitOffset.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitOffset.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitOffset.attributes" />
+   </xs:complexType>
+   <xs:group name="bitOffset.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitOffset.attributes">
+      <xs:attributeGroup ref="ish-atts.bitOffset" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldAccess">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldAccess&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldAccess.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldAccess " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldAccess.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldAccess.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldAccess.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldAccess.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldAccess.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldAccess" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldRadix">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldRadix&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldRadix.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldRadix " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldRadix.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldRadix.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldRadix.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldRadix.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldRadix.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldRadix" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldReset">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldReset&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldReset.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldReset " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldReset.class">
+      <xs:sequence>
+         <xs:group ref="bitFieldReset.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldReset.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldReset.content">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="bitFieldResetValue" />
+            <xs:group ref="bitFieldResetValueSource" />
+         </xs:choice>
+         <xs:group ref="bitFieldResetTrig" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldReset.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldReset" />
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldResetValue">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldResetValue&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldResetValue.class">
+               <xs:attribute ref="class" default="- topic/ph dataTableDomain/dataPhrase sidsc-bitField/bitFieldResetValue " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldResetValue.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldResetValue.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldResetValue.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldResetValue.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldResetValue.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldResetValue" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldResetTrig">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldResetTrig&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldResetTrig.class">
+               <xs:attribute ref="class" default="- topic/ph dataTableDomain/dataPhrase sidsc-bitField/bitFieldResetTrig " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldResetTrig.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldResetTrig.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldResetTrig.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldResetTrig.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldResetTrig.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldResetTrig" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldResetValueSource">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldResetValueSource&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldResetValueSource.class">
+               <xs:attribute ref="class" default="- topic/ph dataTableDomain/dataPhrase sidsc-bitField/bitFieldResetValueSource " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldResetValueSource.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldResetValueSource.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldResetValueSource.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldResetValueSource.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldResetValueSource.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldResetValueSource" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldValues">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldValues&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldValues.class">
+               <xs:attribute ref="class" default="- topic/simpletable dataTableDomain/dataTable sidsc-bitField/bitFieldValues " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldValues.class">
+      <xs:sequence>
+         <xs:group ref="bitFieldValues.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldValues.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldValues.content">
+      <xs:sequence>
+         <xs:group ref="bitFieldValueGroup" minOccurs="1" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldValues.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldValues" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldValueGroup">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldValueGroup&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldValueGroup.class">
+               <xs:attribute ref="class" default="- topic/strow dataTableDomain/dataRow sidsc-bitField/bitFieldValueGroup " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldValueGroup.class">
+      <xs:sequence>
+         <xs:group ref="bitFieldValueGroup.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldValueGroup.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldValueGroup.content">
+      <xs:sequence>
+         <xs:group ref="bitFieldValue" minOccurs="0" />
+         <xs:group ref="bitFieldValueName" minOccurs="0" />
+         <xs:group ref="bitFieldValueDescription" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldValueGroup.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldValueGroup" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldValue">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldValue&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldValue.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldValue " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldValue.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldValue.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldValue.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldValue.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldValue.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldValue" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldValueName">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldValueName&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldValueName.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldValueName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldValueName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldValueName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldValueName.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldValueName.content">
+      <xs:sequence>
+         <xs:group ref="bit.dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldValueName.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldValueName" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitFieldValueDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;bitFieldValueDescription&gt; element. Category: SISDC Bit Field elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitFieldValueDescription.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-bitField/bitFieldValueDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitFieldValueDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitFieldValueDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitFieldValueDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="bitFieldValueDescription.content">
+      <xs:sequence>
+         <xs:group ref="tblcell.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitFieldValueDescription.attributes">
+      <xs:attributeGroup ref="ish-atts.bitFieldValueDescription" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

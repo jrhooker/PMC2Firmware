@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Address Block                         -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Address Block//EN"     -->
+<!--      Delivered as file "sidsc-addressBlock.mod"             -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:group name="addressBlock">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="addressBlock" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="addressBlockName">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="addressBlockName" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="addressBlockBriefDescription">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="addressBlockBriefDescription" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="addressBlockBody">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="addressBlockBody" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="addressBlockDescription">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="addressBlockDescription" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="addressBlockProperties">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="addressBlockProperties" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="addressBlockPropset">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="addressBlockPropset" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="baseAddress">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="baseAddress" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="range">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="range" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="width">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="width" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="byteOrder">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="byteOrder" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+</xs:schema>

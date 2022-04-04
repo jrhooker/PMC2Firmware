@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    SDL DITA API Reference                           -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      June 2018                                        -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:group name="apiref">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="apiref"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="apifunction">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="apifunction"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="classname">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="classname"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="classversion">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="classversion"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="functionname">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="functionname"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="apidesc">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="apidesc"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramlist">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramlist"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramStringIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramStringIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramStringOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramStringOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramStringInOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramStringInOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramLongIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramLongIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramLongOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramLongOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramLongInOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramLongInOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramIntegerIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramIntegerIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramIntegerOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramIntegerOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramIntegerInOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramIntegerInOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramBooleanIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramBooleanIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramBooleanOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramBooleanOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramBooleanInOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramBooleanInOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramBlobIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramBlobIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramBlobOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramBlobOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramBlobInOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramBlobInOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramDateIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramDateIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramDateOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramDateOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramEnumIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramEnumIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramEnumOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramEnumOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramEnumInOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramEnumInOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramEnumName">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramEnumName"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramName">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramName"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramDesc">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramDesc"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramStringArrayIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramStringArrayIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramStringArrayOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramStringArrayOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramStringArrayInOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramStringArrayInOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramLongArrayIn">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramLongArrayIn"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramLongArrayOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramLongArrayOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="paramLongArrayInOut">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="paramLongArrayInOut"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="purpose">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="purpose"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="remarks">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="remarks"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="knownissues">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="knownissues"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="knownissue">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="knownissue"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="limitation">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="limitation"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="workaround">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="workaround"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="history">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="history"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="since">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="since"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="deprecated">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="deprecated"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+</xs:schema>

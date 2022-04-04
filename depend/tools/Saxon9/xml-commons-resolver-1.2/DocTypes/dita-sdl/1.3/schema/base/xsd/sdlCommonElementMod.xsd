@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--============================================================ -->
+<!-- MODULE:    SDL Common Elements                              -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      June 2018                                        -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.3">
+
+    <xs:attributeGroup name="keyword.attributes">
+      <xs:attributeGroup ref="keyword.attributes" />
+      <xs:attributeGroup ref="variables-atts" />
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="ph.attributes">
+      <xs:attributeGroup ref="ph.attributes" />
+      <xs:attributeGroup ref="variables-atts" />
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="cite.attributes">
+      <xs:attributeGroup ref="cite.attributes" />
+      <xs:attributeGroup ref="variables-atts" />
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="image.attributes">
+      <xs:attributeGroup ref="image.attributes" />
+      <xs:attributeGroup ref="variables-atts" />
+    </xs:attributeGroup>
+  </xs:redefine>
+</xs:schema>

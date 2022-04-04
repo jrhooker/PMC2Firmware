@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentTypeMap>
+  <!-- Maps a public ID to another public ID. -->
+  <!-- It is used by Content Importer to convert a document type into another document type before importing it, e.g. -->
+  <!-- Replace "-//OASIS//DTD DITA Concept//EN" with "-//SDL//DTD DITA Concept//EN" -->
+  <rewritePublicId publicIdStartString="-//OASIS//DTD DITA 1.2" rewritePrefix="-//OASIS//DTD DITA 1.2" />
+  <rewritePublicId publicIdStartString="-//OASIS//DTD DITA 1.1" rewritePrefix="-//OASIS//DTD DITA 1.1" />
+  <rewritePublicId publicIdStartString="-//OASIS//DTD DITA 1.0" rewritePrefix="-//OASIS//DTD DITA 1.0" />
+  <rewritePublicId publicIdStartString="-//OASIS//DTD DITA" rewritePrefix="-//SDL//DTD DITA" />
+</documentTypeMap>

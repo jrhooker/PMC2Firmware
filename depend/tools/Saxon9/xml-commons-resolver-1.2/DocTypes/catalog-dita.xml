@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <!-- ...................................................................... -->
+  <!-- IN THIS OASIS XML CATALOG:                                             -->
+  <!--   [A] XML Catalog data for IBM DITA V1.3.2 [compatibility,deprecated]  -->
+  <!--   [B] XML Catalog data for OASIS DITA V1.0 [compatibility,deprecated]  -->
+  <!--   [C] XML Catalog data for OASIS DITA V1.1                             -->
+  <!--   [D] XML Catalog data for OASIS DITA V1.2                             -->
+  <!--   [E] XML Catalog data for OASIS DITA V1.X                             -->
+  <!--   [F] XML Catalog data for OASIS version-less DITA pointing to latest  -->
+  <!-- GENERAL NOTES:                                                         -->
+  <!--   1. IBM DITA should be replaced with OASIS DITA as much as possible   -->
+  <!--   2. OASIS DITA 1.2 is stated to be fully backward compatible with     -->
+  <!--      OASIS DITA 1.1 & 1.0. All version-less public identifiers are     -->
+  <!--      redirected to this latest version system file path. Note that     -->
+  <!--      the regular publicId doesn't contain a version number.            -->
+  <!--   3. OASIS DITA 1.0, 1.1 and 1.2 public identifiers containing a       -->
+  <!--      version are added to allow explicit DTD usage.                    -->
+  <!--   4. DITA Composite is disabled since it makes no sense from Trisoft   -->
+  <!--      InfoShare perspective to group topics into one object/file.       -->
+  <!--      20081201/DDM Activated for FI and Adobe FrameMaker 8.0 IAB        -->
+  <!-- HISTORY:                                                               -->
+  <!--   20070521/DDM Creation and case-sensitive verification of all         -->
+  <!--     publicIds present in this catalog-dita.xml file.                   -->
+  <!--   20070521/DDM Disabled composite ditabase and IBM BookMap.            -->
+  <!--   20070807/DDM Rearranged the OASIS section into version 1.0, version  -->
+  <!--     1.1 and version-less section.                                      -->
+  <!--   20081201/DDM Activated ditabase OASIS DITA 1.1 PublicId              -->
+  <!--   20090723/EL Added OASIS DITA 1.2 PublicId                            -->
+  <!-- ...................................................................... -->
+
+  <nextCatalog catalog="dita-atmel/1.3/catalog.xml" />
+  <nextCatalog catalog="dita-sdl/1.3/catalog.xml" />
+  <nextCatalog catalog="dita-oasis/1.2/catalog.xml" />
+  <nextCatalog catalog="dita-oasis/1.2/catalog-xsds.xml" />
+  <nextCatalog catalog="dita-oasis/1.1/catalog.xml" />
+  <nextCatalog catalog="dita-oasis/1.0/catalog.xml" />
+  <nextCatalog catalog="dita-ibm/1.3.2/catalog.xml" />
+  <nextCatalog catalog="dita-oasis/1.3/catalog.xml" />
+</catalog>

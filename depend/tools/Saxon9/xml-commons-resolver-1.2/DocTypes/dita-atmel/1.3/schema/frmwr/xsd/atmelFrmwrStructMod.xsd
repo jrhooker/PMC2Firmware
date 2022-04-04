@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    Atmel DITA FRMWR Structure                       -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2022                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA FRMWR Structure//EN"         -->
+<!--      Delivered as file "atmelFrmwrStruct.mod"               -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3" />
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference frmwrStruct)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="frmwrStruct-info-types">
+      <xs:choice>
+         <xs:group ref="structDword" />
+      </xs:choice>
+    </xs:group>
+   <xs:element name="frmwrStruct">
+      <xs:annotation>
+         <xs:documentation>The &lt;frmwrStruct&gt; element is the top-level element for a frmwrStruct topic. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="frmwrStruct.class">
+               <xs:attribute ref="class" default="- topic/topic reference/reference frmwrStruct/frmwrStruct " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="frmwrStruct.class">
+      <xs:sequence>
+         <xs:group ref="frmwrStruct.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="frmwrStruct.attributes" />
+   </xs:complexType>
+   <xs:group name="frmwrStruct.content">
+      <xs:sequence>
+         <xs:group ref="structName" />
+         <xs:group ref="structNameMore" minOccurs="0" />
+         <xs:group ref="structBody" />
+         <xs:group ref="frmwrStruct-info-types" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="frmwrStruct.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID" />
+      <xs:attributeGroup ref="conref-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:attributeGroup name="frmwrStruct.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+   </xs:attributeGroup>
+   <xs:element name="structName">
+      <xs:annotation>
+         <xs:documentation>&lt;structName&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structName.class">
+               <xs:attribute ref="class" default="- topic/title reference/title frmwrStruct/structName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="structName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structName.attributes" />
+   </xs:complexType>
+   <xs:group name="structName.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="title.cnt" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structName.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="base" type="xs:string" />
+      <xs:attributeGroup ref="base-attribute-extensions" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute name="rev" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structNameMore">
+      <xs:annotation>
+         <xs:documentation>&lt;structNameMore&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structNameMore.class">
+               <xs:attribute ref="class" default="- topic/abstract reference/abstract frmwrStruct/structNameMore " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structNameMore.class">
+      <xs:sequence>
+         <xs:group ref="structNameMore.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structNameMore.attributes" />
+   </xs:complexType>
+   <xs:group name="structNameMore.content">
+      <xs:sequence>
+         <xs:group ref="structNameFull" />
+         <xs:group ref="structNameDescription" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structNameMore.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structNameFull">
+      <xs:annotation>
+         <xs:documentation>&lt;structNameFull&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structNameFull.class">
+               <xs:attribute ref="class" default="- topic/shortdesc reference/shortdesc frmwrStruct/structNameFull " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structNameFull.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="structNameFull.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structNameFull.attributes" />
+   </xs:complexType>
+   <xs:group name="structNameFull.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="title.cnt" />
+            <xs:group ref="xref" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structNameFull.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structNameDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;structNameDescription&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structNameDescription.class">
+               <xs:attribute ref="class" default="- topic/p reference/p frmwrStruct/structNameDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structNameDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="structNameDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structNameDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="structNameDescription.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="para.cnt" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structNameDescription.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structBody">
+      <xs:annotation>
+         <xs:documentation>&lt;structBody&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structBody.class">
+               <xs:attribute ref="class" default="- topic/body reference/refbody frmwrStruct/structBody " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structBody.class">
+      <xs:sequence>
+         <xs:group ref="structBody.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structBody.attributes" />
+   </xs:complexType>
+   <xs:group name="structBody.content">
+      <xs:sequence>
+         <xs:group ref="structDescription" />
+         <xs:group ref="structProperties" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structBody.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;structDescription&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structDescription.class">
+               <xs:attribute ref="class" default="- topic/section reference/section frmwrStruct/structDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="structDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="structDescription.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="section.cnt" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structDescription.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structProperties">
+      <xs:annotation>
+         <xs:documentation>&lt;structProperties&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structProperties.class">
+               <xs:attribute ref="class" default="- topic/simpletable reference/simpletable frmwrStruct/structProperties " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structProperties.class">
+      <xs:sequence>
+         <xs:group ref="structProperties.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structProperties.attributes" />
+   </xs:complexType>
+   <xs:group name="structProperties.content">
+      <xs:sequence>
+         <xs:group ref="structPropset" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structProperties.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structPropset">
+      <xs:annotation>
+         <xs:documentation>&lt;structPropset&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structPropset.class">
+               <xs:attribute ref="class" default="- topic/strow reference/strow frmwrStruct/structPropset " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structPropset.class">
+      <xs:sequence>
+         <xs:group ref="structPropset.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structPropset.attributes" />
+   </xs:complexType>
+   <xs:group name="structPropset.content">
+      <xs:sequence>
+         <xs:group ref="structOpcode" />
+         <xs:group ref="structType" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structPropset.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structOpcode">
+      <xs:annotation>
+         <xs:documentation>&lt;structOpcode&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structOpcode.class">
+               <xs:attribute ref="class" default="- topic/stentry reference/stentry frmwrStruct/structOpcode " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structOpcode.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="structOpcode.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structOpcode.attributes" />
+   </xs:complexType>
+   <xs:group name="structOpcode.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dword.atomicvalue.cnt" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structOpcode.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="structType">
+      <xs:annotation>
+         <xs:documentation>&lt;structType&gt; element. Category: FRMWR Structure elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structType.class">
+               <xs:attribute ref="class" default="- topic/stentry reference/stentry frmwrStruct/structType " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structType.class">
+      <xs:sequence>
+         <xs:group ref="structType.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="structType.attributes" />
+   </xs:complexType>
+   <xs:group name="structType.content">
+      <xs:sequence />
+   </xs:group>
+   <xs:attributeGroup name="structType.attributes">
+      <xs:attribute name="structType">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:enumeration value="msg" />
+               <xs:enumeration value="sub" />
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

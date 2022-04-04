@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://relaxng.org/ns/structure/1.0" 
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>Atmel DITA FRMWR Component</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+ MODULE:    Atmel DITA FRMWR Component
+ VERSION:   1.3                                              
+ DATE:      March 2022  
+                                                             
+=============================================================
+
+=============================================================
+                   PUBLIC DOCUMENT TYPE DEFINITION           
+                   TYPICAL INVOCATION                        
+                                                             
+ Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//Atmel//ELEMENTS DITA FRMWR Component//EN"
+      Delivered as file "atmelFrmwrComponent.mod"               
+
+
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>frmwrComponent</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//Atmel//ELEMENTS DITA<var presep=" " name="ditaver" /> FRMWR Component//EN</dtdMod>
+        <dtdEnt>-//Atmel//ENTITIES DITA<var presep=" " name="ditaver" /> FRMWR Component//EN</dtdEnt>
+        <xsdMod>urn:atmel:names:tc:dita:xsd:atmelFrmwrComponentMod.xsd<var presep=":" name="ditaver" /></xsdMod>
+        <xsdGrp>urn:atmel:names:tc:dita:xsd:atmelFrmwrComponentGrp.xsd<var presep=":" name="ditaver" /></xsdGrp>
+        <rncMod>urn:atmel:names:tc:dita:rnc:atmelFrmwrComponentMod.rnc<var presep=":" name="ditaver" /></rncMod>
+        <rngMod>urn:atmel:names:tc:dita:rng:atmelFrmwrComponentMod.rng<var presep=":" name="ditaver" /></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic reference frmwrComponent)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+    <define name="frmwrComponent-info-types">
+      <choice>
+        <ref name="no-topic-nesting.element"/>
+      </choice>
+    </define>
+
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="frmwrComponent">
+      <ref name="frmwrComponent.element" />
+    </define>
+    <define name="frmwrName">
+      <ref name="frmwrName.element" />
+    </define>
+    <define name="frmwrBody">
+      <ref name="frmwrBody.element" />
+    </define>
+    <define name="frmwrDescription">
+      <ref name="frmwrDescription.element" />
+    </define>
+    <define name="frmwrEnumvalue">
+      <ref name="frmwrEnumvalue.element" />
+    </define>
+    <define name="frmwrIncludelist">
+      <ref name="frmwrIncludelist.element" />
+    </define>
+    <define name="frmwrInclude">
+      <ref name="frmwrInclude.element" />
+    </define>
+    <define name="frmwrIncludeName">
+      <ref name="frmwrIncludeName.element" />
+    </define>
+    <define name="frmwrIncludeDesc">
+      <ref name="frmwrIncludeDesc.element" />
+    </define>
+  </div>
+
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+   
+    <div>
+      <a:documentation> LONG NAME: Firmware Component </a:documentation>
+      <define name="frmwrComponent.content">
+        <ref name="frmwrName" />
+        <ref name="frmwrBody" />
+      </define>
+      <define name="frmwrComponent.attributes">
+        <attribute name="id">
+          <data type="ID" />
+        </attribute>
+        <ref name="conref-atts" />
+        <ref name="select-atts" />
+        <ref name="localization-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrComponent.element">
+        <element name="frmwrComponent" dita:longName="Structure Dword">
+          <a:documentation>The &lt;frmwrComponent> element is the top-level element for a frmwrComponent topic. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrComponent.attlist" />
+          <ref name="frmwrComponent.content" />
+        </element>
+      </define>
+      <define name="frmwrComponent.attlist" combine="interleave">
+        <ref name="frmwrComponent.attributes" />
+        <ref name="arch-atts" />
+        <ref name="domains-att" />
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="frmwrComponent.element"/>
+      </define>
+    </div>
+
+    <div>
+      <a:documentation> LONG NAME: Firmware Name </a:documentation>
+      <define name="frmwrName.content">
+        <zeroOrMore>
+          <ref name="title.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="frmwrName.attributes">
+        <ref name="id-atts"/>
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="base"/>
+        </optional>
+        <ref name="base-attribute-extensions"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+        <optional>
+          <attribute name="rev" dita:since="1.3"/>
+        </optional>
+      </define>
+      <define name="frmwrName.element">
+        <element name="frmwrName" dita:longName="Firmware Name">
+          <a:documentation>&lt;frmwrName> element. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrName.attlist" />
+          <ref name="frmwrName.content" />
+        </element>
+      </define>
+      <define name="frmwrName.attlist" combine="interleave">
+        <ref name="frmwrName.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Firmware Body </a:documentation>
+      <define name="frmwrBody.content">
+        <optional>
+          <ref name="frmwrDescription" />
+        </optional>
+        <ref name="frmwrEnumvalue" />
+        <optional>
+          <ref name="frmwrIncludelist" />
+        </optional>
+      </define>
+      <define name="frmwrBody.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrBody.element">
+        <element name="frmwrBody" dita:longName="Firmware Body">
+          <a:documentation>&lt;frmwrBody> element. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrBody.attlist" />
+          <ref name="frmwrBody.content" />
+        </element>
+      </define>
+      <define name="frmwrBody.attlist" combine="interleave">
+        <ref name="frmwrBody.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Firmware Description </a:documentation>
+      <define name="frmwrDescription.content">
+        <zeroOrMore>
+          <ref name="section.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="frmwrDescription.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrDescription.element">
+        <element name="frmwrDescription" dita:longName="Firmware Description">
+          <a:documentation>&lt;frmwrDescription> element. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrDescription.attlist" />
+          <ref name="frmwrDescription.content" />
+        </element>
+      </define>
+      <define name="frmwrDescription.attlist" combine="interleave">
+        <ref name="frmwrDescription.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Firmware Enumaration value </a:documentation>
+      <define name="frmwrEnumvalue.content">
+        <zeroOrMore>
+          <ref name="para.cnt" />
+        </zeroOrMore>
+      </define>
+      <define name="frmwrEnumvalue.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrEnumvalue.element">
+        <element name="frmwrEnumvalue" dita:longName="Firmware Enumaration value">
+          <a:documentation>&lt;frmwrEnumvalue> element. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrEnumvalue.attlist" />
+          <ref name="frmwrEnumvalue.content" />
+        </element>
+      </define>
+      <define name="frmwrEnumvalue.attlist" combine="interleave">
+        <ref name="frmwrEnumvalue.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Firmware Include List </a:documentation>
+      <define name="frmwrIncludelist.content">
+        <oneOrMore>
+          <choice>
+            <ref name="frmwrInclude" />
+          </choice>
+        </oneOrMore>
+      </define>
+      <define name="frmwrIncludelist.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrIncludelist.element">
+        <element name="frmwrIncludelist" dita:longName="Firmware Include List">
+          <a:documentation>&lt;frmwrIncludelist> element. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrIncludelist.attlist" />
+          <ref name="frmwrIncludelist.content" />
+        </element>
+      </define>
+      <define name="frmwrIncludelist.attlist" combine="interleave">
+        <ref name="frmwrIncludelist.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Firmware Include List Entry </a:documentation>
+      <define name="frmwrInclude.content">
+        <ref name="frmwrIncludeName" />
+        <ref name="frmwrIncludeDesc" />
+      </define>
+      <define name="frmwrInclude.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrInclude.element">
+        <element name="frmwrInclude" dita:longName="Firmware Include List Entry">
+          <a:documentation>&lt;frmwrInclude> element. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrInclude.attlist" />
+          <ref name="frmwrInclude.content" />
+        </element>
+      </define>
+      <define name="frmwrInclude.attlist" combine="interleave">
+        <ref name="frmwrInclude.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Firmware Include Name </a:documentation>
+      <define name="frmwrIncludeName.content">
+        <zeroOrMore>
+          <ref name="term.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="frmwrIncludeName.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrIncludeName.element">
+        <element name="frmwrIncludeName" dita:longName="Firmware Include Name">
+          <a:documentation>&lt;frmwrIncludeName> element. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrIncludeName.attlist" />
+          <ref name="frmwrIncludeName.content" />
+        </element>
+      </define>
+      <define name="frmwrIncludeName.attlist" combine="interleave">
+        <ref name="frmwrIncludeName.attributes" />
+      </define>
+    </div>
+    
+    <div>
+      <a:documentation> LONG NAME: Firmware Include Description </a:documentation>
+      <define name="frmwrIncludeDesc.content">
+        <zeroOrMore>
+          <ref name="defn.cnt"/>
+        </zeroOrMore>
+      </define>
+      <define name="frmwrIncludeDesc.attributes">
+        <ref name="univ-atts" />
+        <optional>
+          <attribute name="outputclass" />
+        </optional>
+      </define>
+      <define name="frmwrIncludeDesc.element">
+        <element name="frmwrIncludeDesc" dita:longName="Firmware Include Description">
+          <a:documentation>&lt;frmwrIncludeDesc> element. Category: FRMWR Component elements</a:documentation>
+          <ref name="frmwrIncludeDesc.attlist" />
+          <ref name="frmwrIncludeDesc.content" />
+        </element>
+      </define>
+      <define name="frmwrIncludeDesc.attlist" combine="interleave">
+        <ref name="frmwrIncludeDesc.attributes" />
+      </define>
+    </div>
+    
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="frmwrComponent.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic reference/reference frmwrComponent/frmwrComponent " />
+      </optional>
+    </define>
+    <define name="frmwrName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/title reference/title frmwrComponent/frmwrName " />
+      </optional>
+    </define>
+    <define name="frmwrBody.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body reference/refbody frmwrComponent/frmwrBody " />
+      </optional>
+    </define>
+    <define name="frmwrDescription.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section reference/section frmwrComponent/frmwrDescription " />
+      </optional>
+    </define>
+    <define name="frmwrEnumvalue.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/p reference/p frmwrComponent/frmwrEnumvalue " />
+      </optional>
+    </define>
+    <define name="frmwrIncludelist.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/dl reference/dl frmwrComponent/frmwrIncludelist " />
+      </optional>
+    </define>
+    <define name="frmwrInclude.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/dlentry reference/dlentry frmwrComponent/frmwrInclude " />
+      </optional>
+    </define>
+    <define name="frmwrIncludeName.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/dt reference/dt frmwrComponent/frmwrIncludeName " />
+      </optional>
+    </define>
+    <define name="frmwrIncludeDesc.attlist" combine="interleave">
+      <ref name="global-atts" />
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/dd reference/dd frmwrComponent/frmwrIncludeDesc " />
+      </optional>
+    </define>
+  </div>
+</grammar>

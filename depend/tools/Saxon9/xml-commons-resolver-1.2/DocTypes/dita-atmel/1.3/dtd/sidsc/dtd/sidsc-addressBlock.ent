@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    DITA SIDSC Address Block                          -->
+<!--  VERSION:   1.3                                               -->
+<!--  DATE:      March 2019                                        -->
+<!--                                                               -->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an  -->
+<!--       appropriate system identifier                           -->
+<!-- PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Address Block//EN"      -->
+<!--       Delivered as file "sidsc-addressBlock.mod"              -->
+<!-- ============================================================= -->
+<!-- Copyright OASIS 2009                                          -->
+<!-- Author: Seth Park                                             -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY addressBlock-att
+  "(topic reference sidsc-addressBlock)"
+>
+
+<!-- ================ End DITA SIDSC Address Block ================== -->
+ 

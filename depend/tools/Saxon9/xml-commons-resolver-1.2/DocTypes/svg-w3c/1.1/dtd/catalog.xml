@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <!-- SVG 1.1 -->
+
+  <public publicId="-//W3C//DTD SVG 1.1//EN" uri="svg11-flat.dtd" />
+  <public publicId="-//W3C//DTD SVG 1.1 Tiny//EN" uri="svg11-tiny-flat.dtd" />
+  <public publicId="-//W3C//DTD SVG 1.1 Basic//EN" uri="svg11-basic-flat.dtd" />
+
+  <system systemId="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" uri="svg11-flat.dtd" />
+  <system systemId="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat.dtd" uri="svg11-flat.dtd" />
+  <system systemId="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20110816.dtd" uri="svg11-flat.dtd" />
+  <system systemId="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-basic.dtd" uri="svg11-basic-flat.dtd" />
+  <system systemId="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-basic-flat.dtd" uri="svg11-basic-flat.dtd" />
+  <system systemId="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd" uri="svg11-tiny-flat.dtd" />
+  <system systemId="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny-flat.dtd" uri="svg11-tiny-flat.dtd" />
+</catalog>

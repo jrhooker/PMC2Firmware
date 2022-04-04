@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC dataTableDomain                       -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC dataTable Domain//EN"  -->
+<!--      Delivered as file "sidscDomain.mod"                    -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic dataTableDomain-d)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:group name="dataTable">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dataTable" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dataRow">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dataRow" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dataEntry">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dataEntry" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dataPhrase">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dataPhrase" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dataGroup">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dataGroup" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dataInstance">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dataInstance" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dataInstanceValue">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dataInstanceValue" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dataInstanceMeaning">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dataInstanceMeaning" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dimension">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dimension" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dimensionValue">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dimensionValue" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dimensionIncrement">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="dimensionIncrement" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+
+   <xs:group name="dataTableDomain-d-simpletable">
+      <xs:choice>
+         <xs:element ref="dataTable" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="dataTableDomain-d-strow">
+      <xs:choice>
+         <xs:element ref="dataRow" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="dataTableDomain-d-stentry">
+      <xs:choice>
+         <xs:element ref="dataEntry" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="dataTableDomain-d-dl">
+      <xs:choice>
+         <xs:element ref="dataGroup" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="dataTableDomain-d-dlentry">
+      <xs:choice>
+         <xs:element ref="dataInstance" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="dataTableDomain-d-dt">
+      <xs:choice>
+         <xs:element ref="dataInstanceValue" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="dataTableDomain-d-dd">
+      <xs:choice>
+         <xs:element ref="dataInstanceMeaning" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="dataPhrase.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:element ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="dt.plain.text.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:element ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:element name="dataTable">
+      <xs:annotation>
+         <xs:documentation>
+            Data Table
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dataTable.class">
+               <xs:attribute ref="class" default="- topic/simpletable dataTableDomain/dataTable " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dataTable.class">
+      <xs:sequence>
+         <xs:group ref="dataTable.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dataTable.attributes" />
+   </xs:complexType>
+   <xs:group name="dataTable.content">
+      <xs:sequence>
+         <xs:group ref="dataRow" minOccurs="1" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dataTable.attributes">
+      <xs:attribute name="relcolwidth" type="xs:string" />
+      <xs:attribute name="keycol" type="xs:NMTOKEN" />
+      <xs:attribute name="refcols" type="xs:string" />
+      <xs:attributeGroup ref="display-atts" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="spectitle" type="xs:string" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dataRow">
+      <xs:annotation>
+         <xs:documentation>
+            Data Row
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dataRow.class">
+               <xs:attribute ref="class" default="- topic/strow dataTableDomain/dataRow " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dataRow.class">
+      <xs:sequence>
+         <xs:group ref="dataRow.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dataRow.attributes" />
+   </xs:complexType>
+   <xs:group name="dataRow.content">
+      <xs:sequence>
+         <xs:group ref="dataEntry" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dataRow.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dataEntry">
+      <xs:annotation>
+         <xs:documentation>
+            Data Entry
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dataEntry.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dataEntry.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dataEntry.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dataEntry.attributes" />
+   </xs:complexType>
+   <xs:group name="dataEntry.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dataPhrase.cnt" />
+            <xs:group ref="dataPhrase" />
+            <xs:group ref="dataGroup" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dataEntry.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="specentry" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dataPhrase">
+      <xs:annotation>
+         <xs:documentation>
+            Data Phrase
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dataPhrase.class">
+               <xs:attribute ref="class" default="- topic/ph dataTableDomain/dataPhrase " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dataPhrase.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dataPhrase.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dataPhrase.attributes" />
+   </xs:complexType>
+   <xs:group name="dataPhrase.content">
+      <xs:sequence>
+         <xs:group ref="dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dataPhrase.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dataGroup">
+      <xs:annotation>
+         <xs:documentation>
+            Data Group
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dataGroup.class">
+               <xs:attribute ref="class" default="- topic/dl dataTableDomain/dataGroup " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dataGroup.class">
+      <xs:sequence>
+         <xs:group ref="dataGroup.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dataGroup.attributes" />
+   </xs:complexType>
+   <xs:group name="dataGroup.content">
+      <xs:sequence>
+         <xs:group ref="dataInstance" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dataGroup.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dataInstance">
+      <xs:annotation>
+         <xs:documentation>
+            Data Instance
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dataInstance.class">
+               <xs:attribute ref="class" default="- topic/dlentry dataTableDomain/dataInstance " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dataInstance.class">
+      <xs:sequence>
+         <xs:group ref="dataInstance.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dataInstance.attributes" />
+   </xs:complexType>
+   <xs:group name="dataInstance.content">
+      <xs:sequence>
+         <xs:sequence minOccurs="1" maxOccurs="unbounded">
+            <xs:group ref="dataInstanceValue" minOccurs="1" maxOccurs="unbounded" />
+            <xs:group ref="dataInstanceMeaning" minOccurs="1" maxOccurs="unbounded" />
+         </xs:sequence>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dataInstance.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dataInstanceValue">
+      <xs:annotation>
+         <xs:documentation>
+            Data Instance Value
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dataInstanceValue.class">
+               <xs:attribute ref="class" default="- topic/dt dataTableDomain/dataInstanceValue " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dataInstanceValue.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dataInstanceValue.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dataInstanceValue.attributes" />
+   </xs:complexType>
+   <xs:group name="dataInstanceValue.content">
+      <xs:sequence>
+         <xs:group ref="dt.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dataInstanceValue.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dataInstanceMeaning">
+      <xs:annotation>
+         <xs:documentation>
+            Data Instance Meaning
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dataInstanceMeaning.class">
+               <xs:attribute ref="class" default="- topic/dd dataTableDomain/dataInstanceMeaning " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dataInstanceMeaning.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dataInstanceMeaning.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dataInstanceMeaning.attributes" />
+   </xs:complexType>
+   <xs:group name="dataInstanceMeaning.content">
+      <xs:sequence>
+         <xs:group ref="dt.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dataInstanceMeaning.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dimension">
+      <xs:annotation>
+         <xs:documentation>
+            Dimension
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dimension.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dimension " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dimension.class">
+      <xs:sequence>
+         <xs:group ref="dimension.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dimension.attributes" />
+   </xs:complexType>
+   <xs:group name="dimension.content">
+      <xs:sequence>
+         <xs:group ref="dimensionValue" />
+         <xs:group ref="dimensionIncrement" minOccurs="0" />
+         <xs:element ref="unitQualifier" minOccurs="0" />
+         <xs:element ref="namePattern" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dimension.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dimensionValue">
+      <xs:annotation>
+         <xs:documentation>
+            Dimension Value
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dimensionValue.class">
+               <xs:attribute ref="class" default="- topic/ph dataTableDomain/dimensionValue " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dimensionValue.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dimensionValue.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dimensionValue.attributes" />
+   </xs:complexType>
+   <xs:group name="dimensionValue.content">
+      <xs:sequence>
+         <xs:group ref="dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dimensionValue.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="dimensionIncrement">
+      <xs:annotation>
+         <xs:documentation>
+            Dimension Increment
+    Category: SIDSC dataTableDomain
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dimensionIncrement.class">
+               <xs:attribute ref="class" default="- topic/ph dataTableDomain/dimensionIncrement " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dimensionIncrement.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dimensionIncrement.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="dimensionIncrement.attributes" />
+   </xs:complexType>
+   <xs:group name="dimensionIncrement.content">
+      <xs:sequence>
+         <xs:group ref="dataPhrase.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dimensionIncrement.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--Atmel DITA Machinery Task Shell-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:atmel:names:tc:dita:spec:machinery:rng:machinerytask.rng"
+              uri="rng/atmelMachineryTask.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:spec:machinery:rng:machinerytask.rng:1.x"
+              uri="rng/atmelMachineryTask.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:spec:machinery:rng:machinerytask.rng:1.3"
+              uri="rng/atmelMachineryTask.rng"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:atmel:names:tc:dita:spec:machinery:rng:machinerytask.rng"
+           uri="rng/atmelMachineryTask.rng"/>
+      <uri name="urn:atmel:names:tc:dita:spec:machinery:rng:machinerytask.rng:1.x"
+           uri="rng/atmelMachineryTask.rng"/>
+      <uri name="urn:atmel:names:tc:dita:spec:machinery:rng:machinerytask.rng:1.3"
+           uri="rng/atmelMachineryTask.rng"/>
+   </group>
+</catalog>

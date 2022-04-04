@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--SDL DITA Concept Shell-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:sdl:names:tc:dita:xsd:concept.xsd"
+              uri="xsd/sdlConcept.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:concept.xsd:1.x"
+              uri="xsd/sdlConcept.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:concept.xsd:1.3"
+              uri="xsd/sdlConcept.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:ditabase.xsd"
+              uri="xsd/sdlDitabase.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:ditabase.xsd:1.x"
+              uri="xsd/sdlDitabase.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:ditabase.xsd:1.3"
+              uri="xsd/sdlDitabase.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:generalTask.xsd"
+              uri="xsd/sdlGeneralTask.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:generalTask.xsd:1.x"
+              uri="xsd/sdlGeneralTask.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:generalTask.xsd:1.3"
+              uri="xsd/sdlGeneralTask.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossentry.xsd"
+              uri="xsd/sdlGlossentry.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossentry.xsd:1.x"
+              uri="xsd/sdlGlossentry.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossentry.xsd:1.3"
+              uri="xsd/sdlGlossentry.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossgroup.xsd"
+              uri="xsd/sdlGlossgroup.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossgroup.xsd:1.x"
+              uri="xsd/sdlGlossgroup.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossgroup.xsd:1.3"
+              uri="xsd/sdlGlossgroup.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:map.xsd" uri="xsd/sdlMap.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:map.xsd:1.x" uri="xsd/sdlMap.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:map.xsd:1.3" uri="xsd/sdlMap.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:reference.xsd"
+              uri="xsd/sdlReference.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:reference.xsd:1.x"
+              uri="xsd/sdlReference.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:reference.xsd:1.3"
+              uri="xsd/sdlReference.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:task.xsd" uri="xsd/sdlTask.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:task.xsd:1.x" uri="xsd/sdlTask.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:task.xsd:1.3" uri="xsd/sdlTask.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:topic.xsd" uri="xsd/sdlTopic.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:topic.xsd:1.x"
+              uri="xsd/sdlTopic.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:topic.xsd:1.3"
+              uri="xsd/sdlTopic.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:troubleshooting.xsd"
+              uri="xsd/sdlTroubleshooting.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:troubleshooting.xsd:1.x"
+              uri="xsd/sdlTroubleshooting.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:troubleshooting.xsd:1.3"
+              uri="xsd/sdlTroubleshooting.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:softwareDomain.xsd"
+              uri="xsd/sdlSoftwareDomain.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:softwareDomain.xsd:1.x"
+              uri="xsd/sdlSoftwareDomain.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:softwareDomain.xsd:1.3"
+              uri="xsd/sdlSoftwareDomain.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossentryMod.xsd"
+              uri="xsd/sdlGlossentryMod.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossentryMod.xsd:1.x"
+              uri="xsd/sdlGlossentryMod.xsd"/>
+      <system systemId="urn:sdl:names:tc:dita:xsd:glossentryMod.xsd:1.3"
+              uri="xsd/sdlGlossentryMod.xsd"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:sdl:names:tc:dita:xsd:concept.xsd" uri="xsd/sdlConcept.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:concept.xsd:1.x"
+           uri="xsd/sdlConcept.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:concept.xsd:1.3"
+           uri="xsd/sdlConcept.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:ditabase.xsd" uri="xsd/sdlDitabase.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:ditabase.xsd:1.x"
+           uri="xsd/sdlDitabase.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:ditabase.xsd:1.3"
+           uri="xsd/sdlDitabase.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:generalTask.xsd"
+           uri="xsd/sdlGeneralTask.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:generalTask.xsd:1.x"
+           uri="xsd/sdlGeneralTask.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:generalTask.xsd:1.3"
+           uri="xsd/sdlGeneralTask.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossentry.xsd"
+           uri="xsd/sdlGlossentry.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossentry.xsd:1.x"
+           uri="xsd/sdlGlossentry.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossentry.xsd:1.3"
+           uri="xsd/sdlGlossentry.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossgroup.xsd"
+           uri="xsd/sdlGlossgroup.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossgroup.xsd:1.x"
+           uri="xsd/sdlGlossgroup.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossgroup.xsd:1.3"
+           uri="xsd/sdlGlossgroup.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:map.xsd" uri="xsd/sdlMap.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:map.xsd:1.x" uri="xsd/sdlMap.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:map.xsd:1.3" uri="xsd/sdlMap.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:reference.xsd"
+           uri="xsd/sdlReference.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:reference.xsd:1.x"
+           uri="xsd/sdlReference.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:reference.xsd:1.3"
+           uri="xsd/sdlReference.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:task.xsd" uri="xsd/sdlTask.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:task.xsd:1.x" uri="xsd/sdlTask.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:task.xsd:1.3" uri="xsd/sdlTask.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:topic.xsd" uri="xsd/sdlTopic.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:topic.xsd:1.x" uri="xsd/sdlTopic.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:topic.xsd:1.3" uri="xsd/sdlTopic.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:troubleshooting.xsd"
+           uri="xsd/sdlTroubleshooting.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:troubleshooting.xsd:1.x"
+           uri="xsd/sdlTroubleshooting.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:troubleshooting.xsd:1.3"
+           uri="xsd/sdlTroubleshooting.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:softwareDomain.xsd"
+           uri="xsd/sdlSoftwareDomain.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:softwareDomain.xsd:1.x"
+           uri="xsd/sdlSoftwareDomain.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:softwareDomain.xsd:1.3"
+           uri="xsd/sdlSoftwareDomain.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossentryMod.xsd"
+           uri="xsd/sdlGlossentryMod.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossentryMod.xsd:1.x"
+           uri="xsd/sdlGlossentryMod.xsd"/>
+      <uri name="urn:sdl:names:tc:dita:xsd:glossentryMod.xsd:1.3"
+           uri="xsd/sdlGlossentryMod.xsd"/>
+   </group>
+</catalog>

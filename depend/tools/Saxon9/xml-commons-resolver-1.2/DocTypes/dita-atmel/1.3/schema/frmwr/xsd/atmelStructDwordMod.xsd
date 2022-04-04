@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    Atmel DITA FRMWR Structure Dword                 -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2022                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA FRMWR Structure Dword//EN"   -->
+<!--      Delivered as file "atmelStructDword.mod"               -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/"
+              schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference structDword)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="structDword-info-types">
+      <xs:choice>
+         <xs:group ref="structDword"/>
+         <xs:group ref="info-types"/>
+      </xs:choice>
+   </xs:group>
+   <xs:group name="dword.atomicvalue.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:element name="structDword">
+      <xs:annotation>
+         <xs:documentation>The &lt;structDword&gt; element is the top-level element for a structDword topic. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="structDword.class">
+               <xs:attribute ref="class"
+                             default="- topic/topic reference/reference structDword/structDword "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="structDword.class">
+      <xs:sequence>
+         <xs:group ref="structDword.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="structDword.attributes"/>
+   </xs:complexType>
+   <xs:group name="structDword.content">
+      <xs:sequence>
+         <xs:group ref="dwordName"/>
+         <xs:group ref="dwordBriefDescription"/>
+         <xs:group ref="dwordBody"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="structDword.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID"/>
+      <xs:attributeGroup ref="conref-atts"/>
+      <xs:attributeGroup ref="select-atts"/>
+      <xs:attributeGroup ref="localization-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attribute ref="ditaarch:DITAArchVersion"/>
+      <xs:attributeGroup ref="domains-att"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="structDword.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion"/>
+      <xs:attributeGroup ref="domains-att"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordName">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordName&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordName.class">
+               <xs:attribute ref="class"
+                             default="- topic/title reference/title structDword/dwordName "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordName.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordName.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordName.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordName.attributes">
+      <xs:attributeGroup ref="id-atts"/>
+      <xs:attributeGroup ref="localization-atts"/>
+      <xs:attribute name="base" type="xs:string"/>
+      <xs:attributeGroup ref="base-attribute-extensions"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attribute name="rev" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordBriefDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordBriefDescription&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordBriefDescription.class">
+               <xs:attribute ref="class"
+                             default="- topic/shortdesc reference/shortdesc structDword/dwordBriefDescription "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordBriefDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordBriefDescription.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordBriefDescription.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordBriefDescription.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="title.cnt"/>
+            <xs:group ref="xref"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordBriefDescription.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordBody">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordBody&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordBody.class">
+               <xs:attribute ref="class"
+                             default="- topic/body reference/refbody structDword/dwordBody "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordBody.class">
+      <xs:sequence>
+         <xs:group ref="dwordBody.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordBody.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordBody.content">
+      <xs:sequence>
+         <xs:group ref="dwordDescription"/>
+         <xs:group ref="dwordProperties"/>
+         <xs:group ref="dwordValues" minOccurs="0"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordBody.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordDescription&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordDescription.class">
+               <xs:attribute ref="class"
+                             default="- topic/section reference/section structDword/dwordDescription "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordDescription.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordDescription.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordDescription.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="section.cnt"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordDescription.attributes">
+      <xs:attribute name="spectitle" type="xs:string"/>
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordProperties">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordProperties&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordProperties.class">
+               <xs:attribute ref="class"
+                             default="- topic/simpletable reference/simpletable structDword/dwordProperties "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordProperties.class">
+      <xs:sequence>
+         <xs:group ref="dwordProperties.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordProperties.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordProperties.content">
+      <xs:sequence>
+         <xs:group ref="dwordPropset"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordProperties.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordPropset">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordPropset&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordPropset.class">
+               <xs:attribute ref="class"
+                             default="- topic/strow reference/strow structDword/dwordPropset "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordPropset.class">
+      <xs:sequence>
+         <xs:group ref="dwordPropset.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordPropset.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordPropset.content">
+      <xs:sequence>
+         <xs:group ref="dwordWidth"/>
+         <xs:group ref="dwordOffset"/>
+         <xs:group ref="dwordNumberWidth"/>
+         <xs:group ref="dwordNumberOffset"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordPropset.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordWidth">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordWidth&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordWidth.class">
+               <xs:attribute ref="class"
+                             default="- topic/stentry reference/stentry structDword/dwordWidth "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordWidth.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordWidth.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordWidth.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordWidth.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dword.atomicvalue.cnt"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordWidth.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attributeGroup ref="variables-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordOffset">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordOffset&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordOffset.class">
+               <xs:attribute ref="class"
+                             default="- topic/stentry reference/stentry structDword/dwordOffset "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordOffset.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordOffset.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordOffset.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordOffset.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dword.atomicvalue.cnt"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordOffset.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attributeGroup ref="variables-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordNumberWidth">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordNumberWidth&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordNumberWidth.class">
+               <xs:attribute ref="class"
+                             default="- topic/stentry reference/stentry structDword/dwordNumberWidth "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordNumberWidth.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordNumberWidth.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordNumberWidth.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordNumberWidth.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dword.atomicvalue.cnt"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordNumberWidth.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attributeGroup ref="variables-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordNumberOffset">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordNumberOffset&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordNumberOffset.class">
+               <xs:attribute ref="class"
+                             default="- topic/stentry reference/stentry structDword/dwordNumberOffset "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordNumberOffset.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordNumberOffset.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordNumberOffset.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordNumberOffset.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dword.atomicvalue.cnt"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordNumberOffset.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attributeGroup ref="variables-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordValues">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordValues&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordValues.class">
+               <xs:attribute ref="class"
+                             default="- topic/simpletable reference/simpletable structDword/dwordValues "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordValues.class">
+      <xs:sequence>
+         <xs:group ref="dwordValues.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordValues.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordValues.content">
+      <xs:sequence>
+         <xs:group ref="dwordValueGroup"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordValues.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordValueGroup">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordValueGroup&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordValueGroup.class">
+               <xs:attribute ref="class"
+                             default="- topic/strow reference/strow structDword/dwordValueGroup "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordValueGroup.class">
+      <xs:sequence>
+         <xs:group ref="dwordValueGroup.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordValueGroup.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordValueGroup.content">
+      <xs:sequence>
+         <xs:group ref="dwordValue"/>
+         <xs:group ref="dwordValueName"/>
+         <xs:group ref="dwordValueDescription"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordValueGroup.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordValue">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordValue&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordValue.class">
+               <xs:attribute ref="class"
+                             default="- topic/stentry reference/stentry structDword/dwordValue "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordValue.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordValue.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordValue.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordValue.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dword.atomicvalue.cnt"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordValue.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attributeGroup ref="variables-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordValueName">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordValueName&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordValueName.class">
+               <xs:attribute ref="class"
+                             default="- topic/stentry reference/stentry structDword/dwordValueName "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordValueName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordValueName.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordValueName.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordValueName.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dword.atomicvalue.cnt"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordValueName.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attributeGroup ref="variables-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   <xs:element name="dwordValueDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;dwordValueDescription&gt; element. Category: FRMWR Structure Dword elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="dwordValueDescription.class">
+               <xs:attribute ref="class"
+                             default="- topic/stentry reference/stentry structDword/dwordValueDescription "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="dwordValueDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="dwordValueDescription.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="dwordValueDescription.attributes"/>
+   </xs:complexType>
+   <xs:group name="dwordValueDescription.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="dword.atomicvalue.cnt"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="dwordValueDescription.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attributeGroup ref="variables-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+</xs:schema>

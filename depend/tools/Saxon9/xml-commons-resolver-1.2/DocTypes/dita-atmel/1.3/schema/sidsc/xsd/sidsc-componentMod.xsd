@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Component                             -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Component//EN"         -->
+<!--      Delivered as file "sidsc-component.mod"                -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3" />
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference sidsc-component)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="sidsc-component-info-types">
+      <xs:choice>
+         <xs:group ref="memoryMap" />
+      </xs:choice>
+    </xs:group>
+   <xs:group name="sidsc.comp.plain.text.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:element ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:element name="sidsc-component">
+      <xs:annotation>
+         <xs:documentation>The &lt;sidsc-component&gt; element is the top-level element for a SIDSC Component topic. Category: SIDSC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="sidsc-component.class">
+               <xs:attribute ref="class" default="- topic/topic reference/reference sidsc-component/sidsc-component " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="sidsc-component.class">
+      <xs:sequence>
+         <xs:group ref="sidsc-component.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="sidsc-component.attributes" />
+   </xs:complexType>
+   <xs:group name="sidsc-component.content">
+      <xs:sequence>
+         <xs:group ref="componentName" />
+         <xs:group ref="data" minOccurs="0" maxOccurs="unbounded" />
+         <xs:group ref="componentBriefDescription" />
+         <xs:group ref="componentBody" />
+         <xs:group ref="sidsc-component-info-types" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="sidsc-component.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID" />
+      <xs:attributeGroup ref="conref-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:attributeGroup name="sidsc-component.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+   </xs:attributeGroup>
+   <xs:element name="componentName">
+      <xs:annotation>
+         <xs:documentation>&lt;componentName&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="componentName.class">
+               <xs:attribute ref="class" default="- topic/title reference/title sidsc-component/componentName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="componentName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="componentName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="componentName.attributes" />
+   </xs:complexType>
+   <xs:group name="componentName.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="componentName.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="componentBriefDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;componentBriefDescription&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="componentBriefDescription.class">
+               <xs:attribute ref="class" default="- topic/shortdesc reference/shortdesc sidsc-component/componentBriefDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="componentBriefDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="componentBriefDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="componentBriefDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="componentBriefDescription.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="componentBriefDescription.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="componentBody">
+      <xs:annotation>
+         <xs:documentation>&lt;componentBody&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="componentBody.class">
+               <xs:attribute ref="class" default="- topic/body reference/refbody sidsc-component/componentBody " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="componentBody.class">
+      <xs:sequence>
+         <xs:group ref="componentBody.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="componentBody.attributes" />
+   </xs:complexType>
+   <xs:group name="componentBody.content">
+      <xs:sequence>
+         <xs:group ref="body.cnt" minOccurs="0" maxOccurs="unbounded" />
+         <xs:group ref="componentDescription" />
+         <xs:group ref="unitAddress" minOccurs="0" />
+         <xs:group ref="componentInstanceVariables" minOccurs="0" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="componentBody.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="componentDescription">
+      <xs:annotation>
+         <xs:documentation>&lt;componentDescription&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="componentDescription.class">
+               <xs:attribute ref="class" default="- topic/section reference/section sidsc-component/componentDescription " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="componentDescription.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="componentDescription.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="componentDescription.attributes" />
+   </xs:complexType>
+   <xs:group name="componentDescription.content">
+      <xs:sequence>
+         <xs:group ref="section.notitle.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="componentDescription.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="unitAddress">
+      <xs:annotation>
+         <xs:documentation>&lt;unitAddress&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="unitAddress.class">
+               <xs:attribute ref="class" default="- topic/p reference/p sidsc-component/unitAddress " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="unitAddress.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="unitAddress.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="unitAddress.attributes" />
+   </xs:complexType>
+   <xs:group name="unitAddress.content">
+      <xs:sequence>
+         <xs:group ref="sidsc.comp.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="unitAddress.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="componentInstanceVariables">
+      <xs:annotation>
+         <xs:documentation>&lt;componentInstanceVariables&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="componentInstanceVariables.class">
+               <xs:attribute ref="class" default="- topic/simpletable dataTableDomain/dataTable/componentInstanceVariables " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="componentInstanceVariables.class">
+      <xs:sequence>
+         <xs:group ref="componentInstanceVariables.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="componentInstanceVariables.attributes" />
+   </xs:complexType>
+   <xs:group name="componentInstanceVariables.content">
+      <xs:sequence>
+         <xs:group ref="componentData" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="componentInstanceVariables.attributes">
+      <xs:attribute name="spectitle" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="componentData">
+      <xs:annotation>
+         <xs:documentation>&lt;componentData&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="componentData.class">
+               <xs:attribute ref="class" default="- topic/strow dataTableDomain/dataRow sidsc-component/componentData " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="componentData.class">
+      <xs:sequence>
+         <xs:group ref="componentData.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="componentData.attributes" />
+   </xs:complexType>
+   <xs:group name="componentData.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:sequence>
+               <xs:sequence>
+                  <xs:group ref="componentDataKey" />
+               </xs:sequence>
+               <xs:sequence>
+                  <xs:group ref="componentDataValue" />
+               </xs:sequence>
+            </xs:sequence>
+            <xs:sequence>
+               <xs:group ref="instanceParameters" />
+            </xs:sequence>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="componentData.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="componentDataKey">
+      <xs:annotation>
+         <xs:documentation>&lt;componentDataKey&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="componentDataKey.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-component/componentDataKey " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="componentDataKey.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="componentDataKey.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="componentDataKey.attributes" />
+   </xs:complexType>
+   <xs:group name="componentDataKey.content">
+      <xs:sequence>
+         <xs:group ref="term.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="componentDataKey.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="componentDataValue">
+      <xs:annotation>
+         <xs:documentation>&lt;componentDataValue&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="componentDataValue.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-component/componentDataValue " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="componentDataValue.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="componentDataValue.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="componentDataValue.attributes" />
+   </xs:complexType>
+   <xs:group name="componentDataValue.content">
+      <xs:sequence>
+         <xs:group ref="defn.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="componentDataValue.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="instanceParameters">
+      <xs:annotation>
+         <xs:documentation>&lt;instanceParameters&gt; element. 
+            Category: SISDC Component elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="instanceParameters.class">
+               <xs:attribute ref="class" default="- topic/stentry dataTableDomain/dataEntry sidsc-component/instanceParameters " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="instanceParameters.class">
+      <xs:sequence>
+         <xs:group ref="instanceParameters.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="instanceParameters.attributes" />
+   </xs:complexType>
+   <xs:group name="instanceParameters.content">
+      <xs:sequence>
+         <xs:group ref="ph" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="instanceParameters.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

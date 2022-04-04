@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Memory Map                            -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Memory Map//EN"        -->
+<!--      Delivered as file "sidsc-memoryMap.mod"                -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- ==================== Import Section ======================= -->
+   <xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3" />
+
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference sidsc-memoryMap)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:group name="memoryMap-info-types">
+      <xs:choice>
+         <xs:group ref="addressBlock" />
+      </xs:choice>
+    </xs:group>
+   <xs:element name="memoryMap">
+      <xs:annotation>
+         <xs:documentation>The &lt;memoryMap&gt; element is the top-level element for a SIDSC memoryMap topic. Category: SIDSC Memory Map elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="memoryMap.class">
+               <xs:attribute ref="class" default="- topic/topic reference/reference sidsc-memoryMap/memoryMap " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="memoryMap.class">
+      <xs:sequence>
+         <xs:group ref="memoryMap.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="memoryMap.attributes" />
+   </xs:complexType>
+   <xs:group name="memoryMap.content">
+      <xs:sequence>
+         <xs:group ref="memoryMapName" />
+         <xs:group ref="memoryMapBody" />
+         <xs:group ref="memoryMap-info-types" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="memoryMap.attributes">
+      <xs:attribute name="id" use="required" type="xs:ID" />
+      <xs:attributeGroup ref="conref-atts" />
+      <xs:attributeGroup ref="select-atts" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:attributeGroup name="memoryMap.attlist">
+      <xs:attribute ref="ditaarch:DITAArchVersion" />
+      <xs:attributeGroup ref="domains-att" />
+   </xs:attributeGroup>
+   <xs:element name="memoryMapName">
+      <xs:annotation>
+         <xs:documentation>&lt;memoryMapName&gt; element. 
+            Category: SISDC Memory Map elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="memoryMapName.class">
+               <xs:attribute ref="class" default="- topic/title reference/title sidsc-memoryMap/memoryMapName " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="memoryMapName.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="memoryMapName.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="memoryMapName.attributes" />
+   </xs:complexType>
+   <xs:group name="memoryMapName.content">
+      <xs:sequence>
+         <xs:group ref="title.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="memoryMapName.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="memoryMapBody">
+      <xs:annotation>
+         <xs:documentation>&lt;memoryMapBody&gt; element. 
+            Category: SISDC Memory Map elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="memoryMapBody.class">
+               <xs:attribute ref="class" default="- topic/body reference/refbody sidsc-memoryMap/memoryMapBody " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="memoryMapBody.class">
+      <xs:sequence>
+         <xs:group ref="memoryMapBody.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="memoryMapBody.attributes" />
+   </xs:complexType>
+   <xs:group name="memoryMapBody.content">
+      <xs:sequence>
+         <xs:group ref="bitsInLau" />
+         <xs:group ref="memoryMapClass" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="memoryMapBody.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="bitsInLau">
+      <xs:annotation>
+         <xs:documentation>&lt;bitsInLau&gt; element. 
+            Category: SISDC Memory Map elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="bitsInLau.class">
+               <xs:attribute ref="class" default="- topic/p reference/p sidsc-memoryMap/bitsInLau " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bitsInLau.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="bitsInLau.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="bitsInLau.attributes" />
+   </xs:complexType>
+   <xs:group name="bitsInLau.content">
+      <xs:sequence>
+         <xs:sequence />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="bitsInLau.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="memoryMapClass">
+      <xs:annotation>
+         <xs:documentation>&lt;memoryMapClass&gt; element. 
+            Category: SISDC Memory Map elements</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="memoryMapClass.class">
+               <xs:attribute ref="class" default="- topic/p reference/p sidsc-memoryMap/memoryMapClass " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="memoryMapClass.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="memoryMapClass.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="memoryMapClass.attributes" />
+   </xs:complexType>
+   <xs:group name="memoryMapClass.content">
+      <xs:sequence>
+         <xs:sequence />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="memoryMapClass.attributes">
+      <xs:attributeGroup ref="id-atts" />
+      <xs:attributeGroup ref="cidAtt-d-attribute" />
+      <xs:attributeGroup ref="localization-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

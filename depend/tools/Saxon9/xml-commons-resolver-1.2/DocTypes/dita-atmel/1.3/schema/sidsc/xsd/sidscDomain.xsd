@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Domain                                -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Domain//EN"            -->
+<!--      Delivered as file "sidscDomain.mod"                    -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic sidscDomain-d)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:group name="active-low">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="active-low" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="instancesNumber">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="instancesNumber" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="unitQualifier">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="unitQualifier" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="namePattern">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="namePattern" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="instanceOffsets">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="instanceOffsets" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+
+   <xs:group name="sidscDomain-d-ph">
+      <xs:choice>
+         <xs:element ref="active-low" />
+         <xs:element ref="unitQualifier" />
+         <xs:element ref="namePattern" />
+         <xs:element ref="instancesNumber" />
+         <xs:element ref="instanceOffsets" />
+      </xs:choice>
+   </xs:group>
+   <xs:group name="sidsc.plain.text.cnt">
+      <xs:sequence>
+         <xs:choice>
+            <xs:group ref="text" />
+            <xs:element ref="ph" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:element name="active-low">
+      <xs:annotation>
+         <xs:documentation>
+            Active Low
+    Category: SIDSC
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="active-low.class">
+               <xs:attribute ref="class" default="+ topic/ph sidscDomain-d/active-low " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="active-low.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="active-low.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="active-low.attributes" />
+   </xs:complexType>
+   <xs:group name="active-low.content">
+      <xs:sequence>
+         <xs:group ref="sidsc.plain.text.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="active-low.attributes">
+      <xs:attribute name="keyref" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="instancesNumber">
+      <xs:annotation>
+         <xs:documentation>
+            Instances Number
+    Category: SIDSC
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="instancesNumber.class">
+               <xs:attribute ref="class" default="+ topic/ph sidscDomain-d/instancesNumber " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="instancesNumber.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="instancesNumber.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="instancesNumber.attributes" />
+   </xs:complexType>
+   <xs:group name="instancesNumber.content">
+      <xs:sequence>
+         <xs:group ref="term.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="instancesNumber.attributes">
+      <xs:attribute name="keyref" type="xs:string" />
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="unitQualifier">
+      <xs:annotation>
+         <xs:documentation>
+            Unit Qualifier
+    Category: SIDSC
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="unitQualifier.class">
+               <xs:attribute ref="class" default="+ topic/ph sidscDomain-d/unitQualifier " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="unitQualifier.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="unitQualifier.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="unitQualifier.attributes" />
+   </xs:complexType>
+   <xs:group name="unitQualifier.content">
+      <xs:sequence>
+         <xs:group ref="defn.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="unitQualifier.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="namePattern">
+      <xs:annotation>
+         <xs:documentation>
+            Name Pattern
+    Category: SIDSC
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="namePattern.class">
+               <xs:attribute ref="class" default="+ topic/ph sidscDomain-d/namePattern " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="namePattern.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="namePattern.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="namePattern.attributes" />
+   </xs:complexType>
+   <xs:group name="namePattern.content">
+      <xs:sequence>
+         <xs:group ref="defn.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="namePattern.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+   <xs:element name="instanceOffsets">
+      <xs:annotation>
+         <xs:documentation>
+            Instance Offsets
+    Category: SIDSC
+  </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="instanceOffsets.class">
+               <xs:attribute ref="class" default="+ topic/ph sidscDomain-d/instanceOffsets " />
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="instanceOffsets.class" mixed="true">
+      <xs:sequence>
+         <xs:group ref="instanceOffsets.content" />
+      </xs:sequence>
+      <xs:attributeGroup ref="instanceOffsets.attributes" />
+   </xs:complexType>
+   <xs:group name="instanceOffsets.content">
+      <xs:sequence>
+         <xs:group ref="defn.cnt" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="instanceOffsets.attributes">
+      <xs:attributeGroup ref="univ-atts" />
+      <xs:attribute name="outputclass" type="xs:string" />
+      <xs:attributeGroup ref="global-atts" />
+   </xs:attributeGroup>
+</xs:schema>

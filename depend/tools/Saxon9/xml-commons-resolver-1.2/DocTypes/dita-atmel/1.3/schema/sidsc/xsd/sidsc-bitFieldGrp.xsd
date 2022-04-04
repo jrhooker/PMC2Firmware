@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!-- MODULE:    DITA SIDSC Bit Field                             -->
+<!-- VERSION:   1.3                                              -->
+<!-- DATE:      March 2019                                       -->
+<!--                                                             -->
+<!--=============================================================-->
+<!--=============================================================-->
+<!--                   PUBLIC DOCUMENT TYPE DEFINITION           -->
+<!--                   TYPICAL INVOCATION                        -->
+<!--                                                             -->
+<!-- Refer to this file by the following public identifier or an -->
+<!--      appropriate system identifier                          -->
+<!--PUBLIC "-//Atmel//ELEMENTS DITA SIDSC Bit Field//EN"         -->
+<!--      Delivered as file "sidsc-bitField.mod"                 -->
+<!--=============================================================-->
+<!--Copyright OASIS 2009                                         -->
+<!--Author: Seth Park                                            -->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:group name="bitField">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitField" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldName">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldName" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldBriefDescription">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldBriefDescription" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldDescription">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldDescription" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldProperties">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldProperties" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldPropset">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldPropset" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldBody">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldBody" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitNumbers">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitNumbers" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitWidth">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitWidth" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitOffset">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitOffset" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldAccess">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldAccess" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldRadix">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldRadix" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldReset">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldReset" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldResetValue">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldResetValue" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldResetTrig">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldResetTrig" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldResetValueSource">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldResetValueSource" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldValues">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldValues" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldValueGroup">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldValueGroup" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldValue">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldValue" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldValueName">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldValueName" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="bitFieldValueDescription">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="bitFieldValueDescription" />
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+</xs:schema>

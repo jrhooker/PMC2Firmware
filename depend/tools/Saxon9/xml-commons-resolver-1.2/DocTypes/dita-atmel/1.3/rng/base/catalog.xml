@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!--Atmel Variables Constraint-->
+
+   <group><!-- System ID (URL) catalog entries -->
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelVariablesConstraintMod.rng"
+              uri="rng/atmelVariablesConstraintMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelVariablesConstraintMod.rng:1.x"
+              uri="rng/atmelVariablesConstraintMod.rng"/>
+      <system systemId="urn:atmel:names:tc:dita:rng:atmelVariablesConstraintMod.rng:1.3"
+              uri="rng/atmelVariablesConstraintMod.rng"/>
+   </group>
+   <group><!-- Public ID (URN) catalog entries -->
+      <uri name="urn:atmel:names:tc:dita:rng:atmelVariablesConstraintMod.rng"
+           uri="rng/atmelVariablesConstraintMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelVariablesConstraintMod.rng:1.x"
+           uri="rng/atmelVariablesConstraintMod.rng"/>
+      <uri name="urn:atmel:names:tc:dita:rng:atmelVariablesConstraintMod.rng:1.3"
+           uri="rng/atmelVariablesConstraintMod.rng"/>
+   </group>
+</catalog>
