@@ -2562,6 +2562,8 @@
          uri="ditaval.xsd"/>
     <uri name="urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.2" 
          uri="ditaval.xsd"/>
-  </group>
+  </group>        
+        
+  <nextCatalog catalog="xml-commons-resolver-1.2/DocTypes/dita-atmel/1.3/dtd/frmwr/catalog.xml"/>
 
 </catalog>

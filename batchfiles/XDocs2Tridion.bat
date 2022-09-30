@@ -1,7 +1,7 @@
-set PATHTOPROJECT=\Source\sample_project
-set OUTPUTPATH=\Out
-set FILENAME=messages_flashInterface.ditamap
-set DITAMAPNAME=messages_flashInterface.ditamap
+set PATHTOPROJECT=\XDocs_Out
+set OUTPUTPATH=\XDocs_Out2
+set FILENAME=Flash_Interface_Messages.ditamap
+set DITAMAPNAME=Flash_Interface_Messages.ditamap
 
 cd ..\
 

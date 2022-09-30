@@ -1,8 +1,7 @@
-set PATHTOPROJECT=\Source\sample_project_Tridion
-set OUTPUTPATH=\Out
-set FILENAME=messages_flashInterface.ditamap
-set DITAMAPNAME=messages_flashInterface.ditamap
-
+set PATHTOPROJECT=\Tridion_Out
+set OUTPUTPATH=\Tridion_Out2
+set FILENAME=Flash_Interface_Messages.ditamap
+set DITAMAPNAME=Flash_Interface_Messages.ditamap
 cd ..\
 
 set WORKINGDIR=%CD%

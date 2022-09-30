@@ -106,8 +106,8 @@
                     <xsl:if test="structBody/structProperties/structPropset/structOpcode">
                       <xsl:attribute name="opcode"><xsl:value-of select="structBody/structProperties/structPropset/structOpcode"/></xsl:attribute>
                     </xsl:if>
-                    <xsl:if test="structBody/structProperties/structPropset/structType">
-                      <xsl:attribute name="structure"><xsl:value-of select="structBody/structProperties/structPropset/structType"/></xsl:attribute>
+                    <xsl:if test="structBody/structProperties/structPropset/structType/@structType">
+                      <xsl:attribute name="structure"><xsl:value-of select="structBody/structProperties/structPropset/structType/@structType"/></xsl:attribute>
                     </xsl:if>
                     <xsl:for-each select="structDword">
                       <xsl:element name="dword">
